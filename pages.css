@@ -1,0 +1,294 @@
+/* ============================================================
+   PAGE HERO (simple, non-split — used on About/Courses/Pricing/etc.)
+   ============================================================ */
+.page-hero {
+  padding-top: calc(var(--space-6) + 2rem);
+  padding-bottom: var(--space-5);
+  background: var(--ink);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: -30%; left: -10%;
+  width: 50%; height: 120%;
+  background: radial-gradient(circle at center, var(--ink-glow) 0%, transparent 70%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero .eyebrow { color: var(--gold-bright); }
+.page-hero .eyebrow::before { background: var(--gold-bright); }
+.page-hero h1 { color: var(--paper); max-width: 18ch; }
+.page-hero .lede { color: rgba(246, 241, 228, 0.72); }
+
+/* ============================================================
+   ABOUT — story blocks, philosophy
+   ============================================================ */
+.about-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+.about-photo {
+  position: sticky;
+  top: 110px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/4.8;
+  box-shadow: 0 30px 60px -24px rgba(11,27,51,0.3);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.story-block { margin-bottom: var(--space-4); }
+.story-block h3 { margin-bottom: var(--space-2); }
+.story-block p + p { margin-top: 1rem; }
+.philosophy-box {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+}
+.philosophy-box p { color: rgba(246,241,228,0.8); font-size: var(--step-1); font-style: italic; }
+@media (max-width: 860px) {
+  .about-split { grid-template-columns: 1fr; }
+  .about-photo { position: static; max-width: 320px; margin-inline: auto; }
+}
+
+/* ============================================================
+   COURSES — detailed cards
+   ============================================================ */
+.course-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+.course-full {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.course-full-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.course-full ul { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+.course-full li {
+  font-size: var(--step--1);
+  color: var(--slate);
+  display: flex;
+  gap: 0.6em;
+}
+.course-full li::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-top: 0.55em;
+  flex-shrink: 0;
+}
+.course-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--slate-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: var(--space-2);
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+}
+.course-full--guidance { border-color: rgba(201,162,75,0.4); background: rgba(201,162,75,0.05); }
+@media (max-width: 860px) { .course-detail { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  align-items: stretch;
+}
+.pricing-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+}
+.pricing-card--featured {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  transform: scale(1.03);
+  box-shadow: 0 30px 60px -20px rgba(11,27,51,0.4);
+}
+.pricing-card--featured p { color: rgba(246,241,228,0.7); }
+.pricing-card--featured .price { color: var(--paper); }
+.pricing-card--featured .pricing-check { color: var(--gold-bright); }
+.pricing-featured-tag {
+  position: absolute;
+  top: -13px; left: var(--space-3);
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.price {
+  font-family: var(--font-display);
+  font-size: var(--step-3);
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+.price span {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--slate-dim);
+  font-weight: 500;
+}
+.pricing-card--featured .price span { color: rgba(246,241,228,0.55); }
+.pricing-list { display: flex; flex-direction: column; gap: 0.7rem; margin-top: auto; padding-top: var(--space-2); }
+.pricing-list li { display: flex; gap: 0.6em; font-size: var(--step--1); }
+.pricing-check { color: var(--gold); flex-shrink: 0; }
+.pricing-note {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+  font-size: var(--step--1);
+  color: var(--slate);
+}
+@media (max-width: 960px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-card--featured { transform: none; order: -1; }
+}
+
+/* ============================================================
+   TESTIMONIALS PAGE
+   ============================================================ */
+.testi-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+.testi-filter { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: var(--space-3); }
+.filter-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--slate);
+}
+@media (max-width: 960px) { .testi-full-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .testi-full-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   BLOG
+   ============================================================ */
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-4); }
+.blog-card { display: flex; flex-direction: column; gap: var(--space-2); }
+.blog-card .eyebrow { font-size: 0.68rem; }
+.blog-card h3 { font-size: var(--step-1); }
+.blog-card p { font-size: var(--step--1); }
+.blog-meta { display: flex; gap: var(--space-2); font-family: var(--font-mono); font-size: 0.7rem; color: var(--slate-dim); margin-top: auto; }
+@media (max-width: 960px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+
+.blog-post-body { max-width: 68ch; margin-inline: auto; }
+.blog-post-body h2 { margin-top: var(--space-4); margin-bottom: var(--space-2); }
+.blog-post-body p { margin-bottom: 1.1rem; font-size: var(--step-0); }
+.blog-post-body li { margin-bottom: 0.6rem; margin-left: 1.4rem; color: var(--slate); }
+
+/* ============================================================
+   FAQ ACCORDION (native <details>, no JS needed)
+   ============================================================ */
+.faq-list { max-width: 74ch; margin-top: var(--space-4); }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding-block: var(--space-3);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 600;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .icon {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: grid; place-items: center;
+  transition: transform 0.3s var(--ease);
+  position: relative;
+}
+.faq-item summary .icon::before, .faq-item summary .icon::after {
+  content: "";
+  position: absolute;
+  background: var(--ink);
+}
+.faq-item summary .icon::before { width: 10px; height: 1.5px; }
+.faq-item summary .icon::after { width: 1.5px; height: 10px; transition: opacity 0.2s var(--ease); }
+.faq-item[open] summary .icon::after { opacity: 0; }
+.faq-item[open] summary .icon { transform: rotate(180deg); }
+.faq-item p { margin-top: var(--space-2); max-width: 62ch; }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); align-items: start; }
+.contact-form { display: flex; flex-direction: column; gap: var(--space-2); }
+.form-row { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-row label { font-size: var(--step--1); font-weight: 600; color: var(--ink); }
+.form-row input, .form-row select, .form-row textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: var(--step--1);
+  transition: border-color 0.25s var(--ease);
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+.form-row textarea { resize: vertical; min-height: 120px; }
+.form-note { font-size: 0.8rem; color: var(--slate-dim); }
+
+.booking-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  background: var(--paper-dim);
+}
+.calendly-inline-widget { min-height: 630px; border-radius: var(--radius-md); overflow: hidden; }
+.contact-detail { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-3); }
+.contact-detail-item { display: flex; gap: 0.8rem; align-items: flex-start; font-size: var(--step--1); color: var(--slate); }
+.contact-detail-item strong { color: var(--ink); display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem; }
+
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
