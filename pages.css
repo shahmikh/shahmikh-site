@@ -292,3 +292,16 @@
 .contact-detail-item strong { color: var(--ink); display: block; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem; }
 
 @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+
+/* ============================================================
+   PLAINER LOOK (inner pages)
+   ============================================================ */
+.page-hero::before { display: none; }
+.about-photo { box-shadow: none; }
+.pricing-card--featured { transform: none; box-shadow: none; }
+.pricing-featured-tag { border-radius: 4px; }
+.philosophy-box p { font-style: normal; }
+/* keep an odd last course card from leaving a gap */
+.course-detail > .course-full:last-child:nth-child(odd) { grid-column: 1 / -1; }
+@media (max-width: 860px) { .course-detail > .course-full:last-child:nth-child(odd) { grid-column: auto; } }

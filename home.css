@@ -230,3 +230,24 @@
 .testi-name strong { font-family: var(--font-display); font-size: var(--step--1); font-weight: 600; }
 
 
+
+
+/* ============================================================
+   PLAINER LOOK (homepage)
+   ============================================================ */
+.hero::before { display: none; }
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.hero-eyebrow::before { display: none; }
+.hero h1 { font-size: var(--step-4); }
+.portrait-frame { box-shadow: none; border: 1px solid var(--line-on-ink); }
+.portrait-frame::after { display: none; }
+.cred-list span { font-family: var(--font-body); font-weight: 500; }
+.audience-card .num { color: var(--gold-text); font-family: var(--font-body); font-weight: 600; font-size: 0.74rem; letter-spacing: 0.08em; }
+.testi-card p { font-style: normal; }
+.testi-card .stars { font-style: normal; }
