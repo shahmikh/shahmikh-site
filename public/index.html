@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Syed Shahmikh Ali — Study Strategy, Career Guidance & Tech Mentorship</title>
 <meta name="description" content="1:1 mentorship for students, parents and career-changers — exam and study strategy, degree and career guidance, and tech tutoring from AP CSP, AP CSA and IB CS to Security+ and CCNA.">
-<meta name="theme-color" content="#0B1B33">
+<meta name="theme-color" content="#0B1F3A">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://shahmikh.com/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Syed Shahmikh Ali — Study Strategy, Career Guidance & Tech Mentorship">
-<meta property="og:description" content="Study smarter, choose wisely, build what's next — 1:1 exam strategy, career guidance and tech tutoring.">
-<meta property="og:image" content="https://shahmikh.com/headshot.jpg">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="stylesheet" href="style.css">
-
+<link rel="preload" href="fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,214 +17,215 @@
   "knowsAbout": ["AWS", "Cloud Computing", "Cybersecurity", "CompTIA Security+", "Cisco CCNA", "Computer Science Education", "DevSecOps"]
 }
 </script>
-<link rel="preload" href="fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="theme.css">
-</head>
+<style>@font-face{font-family:"Plus Jakarta Sans";font-weight:700;font-display:swap;src:url(fonts/plus-jakarta-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:800;font-display:swap;src:url(fonts/plus-jakarta-sans-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:400;font-display:swap;src:url(fonts/dm-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:600;font-display:swap;src:url(fonts/dm-sans-latin-600-normal.woff2) format("woff2")}
+
+:root{--ink:#0B1F3A;--soft:#4C5E78;--bg:#fff;--mint:#D6F3E2;--lilac:#D8EAFF;--peach:#FFE0D3;--sun:#FFEFB0;--brand:#0B1F3A;--brand-d:#1D3A66;--lime:#FF8F6B;--line:#E1E8F2;--d:"Plus Jakarta Sans","Segoe UI",sans-serif;--b:"DM Sans","Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--b);color:var(--ink);background:var(--bg);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;caret-color:var(--brand)}
+::selection{background:var(--brand);color:#fff}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.wrap{max-width:1200px;margin:auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--d);letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:52px;padding:0 28px;border-radius:14px;font:600 1.02rem var(--b);background:var(--brand);color:#fff;transition:transform .2s ease-out,background .2s;border:2px solid var(--brand)}
+.btn:hover{background:var(--brand-d);transform:translateY(-2px)}
+.btn--o{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn--o:hover{background:var(--lilac)}
+/* nav */
+header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;gap:32px;height:76px}
+.brand{display:flex;align-items:center;gap:10px;font:800 1.25rem var(--d);letter-spacing:.01em}
+.mark{width:36px;height:36px;border-radius:11px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800}
+nav{display:flex;gap:6px;margin-left:12px}
+nav a{padding:9px 14px;border-radius:10px;font-weight:600;font-size:.98rem}
+nav a:hover{background:var(--lilac)}
+header .btn{margin-left:auto;min-height:46px;padding:0 22px}
+/* hero */
+.hero{background:var(--lilac);margin:20px 24px 0;border-radius:32px;overflow:hidden}
+.hero .in{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center;padding:64px 40px 0 48px}
+.hero h1{font-size:clamp(2.4rem,4.8vw,4.2rem);font-weight:800}
+.hero h1 span{white-space:nowrap;background:var(--lime);padding:0 .12em;border-radius:12px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p.lede{font-size:1.25rem;line-height:1.5;color:#2d2d4d;max-width:46ch;margin-top:22px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;padding-bottom:56px}
+.chip{background:#fff;border-radius:999px;padding:8px 16px;font-weight:600;font-size:.95rem;border:1.5px solid var(--ink)}
+.pic{position:relative;align-self:end;justify-self:center;width:min(430px,100%)}
+.pic .blob{position:absolute;inset:12% 0 0 6%;background:var(--sun);border-radius:200px 200px 0 0}
+.pic img{position:relative;display:block;width:100%;aspect-ratio:1/1.15;object-fit:cover;object-position:50% 12%;border-radius:200px 200px 0 0}
+.float{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 10px 30px rgba(20,20,43,.16);font-weight:600;font-size:.92rem;line-height:1.3;display:flex;gap:10px;align-items:center}
+.float b{display:block;font-family:var(--d);font-size:1.05rem}
+.float i{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-style:normal;font-size:1.1rem}
+.f1{left:-30px;top:20%}.f1 i{background:var(--lime)}
+.f2{right:-14px;bottom:18%}.f2 i{background:var(--peach)}
+/* trust strip */
+.trust{max-width:1200px;margin:48px auto 0;padding-inline:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.trust div{border:1.5px solid var(--line);border-radius:20px;padding:22px 24px}
+.trust b{display:block;font:800 1.7rem var(--d);letter-spacing:-.02em}
+.trust span{color:var(--soft);font-size:.98rem}
+section{padding-top:104px}
+.head{max-width:700px;margin-bottom:40px}
+.head p{color:var(--soft);font-size:1.15rem;margin-top:14px}
+/* subjects */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tile{border-radius:24px;padding:26px 24px 24px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s ease-out}
+.tile:hover{transform:translateY(-4px)}
+.tile small{font-weight:600;font-size:.88rem;opacity:.75;letter-spacing:.02em}
+.tile h3{font-size:1.55rem;font-weight:800;margin-top:8px}
+.tile p{font-size:.97rem;color:#2d2d4d;margin-top:8px;line-height:1.45}
+.tile .go{margin-top:18px;font-weight:600;display:flex;align-items:center;gap:8px}
+.t1{background:var(--mint)}.t2{background:var(--peach)}.t3{background:var(--lilac)}.t4{background:var(--sun)}
+.t5{background:var(--sun)}.t6{background:var(--mint)}.t7{background:var(--peach)}.t8{background:var(--lilac)}
+/* how */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{border:1.5px solid var(--line);border-radius:24px;padding:32px}
+.step .n{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:800 1.15rem var(--d);margin-bottom:22px}
+.step h3{font-size:1.5rem;font-weight:800;margin-bottom:10px}
+.step p{color:var(--soft)}
+/* two audiences */
+.aud{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{border-radius:28px;padding:44px}
+.card.a{background:var(--mint)}.card.b{background:var(--peach)}
+.card h3{font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:800;margin-bottom:14px}
+.card ul{margin:20px 0 26px;padding-left:0;list-style:none;display:grid;gap:10px}
+.card li{display:flex;gap:10px;align-items:flex-start}
+.card li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;margin-top:3px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{border:1.5px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.rev blockquote{font-size:1.08rem;line-height:1.55}
+.rev .who{display:flex;gap:12px;align-items:center;margin-top:auto}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:800 1.1rem var(--d);flex:none}
+.who b{display:block;line-height:1.2}.who small{color:var(--soft)}
+.rev code{display:block;background:#F5F5FA;border-radius:12px;padding:12px 14px;font:.84rem/1.5 Menlo,Consolas,monospace}
+.rev--big{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rev--big blockquote{font:700 1.45rem/1.25 var(--d);letter-spacing:-.01em}
+.rev--big small{color:#bdbdd8}
+/* faq */
+.faq{max-width:860px}
+.q{border-bottom:1.5px solid var(--line);padding:22px 0}
+.q h3{font:700 1.2rem var(--d);display:flex;justify-content:space-between;gap:20px}
+.q h3::after{content:"+";font-size:1.6rem;line-height:1;color:var(--brand)}
+.q p{color:var(--soft);margin-top:10px;max-width:62ch}
+/* cta */
+.cta{margin:110px 24px 24px;background:var(--brand);color:#fff;border-radius:32px;overflow:hidden;position:relative}
+.cta .in{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;padding:72px 48px}
+.cta h2{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+.cta p{font-size:1.2rem;margin-top:16px;color:#E4E1FF;max-width:44ch}
+.cta .btn{background:var(--lime);color:var(--ink);border-color:var(--lime);margin-top:28px}
+.cta .btn:hover{background:#d6f77a}
+.cta .box{background:#fff;color:var(--ink);border-radius:24px;padding:26px;transform:rotate(2deg)}
+.cta .box b{font:800 1.3rem var(--d);display:block}
+.cta .box ul{list-style:none;margin-top:10px;display:grid;gap:6px;color:var(--soft);font-size:.98rem}
+footer{padding:56px 0 36px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h4{font:700 .95rem var(--d);margin-bottom:12px}
+footer li{list-style:none;margin-bottom:8px;color:var(--soft)}
+footer .fine{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--soft);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:960px){
+ nav{display:none}.hero{margin:12px 12px 0;border-radius:24px}.hero .in{grid-template-columns:1fr;padding:40px 22px 0}
+ .pic{width:min(340px,100%)}.f1{left:-6px}.f2{right:-6px}
+ .trust{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}.how,.aud,.revs{grid-template-columns:1fr}
+ .cta .in{grid-template-columns:1fr;padding:48px 24px}.cta{margin-inline:12px}.card{padding:30px 24px}
+ footer .cols{grid-template-columns:1fr 1fr}section{padding-top:72px}.hero .chips{padding-bottom:32px}}
+@media(max-width:520px){.tiles{grid-template-columns:1fr}.tile{min-height:0}.btn{width:100%}header .btn{width:auto}.wrap{padding-inline:18px}.float{font-size:.82rem}}
+.hero h1{line-height:1.14}.hero h1 span{background:var(--lime)}.mark{background:var(--lime);color:var(--ink)}.hero p.lede,.tile p{color:#25395A}.cta p{color:#C9D8F0}.cta .btn{background:var(--lime);color:var(--ink);border-color:var(--lime)}.cta .btn:hover{background:#ffa88c}.rev--big{background:var(--ink)}.rev code{background:#EEF3FA}.btn--o:hover{background:var(--lilac)}.float i{background:var(--sun)}.f1 i{background:var(--mint)}.pic .blob{background:#fff;opacity:.75}
+
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}details.q h3{margin:0}details.q[open] h3::after{content:"\2212"}.hero p.lede,.tile p{color:#25395A}</style></head>
 <body>
+<header><div class="wrap">
+ <a class="brand" href="index.html"><span class="mark">S</span>Shahmikh</a>
+ <nav><a href="courses.html">Subjects</a><a href="#how">How it works</a><a href="testimonials.html">Reviews</a><a href="blog.html">Blog</a><a href="about.html">About</a></nav>
+ <a class="btn" href="contact.html#booking">Book a free call</a>
+</div></header>
+<main>
+<div class="hero"><div class="in">
+ <div>
+  <h1>Learn computer science <span>one to one</span></h1>
+  <p class="lede">AP, IB and IGCSE computer science, plus Security+, CCNA and Python. Live on video, with a teacher who knows your name and your exam board.</p>
+  <div class="acts"><a class="btn" href="contact.html#booking">Book a free 15-minute call</a><a class="btn btn--o" href="courses.html">Explore subjects</a></div>
+  <div class="chips"><span class="chip">AP CSP</span><span class="chip">AP CSA</span><span class="chip">IB CS</span><span class="chip">IGCSE</span><span class="chip">Security+</span><span class="chip">CCNA</span><span class="chip">Python</span></div>
+ </div>
+ <div class="pic"><div class="blob"></div>
+  <img src="headshot.jpg" alt="Shahmikh, your computer science teacher" width="430" height="495">
+  <div class="float f1"><i>★</i><div><b>Super Tutor</b>on Preply</div></div>
+  <div class="float f2"><i>15</i><div><b>Top 15%</b>of CS tutors</div></div>
+ </div>
+</div></div>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<div class="trust">
+ <div><b>1 to 1</b><span>Every lesson, live on video</span></div>
+ <div><b>Top 15%</b><span>Of computer science tutors on Preply</span></div>
+ <div><b>US · UK · EU</b><span>Where my students are</span></div>
+ <div><b>Free call</b><span>15 minutes to see if we fit</span></div>
+</div>
 
-<header class="site-header">
-  <div class="container nav-row">
-    <a href="index.html" class="brand">
-      <span class="brand-mark" aria-hidden="true">S</span>
-      SHAHMIKH
-    </a>
+<section id="subjects"><div class="wrap">
+ <div class="head"><h2>Pick what you want to learn</h2><p>Every subject is taught live, one to one, at your pace.</p></div>
+ <div class="tiles">
+  <a class="tile t1" href="courses.html"><div><small>High school</small><h3>AP Computer Science Principles</h3></summary><p>Create task, data, algorithms and the exam.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t2" href="courses.html"><div><small>High school</small><h3>AP Computer Science A</h3></summary><p>Java and the four free-response types.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t3" href="courses.html"><div><small>High school</small><h3>IB Computer Science</h3></summary><p>HL and SL, papers and Internal Assessment.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t4" href="courses.html"><div><small>High school</small><h3>IGCSE Computer Science</h3></summary><p>Theory, pseudocode and programming.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t5" href="courses.html"><div><small>Certification</small><h3>CompTIA Security+</h3></summary><p>Exam-focused with hands-on practice.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t6" href="courses.html"><div><small>Certification</small><h3>Cisco CCNA</h3></summary><p>Networking from the ground up.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t7" href="courses.html"><div><small>All levels</small><h3>Python and Java</h3></summary><p>From a first script to object-oriented projects.</p></div><span class="go">Learn more →</span></a>
+  <a class="tile t8" href="career-guidance.html"><div><small>Everyone</small><h3>Study and career guidance</h3></summary><p>Degree choices and a cloud or security roadmap.</p></div><span class="go">Learn more →</span></a>
+ </div>
+</div></section>
 
-    <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="index.html" class="is-active">Home</a>
-      <a href="about.html">About</a>
-      <a href="courses.html">Courses</a>
-      <a href="career-guidance.html">Career Guidance</a><a href="pricing.html">Pricing</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<section id="how"><div class="wrap">
+ <div class="head"><h2>How it works</h2><p>Three steps, and the first one is free.</p></div>
+ <div class="how">
+  <div class="step"><div class="n">1</div><h3>Book a free call</h3></summary><p>15 minutes on video. Tell me your goal, your exam board or your deadline.</p></div>
+  <div class="step"><div class="n">2</div><h3>Get a plan</h3></summary><p>I show you where to start, what to practise and how lessons would run.</p></div>
+  <div class="step"><div class="n">3</div><h3>Start lessons</h3></summary><p>Live one-to-one sessions, with notes and practice after each one.</p></div>
+ </div>
+</div></section>
 
-    <div class="nav-cta">
-      <a href="contact.html" class="btn btn--ghost">Contact</a>
-      <a href="contact.html#booking" class="btn btn--primary">Book a Call</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+<section><div class="wrap">
+ <div class="head"><h2>Who I teach</h2></div>
+ <div class="aud">
+  <div class="card a"><h3>For parents</h3></summary><p>Your child is taking AP, IB or IGCSE computer science and you want an honest picture of where they stand.</p>
+   <ul><li>Lessons follow the exam board's course</li><li>Past papers and examiner reports</li><li>Straight feedback, no grade promises</li></ul><a class="btn" href="#book">Book a call</a></div>
+  <div class="card b"><h3>For students and career-changers</h3></summary><p>You are learning IT or moving into it, and want a clear route.</p>
+   <ul><li>Security+, CCNA, Python and Java</li><li>A realistic roadmap into cloud and security</li><li>Hands-on practice, not just slides</li></ul><a class="btn" href="#book">Book a call</a></div>
+ </div>
+</div></section>
 
-<main id="main">
+<section id="reviews"><div class="wrap">
+ <div class="head"><h2>What students and parents say</h2><p>Reviews left on Preply.</p></div>
+ <div class="revs">
+  <div class="rev rev--big"><blockquote>"My son learned more about computer skills in the few booked hours than in half a year of IT classes at school."</blockquote><div class="who"><span class="av" style="background:var(--lime);color:var(--ink)">L</span><div><b>Ludmila</b><small>Parent</small></div></div></div>
+  <div class="rev"><blockquote>"He's a really patient and helpful tutor. He explains concepts in a way that makes them much easier to understand."</blockquote><div class="who"><span class="av" style="background:var(--lilac)">H</span><div><b>Harshita</b><small>IB Computer Science</small></div></div></div>
+  <div class="rev"><blockquote>"Syed is a very experienced, patient trainer who explains things very simply. I loved my first class."</blockquote><div class="who"><span class="av" style="background:var(--mint)">L</span><div><b>Luca</b><small>Student</small></div></div></div>
+  <div class="rev" style="grid-column:span 2"><blockquote>"Syed was very patient and made me understand the material really quick!"<code># Syed's patience: float('inf') &nbsp;·&nbsp; # My confusion: 0 &nbsp;·&nbsp; print("100% recommend!")</code></blockquote><div class="who"><span class="av" style="background:var(--peach)">M</span><div><b>Marielle</b><small>Student</small></div></div></div>
+  <div class="rev" style="justify-content:center;background:var(--sun);border-color:var(--sun)"><b style="font:800 1.4rem var(--d)">Read all reviews on Preply</b><a class="btn btn--o" href="#" style="width:max-content">See reviews →</a></div>
+ </div>
+</div></section>
 
-  <!-- HERO -->
-  <section class="h-hero">
-    <div class="h-hero-in">
-      <div>
-        <h1>Learn computer science <span>one to one</span></h1>
-        <p class="h-lede">AP, IB and IGCSE computer science, plus Security+, CCNA and Python. Live on video, with a teacher who knows your name and your exam board.</p>
-        <div class="h-acts">
-          <a class="btn btn--primary" href="contact.html#booking">Book a free 15-minute call</a>
-          <a class="btn btn--ghost" href="courses.html">Explore subjects</a>
-        </div>
-        <div class="h-chips" aria-label="Subjects">
-          <span class="h-chip">AP CSP</span><span class="h-chip">AP CSA</span><span class="h-chip">IB CS</span><span class="h-chip">IGCSE</span><span class="h-chip">Security+</span><span class="h-chip">CCNA</span><span class="h-chip">Python</span>
-        </div>
-      </div>
-      <div class="h-pic">
-        <div class="blob"></div>
-        <img src="headshot.jpg" alt="Portrait of Syed Shahmikh Ali, your computer science teacher" width="420" height="483">
-        <div class="h-float h-f1"><i aria-hidden="true">&#9733;</i><div><b>Super Tutor</b>on Preply</div></div>
-        <div class="h-float h-f2"><i aria-hidden="true">15</i><div><b>Top 15%</b>of CS tutors</div></div>
-      </div>
-    </div>
-  </section>
+<section><div class="wrap">
+ <div class="head"><h2>Questions parents and students ask</h2></div>
+ <div class="faq">
+  <details class="q" open><summary><h3>Is the first call really free?</h3></summary><p>Yes. It's 15 minutes on video to talk about your goals and see whether I'm the right fit.</p></details>
+  <details class="q" open><summary><h3>Which exam boards do you teach?</h3></summary><p>AP, IB (HL and SL) and Cambridge IGCSE computer science, plus Security+ and CCNA for certifications.</p></details>
+  <details class="q" open><summary><h3>Do you guarantee grades?</h3></summary><p>No. I give honest feedback and a clear plan, and the results come from the work we do together.</p></details>
+  <details class="q" open><summary><h3>Where are lessons held?</h3></summary><p>Live on video, one student at a time, at times that suit your time zone.</p></details>
+ </div>
+</div></section>
 
-  <div class="h-trust">
-    <div><b>1 to 1</b><span>Every lesson, live on video</span></div>
-    <div><b>Top 15%</b><span>Of computer science tutors on Preply</span></div>
-    <div><b>US &middot; UK &middot; EU</b><span>Where my students are</span></div>
-    <div><b>Free call</b><span>15 minutes to see if we fit</span></div>
-  </div>
-
-  <!-- SUBJECTS -->
-  <section class="h-sec" id="subjects">
-    <div class="container">
-      <div class="h-head reveal"><h2>Pick what you want to learn</h2><p>Every subject is taught live, one to one, at your pace.</p></div>
-      <div class="h-tiles">
-        <a class="h-tile t-mint reveal" href="courses.html"><div><small>High school</small><h3>AP Computer Science Principles</h3><p>Create task, data, algorithms and the exam.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-peach reveal" href="courses.html"><div><small>High school</small><h3>AP Computer Science A</h3><p>Java and the four free-response types.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-sky reveal" href="courses.html"><div><small>High school</small><h3>IB Computer Science</h3><p>HL and SL, papers and Internal Assessment.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-butter reveal" href="courses.html"><div><small>High school</small><h3>IGCSE Computer Science</h3><p>Theory, pseudocode and programming.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-butter reveal" href="courses.html"><div><small>Certification</small><h3>CompTIA Security+</h3><p>Exam-focused, with hands-on practice.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-mint reveal" href="courses.html"><div><small>Certification</small><h3>Cisco CCNA</h3><p>Networking from the ground up.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-peach reveal" href="courses.html"><div><small>All levels</small><h3>Python and Java</h3><p>From a first script to object-oriented projects.</p></div><span class="go">Learn more &rarr;</span></a>
-        <a class="h-tile t-sky reveal" href="career-guidance.html"><div><small>Everyone</small><h3>Study and career guidance</h3><p>Degree choices and a cloud or security roadmap.</p></div><span class="go">Learn more &rarr;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="h-sec" id="how">
-    <div class="container">
-      <div class="h-head reveal"><h2>How it works</h2><p>Three steps, and the first one is free.</p></div>
-      <div class="h-how">
-        <div class="h-step reveal"><div class="n">1</div><h3>Book a free call</h3><p>15 minutes on video. Tell me your goal, your exam board or your deadline.</p></div>
-        <div class="h-step reveal"><div class="n">2</div><h3>Get a plan</h3><p>I show you where to start, what to practise and how lessons would run.</p></div>
-        <div class="h-step reveal"><div class="n">3</div><h3>Start lessons</h3><p>Live one-to-one sessions, with notes and practice after each one.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AUDIENCES -->
-  <section class="h-sec">
-    <div class="container">
-      <div class="h-head reveal"><h2>Who I teach</h2></div>
-      <div class="h-aud">
-        <div class="h-card t-mint reveal"><h3>For parents</h3><p>Your child is taking AP, IB or IGCSE computer science and you want an honest picture of where they stand.</p>
-          <ul><li>Lessons follow the exam board's course</li><li>Past papers and examiner reports</li><li>Straight feedback, no grade promises</li></ul>
-          <a class="btn btn--primary" href="contact.html#booking">Book a call</a></div>
-        <div class="h-card t-peach reveal"><h3>For students and career-changers</h3><p>You are learning IT or moving into it, and want a clear route.</p>
-          <ul><li>Security+, CCNA, Python and Java</li><li>A realistic roadmap into cloud and security</li><li>Hands-on practice, not just slides</li></ul>
-          <a class="btn btn--primary" href="contact.html#booking">Book a call</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="h-sec" id="reviews">
-    <div class="container">
-      <div class="h-head reveal"><h2>What students and parents say</h2><p>Reviews left on Preply.</p></div>
-      <div class="h-revs">
-        <div class="h-rev big reveal"><blockquote>&ldquo;My son learned more about computer skills in the few booked hours than in half a year of IT classes at school. He explains very clearly and is motivating.&rdquo;</blockquote><div class="who"><span class="av" style="background:var(--gold)">L</span><div><b>Ludmila</b><small>Parent</small></div></div></div>
-        <div class="h-rev reveal"><blockquote>&ldquo;He&rsquo;s a really patient and helpful tutor. He explains concepts in a way that makes them much easier to understand, especially when I&rsquo;m struggling with something in CS.&rdquo;</blockquote><div class="who"><span class="av" style="background:var(--sky)">H</span><div><b>Harshita</b><small>IB Computer Science</small></div></div></div>
-        <div class="h-rev reveal"><blockquote>&ldquo;Syed is a very experienced, patient trainer who explains things very simply. I loved my first class with Syed.&rdquo;</blockquote><div class="who"><span class="av" style="background:var(--mint)">L</span><div><b>Luca</b><small>Student</small></div></div></div>
-        <div class="h-rev h-rev-wide reveal" style="grid-column:span 2"><blockquote>&ldquo;Syed was very patient and made me understand the material really quick!&rdquo;<code># Syed's patience: float('inf') &nbsp;|&nbsp; # My confusion: 0 &nbsp;|&nbsp; print("100% recommend!")</code></blockquote><div class="who"><span class="av" style="background:var(--peach)">M</span><div><b>Marielle</b><small>Student</small></div></div></div>
-        <div class="h-rev h-more reveal"><b>Read every review</b><a class="btn btn--ghost" href="testimonials.html">See all reviews &rarr;</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="h-sec">
-    <div class="container">
-      <div class="h-head reveal"><h2>Questions parents and students ask</h2></div>
-      <div class="h-faq">
-        <details class="h-q"><summary>Is the first call really free?</summary><p>Yes. It's 15 minutes on video to talk about your goals and see whether I'm the right fit.</p></details>
-        <details class="h-q"><summary>Which exam boards do you teach?</summary><p>AP, IB (HL and SL) and Cambridge IGCSE computer science, plus Security+ and CCNA for certifications.</p></details>
-        <details class="h-q"><summary>Do you guarantee grades?</summary><p>No. I give honest feedback and a clear plan, and the results come from the work we do together.</p></details>
-        <details class="h-q"><summary>Where are lessons held?</summary><p>Live on video, one student at a time, at times that suit your time zone. More answers are on the <a href="faq.html" style="text-decoration:underline">FAQ page</a>.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOLLOW ALONG (hidden until YouTube / Instagram links are added in the HTML) -->
-  <section class="section-tight social-section" >
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Follow along</p>
-        <h2>Free videos and posts on studying, careers and tech</h2>
-      </div>
-      <div class="hero-actions reveal">
-        <a class="btn btn--primary social-link" href="#" data-network="youtube" target="_blank" rel="noopener">Watch on YouTube</a>
-        <a class="btn btn--ghost social-link" href="#" data-network="instagram" target="_blank" rel="noopener">Follow on Instagram</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CLOSING CTA -->
-  <section class="cta-band on-ink" style="margin-top:var(--space-6)">
-    <div class="container">
-      <p class="eyebrow">Start here</p>
-      <h2>Ready to figure out your <span class="marked--circle">next step
-            <svg viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M12,38 C8,15 40,4 100,5 C165,6 192,18 188,36 C184,55 150,66 100,65 C48,64 16,58 13,42" fill="none" stroke="#C9A24B" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-          </span>?</h2>
-      <p class="lede" style="margin-inline:auto; text-align:center;">Book a free call — we'll talk about where you are, where you want to go, and whether I can help.</p>
-      <a href="contact.html#booking" class="btn btn--gold">Book a Free Call</a>
-    </div>
-  </section>
-
+<div class="cta" id="book"><div class="in">
+ <div><h2>Book a free 15-minute call</h2><p>We'll talk about your goals, where you are now and whether I can help. No pressure, no sales script.</p><a class="btn" href="#">Choose a time →</a></div>
+ <div class="box"><b>On the call</b><ul><li>✓ Your goal and deadline</li><li>✓ Where you are today</li><li>✓ How lessons would work</li></ul></div>
+</div></div>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Syed Shahmikh Ali</h4>
-        <p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="courses.html">Security+ &amp; CCNA</a></li>
-          <li><a href="courses.html">AP CSP, CSA &amp; IB CS</a></li>
-          <li><a href="career-guidance.html">Career Guidance</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li><li><a class="social-link" href="#" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="#" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Syed Shahmikh Ali. All rights reserved.</span>
-      <span>Teaching students across the US, UK &amp; Europe.</span>
-    </div>
-  </div>
-</footer>
-
-<script src="main.js"></script>
-</body>
-</html>
+<footer><div class="wrap"><div class="cols">
+ <div><a class="brand" href="index.html"><span class="mark">S</span>Shahmikh</a><p style="margin-top:14px;color:var(--soft);max-width:32ch">One-to-one computer science and IT tutoring, plus honest study and career guidance.</p></div>
+ <div><h4>Learn</h4><ul><li><a href="courses.html">Subjects</a></li><li><a href="career-guidance.html">Career guidance</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+ <div><h4>About</h4><ul><li><a href="about.html">About me</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+ <div><h4>Contact</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html#booking">Book a call</a></li></ul></div>
+</div><div class="fine"><span>© 2026 Syed Shahmikh Ali</span><span>Teaching students across the US, UK and Europe.</span></div></div></footer>
+</body></html>
