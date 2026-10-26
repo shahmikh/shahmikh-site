@@ -305,3 +305,67 @@
 /* keep an odd last course card from leaving a gap */
 .course-detail > .course-full:last-child:nth-child(odd) { grid-column: 1 / -1; }
 @media (max-width: 860px) { .course-detail > .course-full:last-child:nth-child(odd) { grid-column: auto; } }
+
+/* ============================================================
+   BLOG POSTS (answer-first template)
+   ============================================================ */
+.blog-post-body ul { list-style: disc; padding-left: 1.3rem; margin-bottom: 1.1rem; }
+.blog-post-body ol { list-style: decimal; padding-left: 1.3rem; margin-bottom: 1.1rem; }
+.blog-post-body li { margin-left: 0; margin-bottom: 0.6rem; color: var(--slate); font-size: var(--step-0); }
+.blog-post-body a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.blog-post-body h2 { font-size: var(--step-2); scroll-margin-top: 100px; }
+.post-byline { margin-top: var(--space-2); font-size: var(--step--1); color: rgba(246, 241, 228, 0.72); }
+.post-byline a { color: var(--gold-bright); }
+.post-lead { font-size: var(--step-1); color: var(--ink); line-height: 1.45; }
+.takeaways {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background: var(--paper-dim);
+  margin: var(--space-3) 0;
+}
+.takeaways h2 { font-size: var(--step-1); margin: 0 0 var(--space-2); }
+.takeaways ul { margin-bottom: 0; }
+.toc { margin: 0 0 var(--space-3); }
+.toc-title { font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
+.toc ol { margin-bottom: 0; }
+.toc li { margin-bottom: 0.3rem; font-size: var(--step--1); }
+.table-wrap { overflow-x: auto; margin: var(--space-3) 0; }
+.post-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+.post-table th, .post-table td { text-align: left; vertical-align: top; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--line); color: var(--slate); }
+.post-table thead th { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--ink); }
+.post-table tbody th { color: var(--ink); font-weight: 600; white-space: nowrap; }
+.blog-post-body pre {
+  background: var(--ink);
+  color: var(--paper);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: 0 0 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+.blog-post-body code { font-family: var(--font-mono); font-size: 0.9em; }
+.blog-post-body p code, .blog-post-body li code { background: var(--paper-dim); padding: 0.1em 0.35em; border-radius: 4px; }
+.blog-post-body .faq-list { margin-top: var(--space-2); }
+.blog-post-body .faq-item summary { font-size: var(--step-0); }
+.blog-post-body .faq-item p { margin-bottom: 0; }
+.post-sources li { font-size: var(--step--1); }
+.post-note { font-size: var(--step--1); color: var(--slate-dim); }
+.author-box {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-top: var(--space-4);
+}
+.author-box img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.author-box p { font-size: var(--step--1); margin-bottom: 0.6rem; }
+.author-box .author-name { font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
+@media (max-width: 640px) {
+  .author-box { flex-direction: column; }
+  .post-table tbody th { white-space: normal; }
+}

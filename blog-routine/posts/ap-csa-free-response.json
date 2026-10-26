@@ -1,0 +1,99 @@
+{
+  "slug": "ap-csa-free-response",
+  "title": "AP CSA Free-Response: 4 Question Types and How to Prep",
+  "h1": "AP CSA Free-Response: The 4 Question Types and How to Prepare",
+  "description": "The AP CSA free-response section has four question types worth 45% of your score. What each one tests, common Java slips, and a weekly practice routine.",
+  "eyebrow": "AP Computer Science A",
+  "read_min": 7,
+  "published": "2026-10-26",
+  "modified": "2026-10-26",
+  "card_summary": "What each of the four questions asks you to write, the slips to watch for, and a practice routine built on official past papers.",
+  "lead": "The AP CSA free-response section has four questions: methods and control structures, class design, data analysis with an ArrayList, and a 2D array. Together they are 45% of the exam score, and each one asks you to write Java that does exactly what a specification says. The quickest way to improve is to practise one question type at a time on official past questions and grade yourself against the scoring guidelines.",
+  "takeaways": [
+    "The section has 4 questions, lasts 90 minutes and is worth 45% of the exam score. Split evenly, that is about 22 minutes per question.",
+    "The four questions cover methods and control structures, class design, an ArrayList method and a 2D array method.",
+    "Two of the four questions test collections, the unit that makes up 30% to 40% of the whole exam.",
+    "Past free-response questions and scoring guidelines are free on AP Central, and grading your own answers against them is the most useful practice available.",
+    "Two slips worth drilling out of your code: off-by-one loop bounds, and removing from an ArrayList while looping forward."
+  ],
+  "sections": [
+    {
+      "id": "format",
+      "h2": "What does the AP CSA free-response section look like?",
+      "html": "<p>Section II has four questions and lasts 1 hour 30 minutes. It is 45% of your exam score, and the multiple-choice section is the other 55%. The exam is taken in the Bluebook app, so you type your code. The College Board's <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam\" rel=\"noopener\">AP CSA exam page</a> and <a href=\"https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment\" rel=\"noopener\">assessment page</a> describe the four questions like this:</p>\n      <div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>#</th><th>Question type</th><th>What you write</th></tr></thead><tbody>\n<tr><th>1</th><td>Methods and Control Structures</td><td>Two methods, or one constructor and one method, using loops, conditions and String methods</td></tr>\n<tr><th>2</th><td>Class Design</td><td>A full class from a scenario and a specification table: header, instance variables, constructor and a method</td></tr>\n<tr><th>3</th><td>Data Analysis with ArrayList</td><td>One method that uses, analyses and changes an ArrayList</td></tr>\n<tr><th>4</th><td>2D Array</td><td>One method that uses, analyses and changes a 2D array</td></tr>\n</tbody></table></div>"
+    },
+    {
+      "id": "q1",
+      "h2": "How do you approach Question 1, methods and control structures?",
+      "html": "<p>Read the specification twice before typing. Underline every rule the method has to follow, such as what to return for an empty String or what happens at a boundary. Then write the loop and the condition that match those rules, and nothing extra.</p>\n      <p>String method calls appear in this question type, so practise methods like <code>length</code>, <code>substring</code>, <code>indexOf</code> and <code>equals</code> until you do not have to stop and think about them. Write a quick example input and walk through your code by hand before you move on.</p>"
+    },
+    {
+      "id": "q2",
+      "h2": "How do you approach Question 2, class design?",
+      "html": "<p>Treat it as a checklist. Write the class header, declare every instance variable private as the course teaches, write a constructor that sets them, then write each method the table asks for. At the end, read the scenario once more for anything you skipped.</p>\n      <pre><code>// A bare skeleton, not an exam question\npublic class Counter {\n    private int count;          // instance variable, private\n\n    public Counter() {          // constructor: class name, no return type\n        count = 0;\n    }\n\n    public int getCount() {     // a method from the specification table\n        return count;\n    }\n}</code></pre>\n      <p>The constructor has the same name as the class and no return type. Forgetting either is an easy way to lose a point on a question you otherwise understood.</p>"
+    },
+    {
+      "id": "q3",
+      "h2": "How do you approach Question 3, the ArrayList question?",
+      "html": "<p>Decide first whether you only need to read the list or also change it. Reading is a plain loop. Changing is where marks slip away, especially removal. If you remove an item while looping from the front, everything after it moves one place left and the next item gets skipped. Looping from the back avoids the problem.</p>\n      <pre><code>// Example only: remove every negative number from a list\nfor (int i = list.size() - 1; i &gt;= 0; i--) {\n    if (list.get(i) &lt; 0) {\n        list.remove(i);\n    }\n}</code></pre>\n      <p>Removing inside an enhanced for loop usually throws a <code>ConcurrentModificationException</code> when the code runs, so use an index loop when you need to remove.</p>"
+    },
+    {
+      "id": "q4",
+      "h2": "How do you approach Question 4, the 2D array question?",
+      "html": "<p>Decide what a row and a column are before you write a loop. For a rectangular array, <code>grid.length</code> is the number of rows and <code>grid[0].length</code> is the number of columns. A row-by-row traversal puts the row loop on the outside and the column loop inside. Mixing up the two indexes is the classic mistake, so name the variables <code>row</code> and <code>col</code> instead of <code>i</code> and <code>j</code>.</p>\n      <pre><code>// Example only: add up every value in a rectangular 2D array\nint total = 0;\nfor (int row = 0; row &lt; grid.length; row++) {\n    for (int col = 0; col &lt; grid[0].length; col++) {\n        total += grid[row][col];\n    }\n}</code></pre>"
+    },
+    {
+      "id": "routine",
+      "h2": "What does a good weekly practice routine look like?",
+      "html": "<ol>\n<li>Pick one question type for the week and open three questions of that type from <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions\" rel=\"noopener\">AP Central's past exam questions</a>.</li>\n<li>Do each one in a timed 22 minutes, typing in a plain editor with no hints from an IDE.</li>\n<li>Grade yourself with the scoring guidelines for that year, line by line, and mark every point you missed.</li>\n<li>Keep an error log with one line per lost point and its cause: misread the specification, off-by-one, wrong method, forgot the constructor.</li>\n<li>A few days later, redo the weakest question from scratch.</li>\n</ol>\n      <p>I would not skip the error log. It turns a vague \"I'm bad at ArrayLists\" into a specific habit you can fix, and after two weeks the most common cause stands out.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "How long should I spend on each free-response question?",
+      "a": "The section is 90 minutes for four questions, so about 22 minutes each if you split it evenly. Some students spend less on Question 1 and more on the class or collection questions. Decide your plan before exam day, not during it."
+    },
+    {
+      "q": "Where can I find real past AP CSA free-response questions?",
+      "a": "On AP Central, the College Board's site for AP teachers and students. It has <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions\" rel=\"noopener\">past free-response questions</a> and scoring guidelines for AP Computer Science A."
+    },
+    {
+      "q": "Which unit matters most for the free-response section?",
+      "a": "Data Collections, because Questions 3 and 4 are about ArrayList and 2D arrays. The College Board's <a href=\"https://apstudents.collegeboard.org/courses/ap-computer-science-a\" rel=\"noopener\">AP CSA course page</a> gives that unit 30% to 40% of the whole exam, the largest share of any unit."
+    }
+  ],
+  "sources": [
+    {
+      "title": "College Board: AP Computer Science A exam overview",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam"
+    },
+    {
+      "title": "College Board: AP Computer Science A assessment",
+      "url": "https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment"
+    },
+    {
+      "title": "College Board: AP Computer Science A past exam questions",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions"
+    },
+    {
+      "title": "College Board: AP Computer Science A course page",
+      "url": "https://apstudents.collegeboard.org/courses/ap-computer-science-a"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSP vs AP CSA: which should you take first?",
+      "href": "blog-ap-csp-vs-ap-csa.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    },
+    {
+      "title": "How to read an examiner report to find easy marks",
+      "href": "blog-examiner-reports.html"
+    }
+  ],
+  "cta_eyebrow": "Want a second pair of eyes on your answers?",
+  "cta_heading": "Book a short call and we will plan your practice"
+}

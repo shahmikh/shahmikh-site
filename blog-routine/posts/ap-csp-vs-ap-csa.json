@@ -1,0 +1,104 @@
+{
+  "slug": "ap-csp-vs-ap-csa",
+  "title": "AP CSP vs AP CSA: Which Should You Take First?",
+  "h1": "AP CSP vs AP CSA: Which Should You Take First?",
+  "description": "AP CSP needs no coding background and includes a project. AP CSA is Java-only with a free-response exam. How they differ and how to choose, with sources.",
+  "eyebrow": "AP Computer Science",
+  "read_min": 6,
+  "published": "2026-10-26",
+  "modified": "2026-10-26",
+  "card_summary": "What the College Board says about each course, a side-by-side table, and a simple way to choose.",
+  "lead": "Take AP Computer Science Principles (CSP) first if you have never written code. Take AP Computer Science A (CSA) first if you already program and want a Java course that looks like a college intro class. Neither course requires the other, so the real question is where you are right now.",
+  "takeaways": [
+    "AP CSP asks for no prior computer science experience, and the College Board sets no required programming language.",
+    "AP CSA teaches Java and ends in one exam: 42 multiple-choice questions and 4 free-response questions.",
+    "Neither course lists the other as a prerequisite. CSA recommends high school English and algebra.",
+    "CSP is graded partly on a project you build during the course. CSA is graded on one end-of-course exam, and 45% of it is writing Java.",
+    "Colleges set their own AP credit rules, so check your target schools before you count on credit."
+  ],
+  "sections": [
+    {
+      "id": "difference",
+      "h2": "What is the difference between AP CSP and AP CSA?",
+      "html": "<p>AP CSP covers computing broadly. It includes programming, but also topics like data, networks and the impact of technology on people. AP CSA is narrower and deeper: it is a programming course in Java. The College Board describes the two as complementary rather than as steps on one ladder.</p>\n      <div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th></th><th>AP CSP</th><th>AP CSA</th></tr></thead><tbody>\n<tr><th>Prior experience</th><td>None needed</td><td>High school English and algebra recommended</td></tr>\n<tr><th>Language</th><td>No designated language; the teacher chooses</td><td>Java</td></tr>\n<tr><th>Multiple choice</th><td>70 questions, 120 minutes, 70% of score</td><td>42 questions, 90 minutes, 55% of score</td></tr>\n<tr><th>Other scored part</th><td>Create performance task and a written response section, 30% of score</td><td>4 free-response questions, 90 minutes, 45% of score</td></tr>\n<tr><th>Project work</th><td>Create task: code, a video and a Personalized Project Reference, about 9 class hours</td><td>None</td></tr>\n</tbody></table></div>\n      <p class=\"post-note\">Exam details come from the College Board's <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam\" rel=\"noopener\">AP CSA exam page</a> and <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam\" rel=\"noopener\">AP CSP exam page</a>. Prerequisites and language come from the <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/frequently-asked-questions\" rel=\"noopener\">AP CSP FAQ</a>.</p>"
+    },
+    {
+      "id": "which-first",
+      "h2": "Which one should you take first?",
+      "html": "<p>I teach both courses one to one, and my recommendation depends on what you have already done.</p>\n      <p>If you have never coded, start with CSP. It assumes no experience, and because the teacher picks the language, the early weeks can focus on ideas like loops and conditions without also fighting Java's strict syntax.</p>\n      <p>If you have already built things in Python, Scratch, JavaScript or anything else, you can go straight to CSA. The new part is Java itself: types, classes, and writing code that has to match a specification exactly.</p>\n      <p>If you are aiming at computer science or engineering at university, CSA is the closer match to a first college programming class. The College Board calls it equivalent to a one-semester introductory college course. Taking CSP as well does no harm, since the two complement each other.</p>\n      <p>If your school offers only one of the two, take that one. Do not pass on it because you think you need the other first. You don't.</p>"
+    },
+    {
+      "id": "harder",
+      "h2": "Which one is harder?",
+      "html": "<p>They are hard in different ways. CSP asks for sustained work over several weeks: a project you design, code and explain, plus written answers about it. CSA asks for precision under time pressure. Four free-response questions in 90 minutes means writing working Java for each one, roughly 22 minutes apiece.</p>\n      <p>If you enjoy open-ended projects, CSP plays to that. If you enjoy puzzles with one right answer, CSA does. I would not choose a course on difficulty alone.</p>"
+    },
+    {
+      "id": "prerequisite",
+      "h2": "Do you need AP CSP before AP CSA?",
+      "html": "<p>No. The College Board's <a href=\"https://apstudents.collegeboard.org/courses/ap-computer-science-a\" rel=\"noopener\">AP CSA course page</a> recommends high school English and algebra and does not list CSP. The CSP FAQ says students do not need prior computer science experience, so CSP does not need CSA either.</p>"
+    },
+    {
+      "id": "csa-content",
+      "h2": "What does AP CSA actually cover?",
+      "html": "<p>The course has four units, each with a share of the exam:</p>\n      <ul>\n<li>Using Objects and Methods: 15% to 25%</li>\n<li>Selection and Iteration: 25% to 35%</li>\n<li>Class Creation: 10% to 18%</li>\n<li>Data Collections (arrays, ArrayList, 2D arrays, searching, sorting and recursion): 30% to 40%</li>\n</ul>\n      <p>Data Collections is the biggest unit, and two of the four free-response questions come from it. I go through all four in <a href=\"blog-ap-csa-free-response.html\">how to prepare for the AP CSA free-response questions</a>.</p>"
+    },
+    {
+      "id": "credit",
+      "h2": "Will AP CSP or AP CSA earn college credit?",
+      "html": "<p>It depends on the college. Each school publishes its own AP credit and placement policy, and the rules for computer science exams differ from one school to the next. A score that earns credit at one university may earn none at another. Look up the policy for every school on your list before you decide how much the exam matters.</p>"
+    },
+    {
+      "id": "decide",
+      "h2": "A quick way to decide this week",
+      "html": "<ol>\n<li>Ask your school which of the two it offers, and whether there is a sign-up deadline.</li>\n<li>Write one small program in any language, for example one that prints the numbers from 1 to 20 and flags the multiples of 3. If that felt manageable, CSA is realistic. If you did not know where to start, CSP is the better first step.</li>\n<li>Look up the AP credit policy at your top three colleges.</li>\n<li>Read one past <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions\" rel=\"noopener\">AP CSA free-response question</a>. If it looks like something you could learn to do by May, you have your answer.</li>\n<li>Still unsure? <a href=\"contact.html#booking\">Book a short call</a> and we can look at your schedule and goals together.</li>\n</ol>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I take AP CSA without taking AP CSP?",
+      "a": "Yes. The College Board recommends high school English and algebra for CSA and does not list CSP as a prerequisite. If you can already write simple programs, you can start with CSA."
+    },
+    {
+      "q": "Do I need to know Java before AP CSP?",
+      "a": "No. The College Board says there is no designated programming language for CSP, and teachers choose the language. Java is only required for CSA."
+    },
+    {
+      "q": "Is AP CSA harder than AP CSP?",
+      "a": "They are different rather than one being simply harder. CSP rewards steady project work and clear written explanations. CSA rewards writing exact Java under time pressure. The section above compares them in more detail."
+    }
+  ],
+  "sources": [
+    {
+      "title": "College Board: AP Computer Science A exam overview",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam"
+    },
+    {
+      "title": "College Board: AP Computer Science Principles exam overview",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam"
+    },
+    {
+      "title": "College Board: AP Computer Science Principles FAQ",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/frequently-asked-questions"
+    },
+    {
+      "title": "College Board: AP Computer Science A course page",
+      "url": "https://apstudents.collegeboard.org/courses/ap-computer-science-a"
+    }
+  ],
+  "related": [
+    {
+      "title": "How to prepare for the AP CSA free-response questions",
+      "href": "blog-ap-csa-free-response.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    },
+    {
+      "title": "Guiding your teen into a tech career: a parent's guide",
+      "href": "blog-parents-guide.html"
+    }
+  ],
+  "cta_eyebrow": "Choosing between the two?",
+  "cta_heading": "Book a short call and we will look at your options"
+}
