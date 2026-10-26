@@ -17,12 +17,7 @@
 <meta property="og:image" content="https://shahmikh.com/headshot.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="home.css">
 
 <script type="application/ld+json">
 {
@@ -34,6 +29,8 @@
   "knowsAbout": ["AWS", "Cloud Computing", "Cybersecurity", "CompTIA Security+", "Cisco CCNA", "Computer Science Education", "DevSecOps"]
 }
 </script>
+<link rel="preload" href="fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
 
@@ -70,187 +67,108 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
+  <section class="h-hero">
+    <div class="h-hero-in">
       <div>
-        <p class="hero-eyebrow">Tutor · Engineer · Career mentor</p>
-        <h1>
-          Study smarter.
-          Choose
-          <span class="marked--circle">wisely.
-            <svg viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M12,38 C8,15 40,4 100,5 C165,6 192,18 188,36 C184,55 150,66 100,65 C48,64 16,58 13,42" fill="none" stroke="#C9A24B" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-          </span>
-          Build what's next.
-        </h1>
-        <p class="lede">I'm Syed Shahmikh Ali. I started out as an engineer, and now I tutor and mentor. I help students, parents and career-changers make better calls on exams, degrees and tech careers, in live one-to-one sessions.</p>
-
-        <div class="hero-actions">
-          <a href="contact.html#booking" class="btn btn--gold">Book a Free Call</a>
-          <a href="career-guidance.html" class="btn btn--ghost-on-ink">Explore Career Guidance</a>
+        <h1>Learn computer science <span>one to one</span></h1>
+        <p class="h-lede">AP, IB and IGCSE computer science, plus Security+, CCNA and Python. Live on video, with a teacher who knows your name and your exam board.</p>
+        <div class="h-acts">
+          <a class="btn btn--primary" href="contact.html#booking">Book a free 15-minute call</a>
+          <a class="btn btn--ghost" href="courses.html">Explore subjects</a>
         </div>
-
-        <p class="preply-note">Preply Super Tutor &middot; Top 15% of computer science tutors</p>
-
-        <div class="hero-trust">
-          <div class="hero-trust-item">
-            <strong>97</strong>
-            <span>Reviews</span>
-          </div>
-          <div class="hero-trust-item">
-            <strong>4,500+</strong>
-            <span>Hours taught</span>
-          </div>
-          <div class="hero-trust-item">
-            <strong>9</strong>
-            <span>Certification &amp; CS tracks</span>
-          </div>
+        <div class="h-chips" aria-label="Subjects">
+          <span class="h-chip">AP CSP</span><span class="h-chip">AP CSA</span><span class="h-chip">IB CS</span><span class="h-chip">IGCSE</span><span class="h-chip">Security+</span><span class="h-chip">CCNA</span><span class="h-chip">Python</span>
         </div>
       </div>
-
-      <div class="hero-portrait">
-        <div class="portrait-frame">
-          <img src="headshot.jpg" alt="Portrait of Syed Shahmikh Ali" width="340" height="390">
-        </div>
+      <div class="h-pic">
+        <div class="blob"></div>
+        <img src="headshot.jpg" alt="Portrait of Syed Shahmikh Ali, your computer science teacher" width="420" height="483">
+        <div class="h-float h-f1"><i aria-hidden="true">&#9733;</i><div><b>Super Tutor</b>on Preply</div></div>
+        <div class="h-float h-f2"><i aria-hidden="true">15</i><div><b>Top 15%</b>of CS tutors</div></div>
       </div>
     </div>
   </section>
 
-  <!-- CREDENTIAL / SUBJECT STRIP -->
-  <div class="cred-strip">
-    <div class="container cred-row">
-      <span class="cred-label">What I cover</span>
-      <div class="cred-list">
-        <span>Exam &amp; study strategy</span>
-        <span>Career guidance</span>
-        <span>Degree decisions</span>
-        <span>Security+ SY0-701</span>
-        <span>Network+</span>
-        <span>CCNA</span>
-        <span>AP CSP</span>
-        <span>AP CSA</span>
-        <span>IB CS HL/SL</span>
-        <span>Python</span>
-        <span>Java OOP</span>
-        <span>ISC2 CC (Guidance)</span>
-        <span>AI (Basics–Advanced)</span>
-      </div>
-    </div>
+  <div class="h-trust">
+    <div><b>1 to 1</b><span>Every lesson, live on video</span></div>
+    <div><b>Top 15%</b><span>Of computer science tutors on Preply</span></div>
+    <div><b>US &middot; UK &middot; EU</b><span>Where my students are</span></div>
+    <div><b>Free call</b><span>15 minutes to see if we fit</span></div>
   </div>
 
-  <!-- WHAT I DO -->
-  <section class="section-tight">
+  <!-- SUBJECTS -->
+  <section class="h-sec" id="subjects">
     <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">How I can help</p>
-        <h2>Strategy, guidance, and hands-on skills</h2>
-      </div>
-
-      <div class="grid-2">
-        <article class="card course-card reveal">
-          <span class="badge">CAREER GUIDANCE</span>
-          <h4>Career &amp; Degree Decisions</h4>
-          <p>Is this degree right for you? What comes after school? Straight answers in 1:1 sessions for students, parents and career-changers.</p>
-          <a class="course-link" href="career-guidance.html">
-            Explore guidance
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </article>
-        <article class="card course-card reveal">
-          <span class="badge">STRATEGY</span>
-          <h4>Exam &amp; Study Strategy</h4>
-          <p>How exams are actually marked, how to use past papers and examiner reports, and a revision plan that fits your life — for AP, IB, IGCSE, A-levels and university.</p>
-          <a class="course-link" href="career-guidance.html#study-plan">
-            Build a study plan
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </article>
-        <article class="card course-card reveal">
-          <span class="badge">CERTIFICATION</span>
-          <h4>Security+, Network+ &amp; CCNA</h4>
-          <p>Hands-on, exam-focused cybersecurity and networking, built around real configurations rather than flashcards.</p>
-          <a class="course-link" href="courses.html">
-            Learn more
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </article>
-        <article class="card course-card reveal">
-          <span class="badge">ACADEMIC</span>
-          <h4>AP CSP, AP CSA, IB CS &amp; Programming</h4>
-          <p>Curriculum-aligned tutoring for AP CSP, AP CSA and IB CS (HL and SL, including IA support), plus Python and Java OOP.</p>
-          <a class="course-link" href="courses.html">
-            Learn more
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </article>
+      <div class="h-head reveal"><h2>Pick what you want to learn</h2><p>Every subject is taught live, one to one, at your pace.</p></div>
+      <div class="h-tiles">
+        <a class="h-tile t-mint reveal" href="courses.html"><div><small>High school</small><h3>AP Computer Science Principles</h3><p>Create task, data, algorithms and the exam.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-peach reveal" href="courses.html"><div><small>High school</small><h3>AP Computer Science A</h3><p>Java and the four free-response types.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-sky reveal" href="courses.html"><div><small>High school</small><h3>IB Computer Science</h3><p>HL and SL, papers and Internal Assessment.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-butter reveal" href="courses.html"><div><small>High school</small><h3>IGCSE Computer Science</h3><p>Theory, pseudocode and programming.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-butter reveal" href="courses.html"><div><small>Certification</small><h3>CompTIA Security+</h3><p>Exam-focused, with hands-on practice.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-mint reveal" href="courses.html"><div><small>Certification</small><h3>Cisco CCNA</h3><p>Networking from the ground up.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-peach reveal" href="courses.html"><div><small>All levels</small><h3>Python and Java</h3><p>From a first script to object-oriented projects.</p></div><span class="go">Learn more &rarr;</span></a>
+        <a class="h-tile t-sky reveal" href="career-guidance.html"><div><small>Everyone</small><h3>Study and career guidance</h3><p>Degree choices and a cloud or security roadmap.</p></div><span class="go">Learn more &rarr;</span></a>
       </div>
     </div>
   </section>
 
-  <!-- AUDIENCE -->
-  <section class="section-tight" style="background: var(--paper-dim);">
+  <!-- HOW IT WORKS -->
+  <section class="h-sec" id="how">
     <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Who this is for</p>
-        <h2>Wherever you're starting from, there's a way in</h2>
-      </div>
-
-      <div class="grid-4">
-        <div class="audience-card reveal">
-          <span class="num">PARENTS</span>
-          <h4>Supporting a child's path</h4>
-          <p>Understand where your child really stands, how to help without adding pressure, and which choices are worth the time.</p>
-        </div>
-        <div class="audience-card reveal">
-          <span class="num">SCHOOL STUDENTS</span>
-          <h4>AP, IB, IGCSE &amp; A-levels</h4>
-          <p>Smarter revision, exam technique, and structured help in Computer Science.</p>
-        </div>
-        <div class="audience-card reveal">
-          <span class="num">UNI STUDENTS</span>
-          <h4>Beyond the degree</h4>
-          <p>Project guidance, study strategy, and hands-on Security+, CCNA and cloud fundamentals.</p>
-        </div>
-        <div class="audience-card reveal">
-          <span class="num">CAREER-CHANGERS</span>
-          <h4>Pivoting into tech</h4>
-          <p>A practical roadmap from someone who made the jump from engineering into cloud and security.</p>
-        </div>
+      <div class="h-head reveal"><h2>How it works</h2><p>Three steps, and the first one is free.</p></div>
+      <div class="h-how">
+        <div class="h-step reveal"><div class="n">1</div><h3>Book a free call</h3><p>15 minutes on video. Tell me your goal, your exam board or your deadline.</p></div>
+        <div class="h-step reveal"><div class="n">2</div><h3>Get a plan</h3><p>I show you where to start, what to practise and how lessons would run.</p></div>
+        <div class="h-step reveal"><div class="n">3</div><h3>Start lessons</h3><p>Live one-to-one sessions, with notes and practice after each one.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CAREER GUIDANCE FEATURE -->
-  <section class="section-tight">
+  <!-- AUDIENCES -->
+  <section class="h-sec">
     <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Career guidance</p>
-        <h2>Big decisions deserve a second opinion</h2>
+      <div class="h-head reveal"><h2>Who I teach</h2></div>
+      <div class="h-aud">
+        <div class="h-card t-mint reveal"><h3>For parents</h3><p>Your child is taking AP, IB or IGCSE computer science and you want an honest picture of where they stand.</p>
+          <ul><li>Lessons follow the exam board's course</li><li>Past papers and examiner reports</li><li>Straight feedback, no grade promises</li></ul>
+          <a class="btn btn--primary" href="contact.html#booking">Book a call</a></div>
+        <div class="h-card t-peach reveal"><h3>For students and career-changers</h3><p>You are learning IT or moving into it, and want a clear route.</p>
+          <ul><li>Security+, CCNA, Python and Java</li><li>A realistic roadmap into cloud and security</li><li>Hands-on practice, not just slides</li></ul>
+          <a class="btn btn--primary" href="contact.html#booking">Book a call</a></div>
       </div>
+    </div>
+  </section>
 
-      <div class="grid-3">
-        <article class="card reveal">
-          <h4>For students</h4>
-          <p>A study plan built around your exams and your weak spots — using past papers and examiner reports instead of rereading notes.</p>
-        </article>
-        <article class="card reveal">
-          <h4>For parents</h4>
-          <p>Work out whether it's a learning gap or a motivation problem, and how to support your child without turning every evening into a fight.</p>
-        </article>
-        <article class="card reveal">
-          <h4>For career-changers</h4>
-          <p>A realistic cloud and DevSecOps roadmap: where to start, which certifications matter, and what to skip.</p>
-        </article>
+  <!-- REVIEWS -->
+  <section class="h-sec" id="reviews">
+    <div class="container">
+      <div class="h-head reveal"><h2>What students and parents say</h2><p>Reviews left on Preply.</p></div>
+      <div class="h-revs">
+        <div class="h-rev big reveal"><blockquote>&ldquo;My son learned more about computer skills in the few booked hours than in half a year of IT classes at school. He explains very clearly and is motivating.&rdquo;</blockquote><div class="who"><span class="av" style="background:var(--gold)">L</span><div><b>Ludmila</b><small>Parent</small></div></div></div>
+        <div class="h-rev reveal"><blockquote>&ldquo;He&rsquo;s a really patient and helpful tutor. He explains concepts in a way that makes them much easier to understand, especially when I&rsquo;m struggling with something in CS.&rdquo;</blockquote><div class="who"><span class="av" style="background:var(--sky)">H</span><div><b>Harshita</b><small>IB Computer Science</small></div></div></div>
+        <div class="h-rev reveal"><blockquote>&ldquo;Syed is a very experienced, patient trainer who explains things very simply. I loved my first class with Syed.&rdquo;</blockquote><div class="who"><span class="av" style="background:var(--mint)">L</span><div><b>Luca</b><small>Student</small></div></div></div>
+        <div class="h-rev h-rev-wide reveal" style="grid-column:span 2"><blockquote>&ldquo;Syed was very patient and made me understand the material really quick!&rdquo;<code># Syed's patience: float('inf') &nbsp;|&nbsp; # My confusion: 0 &nbsp;|&nbsp; print("100% recommend!")</code></blockquote><div class="who"><span class="av" style="background:var(--peach)">M</span><div><b>Marielle</b><small>Student</small></div></div></div>
+        <div class="h-rev h-more reveal"><b>Read every review</b><a class="btn btn--ghost" href="testimonials.html">See all reviews &rarr;</a></div>
       </div>
+    </div>
+  </section>
 
-      <p class="reveal" style="margin-top: var(--space-3);"><a class="course-link" href="career-guidance.html">See how career guidance sessions work
-        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+  <!-- FAQ -->
+  <section class="h-sec">
+    <div class="container">
+      <div class="h-head reveal"><h2>Questions parents and students ask</h2></div>
+      <div class="h-faq">
+        <details class="h-q"><summary>Is the first call really free?</summary><p>Yes. It's 15 minutes on video to talk about your goals and see whether I'm the right fit.</p></details>
+        <details class="h-q"><summary>Which exam boards do you teach?</summary><p>AP, IB (HL and SL) and Cambridge IGCSE computer science, plus Security+ and CCNA for certifications.</p></details>
+        <details class="h-q"><summary>Do you guarantee grades?</summary><p>No. I give honest feedback and a clear plan, and the results come from the work we do together.</p></details>
+        <details class="h-q"><summary>Where are lessons held?</summary><p>Live on video, one student at a time, at times that suit your time zone. More answers are on the <a href="faq.html" style="text-decoration:underline">FAQ page</a>.</p></details>
+      </div>
     </div>
   </section>
 
   <!-- FOLLOW ALONG (hidden until YouTube / Instagram links are added in the HTML) -->
-  <section class="section-tight social-section" style="background: var(--paper-dim);">
+  <section class="section-tight social-section" >
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Follow along</p>
@@ -263,69 +181,8 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
-  <section class="on-ink">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">The journey</p>
-        <h2>From actuators to access control</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-step reveal">
-          <span class="marker" aria-hidden="true">01</span>
-          <h4>Mechatronics Engineering</h4>
-          <p>Studied how physical systems behave: control loops, actuators and design fundamentals.</p>
-        </div>
-        <div class="timeline-step reveal">
-          <span class="marker" aria-hidden="true">02</span>
-          <h4>CAD &amp; Design Engineering</h4>
-          <p>Applied that foundation in professional design engineering roles.</p>
-        </div>
-        <div class="timeline-step reveal">
-          <span class="marker" aria-hidden="true">03</span>
-          <h4>Cloud, Security &amp; AI</h4>
-          <p>Retrained across cloud, cybersecurity, DevOps, SysOps, and AI for IT operations, then worked as an AWS Cloud Engineer.</p>
-        </div>
-        <div class="timeline-step reveal">
-          <span class="marker" aria-hidden="true">04</span>
-          <h4>Educator &amp; Career Guide</h4>
-          <p>Now helping students, career-changers, and the parents backing them study smarter, choose better, and build real skills.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL PREVIEW -->
-  <section class="section-tight">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">What students &amp; parents say</p>
-        <h2>97 reviews</h2>
-      </div>
-
-      <div class="grid-3">
-        <article class="card testi-card reveal">
-          <p class="stars">★★★★★</p>
-          <p>"My son learned more about computer skills in a few booked hours than in half a year of IT classes at school. He explains very clearly and is motivating."</p>
-          <div class="testi-name"><strong>Ludmila</strong></div>
-        </article>
-        <article class="card testi-card reveal">
-          <p class="stars">★★★★★</p>
-          <p>"Syed explains networking concepts clearly and focuses a lot on hands-on practice with real examples. I've seen a big improvement in both my understanding and confidence."</p>
-          <div class="testi-name"><strong>Sanix</strong></div>
-        </article>
-        <article class="card testi-card reveal">
-          <p class="stars">★★★★★</p>
-          <p>"Knowledgeable cybersecurity professional who is helping me with getting my Security+ certification."</p>
-          <div class="testi-name"><strong>Zaid</strong></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- CLOSING CTA -->
-  <section class="cta-band on-ink">
+  <section class="cta-band on-ink" style="margin-top:var(--space-6)">
     <div class="container">
       <p class="eyebrow">Start here</p>
       <h2>Ready to figure out your <span class="marked--circle">next step
