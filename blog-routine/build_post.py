@@ -30,7 +30,7 @@ BANNED = [
 HEADER = """<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav-row">
-    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true">S</span>Shahmikh</a>
+    <a href="index.html" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
       <a href="courses.html">Subjects</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="testimonials.html">Reviews</a><a href="blog.html" class="is-active">Blog</a><a href="about.html">About</a>
     </nav>
@@ -190,6 +190,7 @@ def render(p):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#0B1B33">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="{url}">
