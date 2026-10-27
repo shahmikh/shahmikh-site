@@ -1,6 +1,7 @@
 # Topic backlog and log
 
 ## Published
+(2026-10-27: owner asked to remove ALL earlier posts from the site. Their files are deleted and the two generated posts' JSON now sit in blog-routine/retired/. Do NOT republish them. Old URLs redirect to /blog.html through public/_redirects.)
 - 2026-10-26: `ap-csp-vs-ap-csa` (AP CSP vs AP CSA: which should you take first?)
 - 2026-10-26: `ap-csa-free-response` (AP CSA free-response: 4 question types and how to prep)
 

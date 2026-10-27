@@ -369,3 +369,6 @@
   .author-box { flex-direction: column; }
   .post-table tbody th { white-space: normal; }
 }
+
+.blog-empty{color:var(--slate);font-size:var(--step-1);padding:var(--space-4) 0}
+.blog-empty:has(+ .blog-grid .blog-card){display:none}

@@ -30,15 +30,13 @@ BANNED = [
 HEADER = """<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav-row">
-    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true">S</span>SHAHMIKH</a>
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true">S</span>Shahmikh</a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a>
-      <a href="career-guidance.html">Career Guidance</a><a href="pricing.html">Pricing</a><a href="testimonials.html">Testimonials</a><a href="blog.html" class="is-active">Blog</a>
-      <a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+      <a href="courses.html">Subjects</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="testimonials.html">Reviews</a><a href="blog.html" class="is-active">Blog</a><a href="about.html">About</a>
     </nav>
     <div class="nav-cta">
       <a href="contact.html" class="btn btn--ghost">Contact</a>
-      <a href="contact.html#booking" class="btn btn--primary">Book a Call</a>
+      <a href="contact.html#booking" class="btn btn--primary">Book a free call</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
     </div>
   </div>
@@ -206,11 +204,9 @@ def render(p):
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{site}/headshot.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="theme.css">
 <script type="application/ld+json">
 {ld}
 </script>
