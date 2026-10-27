@@ -393,3 +393,23 @@
 .res-note a{font-weight:700;text-decoration:underline}
 @media(max-width:900px){.res-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.res-grid{grid-template-columns:1fr}}
+
+/* free guide */
+.fg-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.fg-cover img{border:2px solid rgba(255,255,255,.25);width:100%;max-width:380px;height:auto;border-radius:14px;box-shadow:0 24px 50px -20px rgba(0,0,0,.5);display:block;margin-inline:auto;transform:rotate(2deg)}
+.fg-form{margin-top:26px;background:#fff;color:#0B1F3A;border-radius:18px;padding:22px;max-width:520px}
+.fg-form label{display:block;font-weight:700;margin-bottom:8px}
+.fg-form .fg-sel{margin-top:14px}
+.fg-row{display:flex;gap:10px;flex-wrap:wrap}
+.fg-form input[type=email],.fg-form select{flex:1 1 220px;width:100%;padding:13px 14px;border:1.5px solid #cdd8ea;border-radius:12px;font:inherit;color:#0B1F3A;background:#fff}
+.fg-form select{flex:none}
+.fg-form .btn{flex:1 1 100%;justify-content:center}
+.fg-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.fg-fine{font-size:.82rem;color:#5a6b85;margin-top:12px}
+.fg-msg{margin-top:8px;font-weight:600}.fg-msg.err{color:#c0392b}
+.fg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.fg-card{padding:22px;border:1.5px solid #dfe6f1;border-radius:18px;background:#fff}
+.fg-card h3{font-size:1.1rem;margin-bottom:6px}.fg-card p{color:#4a5b78}.fg-card a{font-weight:700;text-decoration:underline}
+.fg-by{margin-top:30px;padding:20px 24px;background:#FFE9DF;border-radius:16px}
+@media(max-width:900px){.fg-hero{grid-template-columns:1fr}.fg-cover{order:-1}.fg-cover img{max-width:240px}.fg-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.fg-grid{grid-template-columns:1fr}}
