@@ -32,7 +32,8 @@ HEADER = """<a class="skip-link" href="#main">Skip to content</a>
   <div class="container nav-row">
     <a href="index.html" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="courses.html">Subjects</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="testimonials.html">Reviews</a><a href="blog.html" class="is-active">Blog</a><a href="about.html">About</a>
+      <a href="courses.html">Subjects</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a>
+      <a href="resources.html">Resources</a><a href="testimonials.html">Reviews</a><a href="blog.html" class="is-active">Blog</a><a href="about.html">About</a>
     </nav>
     <div class="nav-cta">
       <a href="contact.html" class="btn btn--ghost">Contact</a>
@@ -47,7 +48,7 @@ FOOTER = """<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="resources.html">Resources</a></li><li><a href="blog.html">Blog</a></li></ul></div>
       <div class="footer-col"><h4>Programs</h4><ul><li><a href="courses.html">Security+ &amp; CCNA</a></li><li><a href="courses.html">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance.html">Career Guidance</a></li></ul></div>
       <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a class="social-link" href="#" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="#" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li></ul></div>
     </div>
