@@ -30,3 +30,4 @@ The owner asked for two posts a week, written with the SEO skill in `blog-routin
 - Never edit `wrangler.jsonc`. The site is served from `public/`.
 - Do not change existing posts beyond adding one internal link.
 - Quality over volume. If a topic has no real angle, swap it for a better one.
+- Owner decision (2026-10-29): do not add any "written with AI assistance" wording to posts. The owner reviews every post himself. Links in posts use a highlight style (theme.css), not underlines; do not add underline styling.
