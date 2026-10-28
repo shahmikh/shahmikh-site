@@ -1,0 +1,86 @@
+{
+  "slug": "security-plus-sy0-701-study-plan",
+  "title": "Security+ SY0-701: What It Covers and an 8-Week Plan",
+  "h1": "CompTIA Security+ SY0-701: What the Exam Covers and a Realistic 8-Week Study Plan",
+  "description": "Security+ SY0-701 has 5 domains, up to 90 questions and a 750 pass mark. See what each domain weighs and an 8-week study plan that follows those weights.",
+  "eyebrow": "CompTIA Security+",
+  "read_min": 8,
+  "card_summary": "The exam format, how the five domains are weighted, and an 8-week plan that gives the most time to the biggest domains.",
+  "lead": "CompTIA Security+ SY0-701 is a 90-minute exam with a maximum of 90 questions, a mix of multiple-choice and performance-based items, and you need 750 on a scale of 100 to 900 to pass. It is split into five domains, and Security Operations alone is 28% of it. A realistic plan for most people with some IT background is about 8 weeks, spending study time roughly in proportion to those domain weights and finishing with timed practice questions.",
+  "takeaways": [
+    "SY0-701 allows a maximum of 90 questions in 90 minutes, mixing multiple-choice and performance-based questions. The pass mark is 750 on a 100 to 900 scale.",
+    "Security Operations (28%) and Threats, Vulnerabilities and Mitigations (22%) together are half of the exam.",
+    "General Security Concepts is the smallest domain at 12%, but its ideas, like the CIA triad and access control, appear in every other domain.",
+    "CompTIA recommends Network+ and two years of security or systems administration experience, and these are recommendations, not prerequisites.",
+    "Study in proportion to the domain weights, and switch to timed practice questions for the last two weeks."
+  ],
+  "sections": [
+    {
+      "id": "format",
+      "h2": "What is the Security+ SY0-701 exam format?",
+      "html": "<p>The <a href=\"https://www.comptia.org/en-us/certifications/security/v7/\" rel=\"noopener\">CompTIA Security+ page</a> lists the exam as SY0-701, with a maximum of 90 questions, 90 minutes, multiple-choice and performance-based questions, and a passing score of 750 on a scale of 100 to 900. It is offered in English, Japanese, Portuguese, Spanish and Thai.</p>\n<p>Performance-based questions are small simulated tasks, such as configuring or analysing something, instead of picking an answer. You will need to know a topic well enough to do something with it, not just recognise the right term.</p>\n<p>CompTIA lists Network+ plus two years of security or systems administrator experience as recommended, not required. If you are new to IT, expect to need more time on networking basics, since many security concepts build on them.</p>"
+    },
+    {
+      "id": "domains",
+      "h2": "How is the exam split across the five domains?",
+      "html": "<p>The same <a href=\"https://www.comptia.org/en-us/certifications/security/v7/\" rel=\"noopener\">CompTIA page</a> gives these weights:</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>Domain</th><th>Weight</th></tr></thead><tbody>\n<tr><th>General Security Concepts</th><td>12%</td></tr>\n<tr><th>Threats, Vulnerabilities and Mitigations</th><td>22%</td></tr>\n<tr><th>Security Architecture</th><td>18%</td></tr>\n<tr><th>Security Operations</th><td>28%</td></tr>\n<tr><th>Security Program Management and Oversight</th><td>20%</td></tr>\n</tbody></table></div>\n<p>CompTIA's own comparison of <a href=\"https://www.comptia.org/en-us/blog/comptia-security-601-vs-701-whats-the-difference/\" rel=\"noopener\">SY0-601 and SY0-701</a> explains that Security Operations absorbed the old incident response domain, that General Security Concepts is a new domain, and that the exam puts more emphasis on current trends such as zero trust, automation, and hybrid cloud and on-premises environments. If you find a study book or video made for SY0-601, check it against the 701 objectives before relying on it.</p>"
+    },
+    {
+      "id": "plan",
+      "h2": "What does a realistic 8-week study plan look like?",
+      "html": "<p>This plan is my own teaching suggestion, not a CompTIA recommendation. It assumes about 8 to 10 hours a week and some IT background. If you have none, stretch it to 10 or 12 weeks and add networking basics at the start.</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>Week</th><th>Focus</th><th>Why</th></tr></thead><tbody>\n<tr><th>1</th><td>General Security Concepts</td><td>Small domain, but the vocabulary underpins everything else</td></tr>\n<tr><th>2 and 3</th><td>Threats, Vulnerabilities and Mitigations</td><td>22%, and full of terms that are easy to mix up</td></tr>\n<tr><th>4</th><td>Security Architecture</td><td>18%: network design, cloud, resilience, cryptography basics</td></tr>\n<tr><th>5 and 6</th><td>Security Operations</td><td>The biggest domain at 28%: monitoring, incident response, identity and access management, automation</td></tr>\n<tr><th>7</th><td>Security Program Management and Oversight</td><td>20%: risk, governance, compliance, third parties, awareness</td></tr>\n<tr><th>8</th><td>Timed practice and weak spots</td><td>Full-length practice under exam timing, then fix what you missed</td></tr>\n</tbody></table></div>\n<p>Each week, spend roughly half your time learning, a quarter on practice questions on that domain, and a quarter reviewing wrong answers from earlier weeks.</p>"
+    },
+    {
+      "id": "method",
+      "h2": "How should you study each domain?",
+      "html": "<p>Read the exam objectives first. CompTIA publishes them for each exam, and they are the list of what can be asked. Turn each objective into a question you can answer from memory, such as &quot;what is the difference between X and Y, and when would I use each?&quot;</p>\n<ol>\n<li><strong>Learn in short blocks.</strong> One objective group per session, then close the book and write what you remember.</li>\n<li><strong>Make comparison tables.</strong> Security+ loves pairs that sound alike, such as authentication and authorisation, or symmetric and asymmetric encryption.</li>\n<li><strong>Do hands-on work for the operations topics.</strong> Reading logs, running a vulnerability scan on your own lab machine and setting up a basic firewall rule teach more than rereading notes.</li>\n<li><strong>Review every wrong answer.</strong> Write why the right answer is right and why your answer was wrong. That second part is where the points come from.</li>\n</ol>"
+    },
+    {
+      "id": "exam",
+      "h2": "How do you prepare for the final week and exam day?",
+      "html": "<p>In the last week, do two timed runs of 90 questions in 90 minutes using a reputable question bank, and treat the second run as a rehearsal. About one minute per question is the rule of thumb the format suggests. If a performance-based question looks long, mark it, answer what you can and keep moving, then come back with the time that is left.</p>\n<p>Aim to be well above the pass mark on practice papers before you book, and check CompTIA's page for the current exam version and any retirement notice before you pay for a voucher. If you would like a plan built around your own background, my <a href=\"courses.html\">Security+ and CCNA lessons</a> start with a short diagnostic, and you can <a href=\"contact.html#booking\">book a free call</a> to talk it through.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "How many questions are on the Security+ SY0-701 exam?",
+      "a": "CompTIA lists a maximum of 90 questions, in 90 minutes. They are a mix of multiple-choice and performance-based questions, so the exact number can vary."
+    },
+    {
+      "q": "What score do you need to pass Security+ SY0-701?",
+      "a": "A score of 750 on a scale of 100 to 900. CompTIA does not turn this into a simple percentage of questions, so aim well above the pass mark in practice."
+    },
+    {
+      "q": "Do I need Network+ before Security+?",
+      "a": "No. CompTIA recommends Network+ and two years of experience, but they are not requirements. If you do not have a networking background, add time for IP addressing, ports and common protocols before you start the security topics."
+    }
+  ],
+  "sources": [
+    {
+      "title": "CompTIA: Security+ (SY0-701) certification",
+      "url": "https://www.comptia.org/en-us/certifications/security/v7/"
+    },
+    {
+      "title": "CompTIA: Security+ 601 vs. 701, what is the difference",
+      "url": "https://www.comptia.org/en-us/blog/comptia-security-601-vs-701-whats-the-difference/"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring (and Security+ and CCNA)",
+      "href": "courses.html"
+    },
+    {
+      "title": "CCNA 200-301: what is on the exam and how to practise labs",
+      "href": "blog-ccna-200-301-exam-guide.html"
+    },
+    {
+      "title": "How to use past papers properly for computer science exams",
+      "href": "blog-past-papers-method.html"
+    }
+  ],
+  "cta_eyebrow": "Want a plan for your own background?",
+  "cta_heading": "Book a short call and we will build your Security+ schedule",
+  "published": "2026-10-29",
+  "modified": "2026-10-29"
+}

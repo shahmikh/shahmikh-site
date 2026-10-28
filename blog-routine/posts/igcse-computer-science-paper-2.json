@@ -1,0 +1,86 @@
+{
+  "slug": "igcse-computer-science-paper-2",
+  "title": "IGCSE Computer Science 0478 Paper 2: How to Revise It",
+  "h1": "IGCSE Computer Science 0478 Paper 2: How to Revise Problem-Solving and Pseudocode",
+  "description": "Paper 2 is half of your IGCSE Computer Science grade. What it covers, how pseudocode is marked, how to handle the 15-mark scenario, and a revision plan.",
+  "eyebrow": "Cambridge IGCSE Computer Science",
+  "read_min": 8,
+  "card_summary": "What Paper 2 tests, the rules on pseudocode and the 15-mark scenario question, and a revision routine built on past papers and mark schemes.",
+  "lead": "Paper 2 of Cambridge IGCSE Computer Science (0478) is called Algorithms, Programming and Logic, and it is worth 50% of your grade: 75 marks in 1 hour 45 minutes, on algorithm design, programming, databases and Boolean logic. Most of your coding is written in pseudocode, the 15-mark scenario question at the end is the one place you can use a real language, and logic matters more than perfect syntax. The best revision is to write and trace algorithms by hand, then mark yourself against the official mark schemes.",
+  "takeaways": [
+    "Paper 2 is 75 marks, 1 hour 45 minutes and 50% of the qualification. Paper 1 (Computer Systems) is the other half.",
+    "It covers topics 7 to 10: algorithm design and problem-solving, programming, databases and Boolean logic.",
+    "Where a question asks you to write code, you answer in pseudocode, and code written in a programming language earns no marks, with one exception.",
+    "The exception is the 15-mark scenario question, which you can answer in pseudocode or in Python, Visual Basic or Java. It is expected to take about 30 minutes.",
+    "Calculators are not allowed, and the syllabus says knowledge of language syntax is not examined, so practise by hand."
+  ],
+  "sections": [
+    {
+      "id": "format",
+      "h2": "What does IGCSE Computer Science Paper 2 cover?",
+      "html": "<p>Paper 2 tests the second half of the syllabus. According to the <a href=\"https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf\" rel=\"noopener\">Cambridge 2026 to 2028 syllabus</a>, both papers are 1 hour 45 minutes and 75 marks, each worth 50%. Paper 2 contains short-answer and structured questions plus a scenario-based question, and all questions are compulsory.</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>Topic</th><th>Heading in the syllabus</th></tr></thead><tbody>\n<tr><th>7</th><td>Algorithm design and problem-solving</td></tr>\n<tr><th>8</th><td>Programming</td></tr>\n<tr><th>9</th><td>Databases</td></tr>\n<tr><th>10</th><td>Boolean logic</td></tr>\n</tbody></table></div>\n<p>This post covers the 2026 to 2028 syllabus. Cambridge publishes a later syllabus with different rules, so check the year on the syllabus your school is teaching before you rely on any detail here.</p>"
+    },
+    {
+      "id": "pseudocode",
+      "h2": "How is pseudocode marked, and do I need to know a programming language?",
+      "html": "<p>You need to write clear, correct logic. The syllabus says that where a solution involves coding, you must write it in pseudocode, and that solutions written in programming code receive no marks. It also says knowledge of programming language syntax is not examined, which means a missing colon is not what separates grades.</p>\n<p>The one exception is the scenario question. There you may answer in pseudocode or in Python, Visual Basic or Java, and solutions in other languages receive no marks. If you learn Python in class, that is a comfortable choice for the scenario question, but you can also use pseudocode all the way through and keep one style for the whole paper.</p>\n<p>Practise the constructs the algorithms need: variables and arrays, <code>IF</code> statements, loops that count and loops that stop on a condition, input and output, and splitting a task into procedures or functions. Write them the same way every time so you do not stop to think about layout in the exam.</p>"
+    },
+    {
+      "id": "scenario",
+      "h2": "How should you handle the 15-mark scenario question?",
+      "html": "<p>The syllabus describes it as an unseen question worth 15 marks and expected to take about 30 minutes. That leaves roughly 75 minutes for the other 60 marks, about 1.25 minutes per mark. Treat those numbers as a planning guide.</p>\n<p>Here is the approach I teach, which is my own method rather than an official one:</p>\n<ol>\n<li><strong>Underline the requirements.</strong> Every sentence of the scenario usually hides a mark: an input, a check, a calculation or an output.</li>\n<li><strong>Write a plan in plain English first.</strong> Three or four lines of what the program does, in order.</li>\n<li><strong>Write the algorithm in blocks.</strong> Inputs, validation, main loop, output. Keep names meaningful.</li>\n<li><strong>Test it on one sample value.</strong> Walk through your own code with a small example, as you would with a trace table.</li>\n<li><strong>Tick the requirements off.</strong> Re-read the scenario and check that each underlined point appears in your answer.</li>\n</ol>\n<p>A partly correct answer still earns marks, so never leave it blank. Write the parts you are sure of and move on.</p>"
+    },
+    {
+      "id": "revise",
+      "h2": "What is a good revision plan for Paper 2?",
+      "html": "<p>Revise by doing, not by reading. Cambridge publishes a <a href=\"https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/\" rel=\"noopener\">past papers page for 0478</a> with question papers and mark schemes, and the best use of it is a short, repeated loop. Here is a four-week example plan, which you can stretch or squeeze to fit the time you have.</p>\n<ol>\n<li><strong>Week 1, algorithms.</strong> Trace short programs by hand, write algorithms for simple tasks such as totals, averages, finding the largest value and searching a list, and fix the errors in code that does not work.</li>\n<li><strong>Week 2, programming.</strong> Work on arrays, loops inside loops, validation checks and splitting code into procedures. Write each answer from memory, then compare it with the mark scheme.</li>\n<li><strong>Week 3, databases and Boolean logic.</strong> Practise reading a table, choosing fields and writing queries, and complete truth tables and logic gate diagrams until they feel routine.</li>\n<li><strong>Week 4, full papers.</strong> Do whole Paper 2 papers in 1 hour 45 minutes, without a calculator, then mark them line by line against the mark scheme.</li>\n</ol>\n<p>After each paper, keep a short list of the marks you lost and why: misread the question, wrong loop bound, missed a requirement. Patterns show up quickly, and you can fix a pattern. If you want help building the list, my <a href=\"courses.html\">IGCSE and school computer science lessons</a> do exactly this.</p>"
+    },
+    {
+      "id": "mistakes",
+      "h2": "Which slips cost marks most often?",
+      "html": "<p>These are the ones I see in practice with students at this level, from teaching rather than from an official report:</p>\n<ul>\n<li>Loops that run one time too many or too few, especially with arrays that start at zero or one.</li>\n<li>Skipping the validation or the output the question asked for, because the main logic was easy.</li>\n<li>Writing a long program in a programming language when the question wants pseudocode.</li>\n<li>Changing a variable inside a loop and forgetting its starting value.</li>\n<li>Spending too long on one early question and arriving at the scenario with ten minutes left.</li>\n</ul>\n<p>A short checklist taped above your desk helps. Before you finish any algorithm, check the starting values, the loop bounds, the output and the question wording.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I answer Paper 2 in Python?",
+      "a": "Not for most questions. The syllabus says coding answers should be written in pseudocode and that solutions in programming code receive no marks. The exception is the 15-mark scenario question, where Python, Visual Basic and Java are allowed."
+    },
+    {
+      "q": "Is a calculator allowed in Paper 2?",
+      "a": "Under the 2026 to 2028 syllabus, no. The syllabus lists no calculators for both papers. A later syllabus may differ, so check the one your school follows."
+    },
+    {
+      "q": "How long should I spend on the scenario question?",
+      "a": "The syllabus says it is expected to take about 30 minutes. Plan your time so that you reach it with that long left, and read the requirements twice before you start writing."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cambridge International: IGCSE Computer Science 0478 syllabus 2026 to 2028",
+      "url": "https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf"
+    },
+    {
+      "title": "Cambridge International: IGCSE Computer Science 0478 past papers",
+      "url": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    },
+    {
+      "title": "How to use past papers properly for computer science exams",
+      "href": "blog-past-papers-method.html"
+    },
+    {
+      "title": "Python or Java as a first language for a school student",
+      "href": "blog-python-or-java-first-language.html"
+    }
+  ],
+  "cta_eyebrow": "Want help with pseudocode and the scenario question?",
+  "cta_heading": "Book a short call and we will plan your Paper 2 revision",
+  "published": "2026-10-29",
+  "modified": "2026-10-29"
+}

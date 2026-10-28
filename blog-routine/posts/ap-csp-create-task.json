@@ -1,0 +1,94 @@
+{
+  "slug": "ap-csp-create-task",
+  "title": "AP CSP Create Task: How the Written Responses Score",
+  "h1": "AP CSP Create Task: How the Written Responses Are Scored and How to Build for Them",
+  "description": "The AP CSP Create task is 30% of your score. See how the four written prompts are scored, the mistakes graders report, and how to design your program for them.",
+  "eyebrow": "AP Computer Science Principles",
+  "read_min": 8,
+  "card_summary": "What the Create task asks for, how each written prompt earns its point, and a way to design your program so the prompts are easy to answer.",
+  "lead": "The AP CSP Create performance task is 30% of your AP score, and it has two parts: a program, video and Personalized Project Reference (PPR) you build in class, and four written responses you answer on exam day about your own code. The written responses are scored one point per prompt, and the College Board's own reports show the same handful of mistakes costing points year after year. The practical fix is to design your program backwards from those four prompts, so that the code you write gives you something clear to say.",
+  "takeaways": [
+    "The Create task is 30% of the AP CSP score. The other 70% is the 70-question multiple-choice exam.",
+    "You get at least 9 hours of in-class time to build the program, the video and the PPR, and all three are submitted through the AP Digital Portfolio.",
+    "The written responses happen at the end of the course: 2 questions, 60 minutes, 4 prompts, and you may use your PPR while you answer.",
+    "In the 2025 scoring guidelines each of the four prompts is worth 1 point, so one vague answer is a real loss.",
+    "The most common errors are naming the wrong thing (the whole if statement instead of its Boolean expression, a syntax error instead of a logic error) rather than not knowing the material."
+  ],
+  "sections": [
+    {
+      "id": "format",
+      "h2": "What exactly is the Create performance task?",
+      "html": "<p>It is the second section of the exam, worth 30% of your score, and it has a through-course part and an end-of-course part. According to the College Board's <a href=\"https://apstudents.collegeboard.org/node/296/assessment\" rel=\"noopener\">AP CSP assessment page</a>, you develop a program of your choice plus a video and a Personalized Project Reference, using 9 hours of in-class time, and submit all three through the AP Digital Portfolio. The 2026-27 final deadline on that page is Friday 30 April 2027, 11:59 PM ET.</p>\n<p>The end-of-course part is 2 questions in 60 minutes, covering 4 prompts. The College Board's <a href=\"https://apcentral.collegeboard.org/help-center/what-are-changes-ap-csp-create-performance-task-2023-24\" rel=\"noopener\">note on the 2023-24 changes</a> explains that the PPR holds screen captures of your list and your procedure, and that the written responses moved to the exam so you answer them about that PPR. Components that are not submitted as final are not scored, so submit early.</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>Prompt</th><th>Topic</th><th>What it asks you to do</th></tr></thead><tbody>\n<tr><th>1</th><td>Program design, function and purpose</td><td>Give an example output and explain what it shows about your program</td></tr>\n<tr><th>2(a)</th><td>Algorithm development</td><td>Name the Boolean expression in the first selection statement, give values that make it true, and say why</td></tr>\n<tr><th>2(b)</th><td>Errors and testing</td><td>Describe a change to your procedure that causes a logic error, and what would go wrong</td></tr>\n<tr><th>2(c)</th><td>Data and procedural abstraction</td><td>Explain what would change in the list-handling code if several items were added to the end of the list</td></tr>\n</tbody></table></div>"
+    },
+    {
+      "id": "scoring",
+      "h2": "How is each written response scored?",
+      "html": "<p>Each prompt is a single point: you either earn it or you do not. The <a href=\"https://apcentral.collegeboard.org/media/pdf/ap25-sg-computer-science-principles-set-1.pdf\" rel=\"noopener\">2025 scoring guidelines (Set 1)</a> describe what earns the point and what does not, and the pattern is consistent. Your answer has to be about your own code, specific, accurate and consistent with how the program really works.</p>\n<ul>\n<li><strong>Prompt 1:</strong> identify at least one example output and explain how it shows something your program can do. The output cannot be a compiler error or other non-normal event.</li>\n<li><strong>Prompt 2(a):</strong> point to the Boolean expression in the first selection statement, give a specific value or set of values that makes it true, and explain why those values do. If the procedure has no selection statement, the point is not available.</li>\n<li><strong>Prompt 2(b):</strong> describe a change another programmer could make (add, change or delete code) that causes a logic error in your procedure, and say how the behaviour would change. Saying only that the program would not run does not earn the point.</li>\n<li><strong>Prompt 2(c):</strong> explain how the code that accesses or manipulates your list would need to change if several elements were added to the end, or explain why no change is needed. A trivial use of the list does not earn the point.</li>\n</ul>"
+    },
+    {
+      "id": "mistakes",
+      "h2": "Which mistakes cost students points most often?",
+      "html": "<p>The College Board's <a href=\"https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-computer-science-principles-set-2.pdf\" rel=\"noopener\">2025 Chief Reader report</a> lists the errors graders saw. They are specific enough to avoid once you know them:</p>\n<ul>\n<li><strong>2(a):</strong> naming the whole selection statement instead of its Boolean expression, giving a general category of values instead of specific ones, or choosing a later selection statement instead of the first.</li>\n<li><strong>2(b):</strong> describing a syntax error (which stops the program running) instead of a logic error (which gives wrong or unexpected behaviour), or describing a change to code outside the list section.</li>\n<li><strong>2(c):</strong> describing the whole program, explaining benefits to end users instead of benefits to the people maintaining the code, or confusing procedural abstraction with data abstraction.</li>\n<li><strong>Program and video:</strong> using an event handler in place of a procedure you wrote yourself, building a list that is never accessed, or showing a static screen in the video instead of the program running with input.</li>\n</ul>\n<p>Almost none of these are knowledge gaps. They are precision gaps, which means practice with feedback fixes them quickly.</p>"
+    },
+    {
+      "id": "design",
+      "h2": "How should you design your program with the prompts in mind?",
+      "html": "<p>This part is my own teaching advice, not an official rule: choose a program idea that makes each prompt easy to answer, before you write any code. The College Board does not require a particular language or topic, so the idea is yours to pick. These choices are the ones I would make.</p>\n<ol>\n<li><strong>Put a clear if statement first in your procedure.</strong> Prompt 2(a) is about the first selection statement, so make that one meaningful, with a condition like <code>score &gt; highScore</code> or <code>item is not already in the list</code>. A condition that is always true makes the answer awkward.</li>\n<li><strong>Give your procedure a parameter and a real job.</strong> Procedural abstraction is easier to explain when one procedure replaces several copies of the same code and takes a value that changes between calls.</li>\n<li><strong>Use a list that the program really reads and changes.</strong> Loop over it with iteration. If you hard-code <code>items[0]</code>, <code>items[1]</code> and <code>items[2]</code>, the answer to 2(c) turns into a weak one.</li>\n<li><strong>Know one safe way to break your procedure.</strong> For 2(b), a one-line example such as changing <code>&lt;</code> to <code>&lt;=</code> in a loop and explaining the wrong output is a clean logic error.</li>\n<li><strong>Record your video with input visible.</strong> Show the program running and make clear where the input comes from, as the report advises.</li>\n</ol>"
+    },
+    {
+      "id": "practice",
+      "h2": "How can you practise the written responses before exam day?",
+      "html": "<p>Write the four answers for your own program in advance, then ask someone to grade them with the official guideline in front of them. Students in my lessons do this on a paper copy of their PPR with the code visible and no notes, which is close to what exam day feels like.</p>\n<p>A routine that works:</p>\n<ol>\n<li>Write all four answers in 20 minutes.</li>\n<li>Mark each against the scoring guideline wording, not against how it feels.</li>\n<li>For every lost point, rewrite the answer and note which error from the list above you made.</li>\n<li>Repeat with a classmate's program, so you practise on code you did not write.</li>\n</ol>\n<p>The Chief Reader report suggests the same habit for teachers: write responses, critique each other's, and study low-scoring examples. If you want a second pair of eyes on yours, the <a href=\"courses.html\">AP CSP lessons page</a> explains how my sessions work, or you can <a href=\"contact.html#booking\">book a free call</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do I have to use a specific programming language for the Create task?",
+      "a": "No. The College Board says AP CSP does not require a specific language. Use one that your teacher supports and that lets you write a procedure with a parameter, a list and a selection statement."
+    },
+    {
+      "q": "When do I submit the Create task?",
+      "a": "The program, video and PPR are submitted through the AP Digital Portfolio, and the final deadline listed for the 2026-27 exam is 30 April 2027 at 11:59 PM ET. Anything not submitted as final is not scored, so ask your teacher for your school's earlier internal deadline."
+    },
+    {
+      "q": "Can I use my PPR when I answer the written responses?",
+      "a": "Yes. The College Board says you can use your PPR while answering. That is why the code in it should be readable, with no comments or notes added, and why it needs to include your list and your procedure."
+    }
+  ],
+  "sources": [
+    {
+      "title": "College Board: AP Computer Science Principles assessment",
+      "url": "https://apstudents.collegeboard.org/node/296/assessment"
+    },
+    {
+      "title": "College Board: changes to the Create performance task for 2023-24",
+      "url": "https://apcentral.collegeboard.org/help-center/what-are-changes-ap-csp-create-performance-task-2023-24"
+    },
+    {
+      "title": "College Board: 2025 AP CSP Scoring Guidelines, Set 1",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-computer-science-principles-set-1.pdf"
+    },
+    {
+      "title": "College Board: 2025 Chief Reader Report, AP CSP Set 2",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-computer-science-principles-set-2.pdf"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    },
+    {
+      "title": "Python or Java as a first language for a school student",
+      "href": "blog-python-or-java-first-language.html"
+    },
+    {
+      "title": "How to use past papers properly for computer science exams",
+      "href": "blog-past-papers-method.html"
+    }
+  ],
+  "cta_eyebrow": "Want feedback on your PPR answers?",
+  "cta_heading": "Book a short call and we will practise the four prompts",
+  "published": "2026-10-29",
+  "modified": "2026-10-29"
+}

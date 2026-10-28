@@ -1,0 +1,94 @@
+{
+  "slug": "python-or-java-first-language",
+  "title": "Python or Java as a First Language for a School Student",
+  "h1": "Python or Java as a First Programming Language for a School Student",
+  "description": "Python or Java first? My answer depends on the exam: AP CSA needs Java, AP CSP and IGCSE do not. A clear recommendation by course, with the official rules.",
+  "eyebrow": "Choosing a language",
+  "read_min": 7,
+  "card_summary": "A clear recommendation on Python or Java for a first language, checked against what AP CSP, AP CSA, IGCSE and IB actually require.",
+  "lead": "For most school students I recommend starting with Python, then adding Java when the course needs it. The exception is AP Computer Science A, which the College Board teaches in a subset of Java, so a student aiming for that exam should reach Java early. AP CSP, IGCSE Computer Science and IB Computer Science do not require a particular language, so the first language is a choice about learning speed, not about the exam.",
+  "takeaways": [
+    "AP CSA uses a subset of Java. If that is the goal, plan to learn Java well before the exam.",
+    "AP CSP does not name a programming language. The College Board says no previous coding experience is required.",
+    "IGCSE Computer Science 0478 marks most coding answers in pseudocode, and the 15-mark scenario question allows Python, Visual Basic or Java.",
+    "IB Computer Science designates no language, and the teacher chooses.",
+    "For a complete beginner, Python is usually the faster start because there is less to type before a program does something. Java is the better second language for learning classes and strict typing."
+  ],
+  "sections": [
+    {
+      "id": "short",
+      "h2": "Which language should a school student learn first?",
+      "html": "<p>My recommendation is Python first, unless the student is going straight into AP CSA. Python lets a beginner see a result in a few lines, which keeps motivation up while they learn the real ideas: variables, conditions, loops, functions and lists. Those ideas carry into every language.</p>\n<p>If a student is taking AP CSA this year and has never coded, I would start with Java and accept the steeper beginning, because the exam will be written in it. This is my teaching judgement, and the rest of this post shows what the exam bodies actually say so you can check it against your own course.</p>"
+    },
+    {
+      "id": "exams",
+      "h2": "What do the exam boards require?",
+      "html": "<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>Course</th><th>Language rule</th></tr></thead><tbody>\n<tr><th>AP CSA</th><td>A subset of Java, according to the <a href=\"https://apstudents.collegeboard.org/courses/ap-computer-science-a\" rel=\"noopener\">College Board's AP CSA page</a>. A Java Quick Reference is provided on exam day.</td></tr>\n<tr><th>AP CSP</th><td>No specific language. The <a href=\"https://apstudents.collegeboard.org/courses/ap-computer-science-principles\" rel=\"noopener\">AP CSP page</a> says programming is only one of the many aspects of computing covered and that no previous coding experience is required.</td></tr>\n<tr><th>IGCSE CS 0478</th><td>Pseudocode for most coding answers. The 15-mark scenario question may be answered in pseudocode, Python, Visual Basic or Java, per the <a href=\"https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf\" rel=\"noopener\">2026 to 2028 syllabus</a>.</td></tr>\n<tr><th>IB Computer Science</th><td>No language designated. The <a href=\"https://www.ibo.org/programmes/diploma-programme/curriculum/sciences/computer-science/\" rel=\"noopener\">IB course page</a> says the external assessment tests algorithmic thinking at the level of pseudo-code and that teachers choose the language.</td></tr>\n</tbody></table></div>\n<p>So only one of these four fixes the language. For the others, the best first language is the one your teacher supports and the student enjoys using.</p>"
+    },
+    {
+      "id": "python",
+      "h2": "When is Python the better first choice?",
+      "html": "<p>Python is a good fit when the student is new to coding, is preparing for AP CSP, IGCSE or IB, or wants to build small projects quickly, such as a quiz game, a calculator or a script that renames files. It also makes the logic easy to see, which matters when the exam marks your thinking.</p>\n<p>It is also useful beyond school. A student who knows Python can follow most data, automation and AI tutorials, which is a strong reason to start there if the goal is general skills and not a single exam.</p>\n<p>The trade-off is that Python's flexibility can hide ideas that Java forces you to learn, such as declaring types and writing classes in a strict structure. A student who stays only in Python may find Java a shock later.</p>"
+    },
+    {
+      "id": "java",
+      "h2": "When should a student start with Java?",
+      "html": "<p>Start with Java when AP CSA is the target, when the school's course is taught in Java, or when the student is aiming at university computer science courses that begin with Java. The College Board's AP CSA page describes the course as teaching students to design and implement programs in a subset of Java, and the units cover classes, objects, arrays, ArrayList and 2D arrays.</p>\n<p>The first weeks are slower. A Java program needs a class and a method before it prints one line, and the compiler will complain about small mistakes. That strictness is useful, though. Students who get through it tend to find their second language easier.</p>"
+    },
+    {
+      "id": "plan",
+      "h2": "What is a sensible order if the student will need both?",
+      "html": "<p>This is the order I use in lessons, and it is a suggestion rather than a rule:</p>\n<ol>\n<li><strong>Weeks 1 to 6, Python.</strong> Variables, input and output, conditions, loops, functions and lists. Build one small project.</li>\n<li><strong>Weeks 7 to 10, bridge to Java.</strong> Take the same project and rewrite it in Java. Seeing the same logic in two languages is the fastest way to separate the idea from the syntax.</li>\n<li><strong>After that, Java-specific topics.</strong> Classes, objects, constructors, arrays and ArrayList, following the AP CSA units.</li>\n</ol>\n<p>If time is short and the exam is Java, skip the Python stage and learn the basics inside Java. You can see how this fits my <a href=\"courses.html\">AP and school computer science lessons</a>, or <a href=\"contact.html#booking\">book a free call</a> and we can pick a route for your course.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I take AP CSA if I only know Python?",
+      "a": "Yes, but you will need to learn Java for the exam, since the College Board teaches AP CSA in a subset of Java. Your Python skills help with the logic, but plan time for Java syntax, classes and the Java library methods."
+    },
+    {
+      "q": "Do I need to know Java for AP CSP?",
+      "a": "No. The College Board does not designate a language for AP CSP, and says no previous coding experience is required. Your teacher chooses the language used in class."
+    },
+    {
+      "q": "Which language should I use in the IGCSE scenario question?",
+      "a": "The syllabus allows pseudocode, Python, Visual Basic or Java for the 15-mark scenario question. Use whichever you can write most accurately under time pressure. For most students that is pseudocode or Python."
+    }
+  ],
+  "sources": [
+    {
+      "title": "College Board: AP Computer Science A",
+      "url": "https://apstudents.collegeboard.org/courses/ap-computer-science-a"
+    },
+    {
+      "title": "College Board: AP Computer Science Principles",
+      "url": "https://apstudents.collegeboard.org/courses/ap-computer-science-principles"
+    },
+    {
+      "title": "Cambridge International: IGCSE Computer Science 0478 syllabus 2026 to 2028",
+      "url": "https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf"
+    },
+    {
+      "title": "International Baccalaureate: Computer science in the Diploma Programme",
+      "url": "https://www.ibo.org/programmes/diploma-programme/curriculum/sciences/computer-science/"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSP Create task: how the written responses score",
+      "href": "blog-ap-csp-create-task.html"
+    },
+    {
+      "title": "IGCSE Computer Science Paper 2: how to revise it",
+      "href": "blog-igcse-computer-science-paper-2.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Not sure which language fits your course?",
+  "cta_heading": "Book a short call and we will pick a starting point",
+  "published": "2026-10-29",
+  "modified": "2026-10-29"
+}

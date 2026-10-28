@@ -1,0 +1,94 @@
+{
+  "slug": "past-papers-method",
+  "title": "How to Use Past Papers for Computer Science Revision",
+  "h1": "How to Use Past Papers Properly: A Revision Method for Computer Science Exams",
+  "description": "Doing past papers is not the same as learning from them. A four-step method for computer science exams: attempt, mark with the mark scheme, log errors, redo.",
+  "eyebrow": "Revision method",
+  "read_min": 7,
+  "card_summary": "A four-step loop for computer science past papers: attempt, mark against the official scheme, log the lost marks, and redo them after a gap.",
+  "lead": "A past paper only helps if you mark it against the official mark scheme and use the lost marks to decide what to study next. The method I recommend has four steps: attempt a paper under timed conditions, mark it line by line, log why each mark was lost, then redo those questions a few days later. Doing ten papers without marking them honestly teaches less than doing three with this loop.",
+  "takeaways": [
+    "Mark every paper with the official mark scheme, because it shows exactly what earns credit and what the examiners accept.",
+    "Log each lost mark with a reason, such as misread the question or wrong loop bound, since the reasons show patterns that topics do not.",
+    "Redo the weak questions after a few days. Re-reading the model answer is not the same as being able to write it.",
+    "Use examiner or chief reader reports where they exist, because they list the errors real students made.",
+    "Do some papers under exam timing and without notes, and others untimed to study a topic."
+  ],
+  "sections": [
+    {
+      "id": "why",
+      "h2": "Why do past papers often not improve your grade?",
+      "html": "<p>The usual mistake is treating a paper as a test to finish, not as feedback to use. A student does a paper, glances at the answers, feels they &quot;get it&quot; and moves on. The next paper repeats the same errors. A paper is only useful if it changes what you do afterwards.</p>\n<p>Official mark schemes are the key. For IGCSE Computer Science 0478, Cambridge publishes a <a href=\"https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/\" rel=\"noopener\">past papers page</a> with question papers and mark schemes. A mark scheme from the <a href=\"https://www.cambridgeinternational.org/Images/520655-june-2024-mark-scheme-paper-21.pdf\" rel=\"noopener\">May/June 2024 Paper 2</a> shows how marking works: examiners award credit for correct or valid answers, marks are not deducted for errors, and pseudocode and programming answers are generally credited for logic rather than strict syntax.</p>"
+    },
+    {
+      "id": "method",
+      "h2": "What is the four-step method?",
+      "html": "<ol>\n<li><strong>Attempt it properly.</strong> Use the time limit, no notes, and the same tools you will have in the exam. Stop when the time is up and mark the unfinished part separately.</li>\n<li><strong>Mark it line by line.</strong> Use the official mark scheme and be strict. Give yourself a mark only for what is written on the page, not for what you meant.</li>\n<li><strong>Log every lost mark.</strong> In a table, write the question, the marks lost, and a short reason. Use the same category names each time so patterns show up.</li>\n<li><strong>Redo after a gap.</strong> After two or three days, rewrite the weak answers from a blank page. If you can do them cold, they are learned.</li>\n</ol>\n<p>Here is an example of an error log, with made-up entries to show the format:</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th>Question</th><th>Marks lost</th><th>Reason</th><th>Fix</th></tr></thead><tbody>\n<tr><th>Q6</th><td>2</td><td>Loop ran one time too many</td><td>Check the loop bounds with the first and last value</td></tr>\n<tr><th>Q9</th><td>3</td><td>Did not read &quot;state and explain&quot;</td><td>Underline command words before answering</td></tr>\n<tr><th>Q12</th><td>1</td><td>Did not know the term</td><td>Add to the vocabulary list and test it on Friday</td></tr>\n</tbody></table></div>"
+    },
+    {
+      "id": "reports",
+      "h2": "How do examiner and chief reader reports help?",
+      "html": "<p>They tell you which mistakes are common, so you can avoid them before you make them. The College Board's <a href=\"https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-computer-science-principles-set-2.pdf\" rel=\"noopener\">2025 Chief Reader report for AP CSP</a> lists errors per question, for example describing a syntax error when the question wanted a logic error. The <a href=\"https://apcentral.collegeboard.org/media/pdf/ap25-sg-computer-science-principles-set-1.pdf\" rel=\"noopener\">scoring guidelines</a> then show what earned the point.</p>\n<p>Read the report after you have attempted and marked the matching paper, not before. The errors will make more sense once you have made a few of your own. Check whether your exam board also publishes examiner reports for your course, and read them the same way.</p>"
+    },
+    {
+      "id": "schedule",
+      "h2": "How many papers should you do, and when?",
+      "html": "<p>Quality matters more than count, and the right number depends on how many papers exist for your course and how much time is left. As a guide, here is an example schedule of mine for the last six weeks before an exam. It is a suggestion, not an official figure.</p>\n<ol>\n<li><strong>Weeks 1 and 2:</strong> do individual questions by topic, untimed, to learn the patterns.</li>\n<li><strong>Weeks 3 and 4:</strong> do one timed paper a week and run the full four-step loop.</li>\n<li><strong>Weeks 5 and 6:</strong> do two timed papers a week, redo the weak questions, and stop learning new topics three days before the exam.</li>\n</ol>\n<p>Keep a few of the newest papers back until the end, so your last timed attempt is a fresh one. If you want help marking and building your error log, my <a href=\"courses.html\">school computer science lessons</a> include it, and you can <a href=\"contact.html#booking\">book a free call</a> to try one.</p>"
+    },
+    {
+      "id": "mistakes",
+      "h2": "What mistakes should you avoid with past papers?",
+      "html": "<ul>\n<li><strong>Looking at the mark scheme while you work.</strong> You will recognise answers instead of recalling them.</li>\n<li><strong>Marking generously.</strong> If the scheme needs a specific word and you wrote a vague one, that is a lost mark.</li>\n<li><strong>Doing only your favourite topics.</strong> Papers should show you where you are weak.</li>\n<li><strong>Using an old specification without checking.</strong> Courses change. For 0478, check the syllabus years on the paper against the one your school teaches, since rules like calculators and language use can differ between syllabuses.</li>\n<li><strong>Skipping the redo step.</strong> This is where learning happens.</li>\n</ul>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "How many past papers should I do before an exam?",
+      "a": "There is no official number. Do enough to cover every topic and to run the full marking and redo loop several times, and use the newest papers last. Three papers done carefully beat ten that were never marked."
+    },
+    {
+      "q": "Should I time every past paper?",
+      "a": "No. Do some questions untimed to learn a topic, then move to timed, no-notes papers closer to the exam so you practise pacing."
+    },
+    {
+      "q": "Where do I find official mark schemes?",
+      "a": "For Cambridge IGCSE Computer Science 0478, the Cambridge International website has a past papers page with question papers and mark schemes. For AP courses, the College Board publishes scoring guidelines and reports on AP Central."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cambridge International: IGCSE Computer Science 0478 past papers",
+      "url": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/"
+    },
+    {
+      "title": "Cambridge International: 0478 Paper 2 mark scheme, May/June 2024",
+      "url": "https://www.cambridgeinternational.org/Images/520655-june-2024-mark-scheme-paper-21.pdf"
+    },
+    {
+      "title": "College Board: 2025 Chief Reader Report, AP CSP Set 2",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-computer-science-principles-set-2.pdf"
+    },
+    {
+      "title": "College Board: 2025 AP CSP Scoring Guidelines, Set 1",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap25-sg-computer-science-principles-set-1.pdf"
+    }
+  ],
+  "related": [
+    {
+      "title": "IGCSE Computer Science Paper 2: how to revise it",
+      "href": "blog-igcse-computer-science-paper-2.html"
+    },
+    {
+      "title": "AP CSP Create task: how the written responses score",
+      "href": "blog-ap-csp-create-task.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Want someone to mark your papers with you?",
+  "cta_heading": "Book a short call and we will build your revision loop",
+  "published": "2026-10-29",
+  "modified": "2026-10-29"
+}
