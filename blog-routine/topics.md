@@ -11,12 +11,12 @@
 - 2026-10-29: `ccna-200-301-exam-guide` (CCNA 200-301: what is on the exam and how to practise)
 - 2026-10-29: `python-or-java-first-language` (Python or Java as a first language)
 - 2026-10-29: `past-papers-method` (How to use past papers for computer science revision)
+- 2026-10-29: `java-oop-classes-inheritance-polymorphism` (Java OOP: classes, inheritance and polymorphism)
 
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
 
 ## Backlog (use in order, verify every fact before writing)
-7. Java object-oriented programming: classes, inheritance and polymorphism with one worked example
 9. Is your teen struggling with the subject or with study habits? How parents can tell
 10. SOC analyst or cloud security engineer: two entry paths compared honestly
 11. Network+ vs Security+ vs CCNA: which to choose with no experience

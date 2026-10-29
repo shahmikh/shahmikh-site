@@ -33,7 +33,7 @@
     {
       "id": "java",
       "h2": "When should a student start with Java?",
-      "html": "<p>Start with Java when AP CSA is the target, when the school's course is taught in Java, or when the student is aiming at university computer science courses that begin with Java. The College Board's AP CSA page describes the course as teaching students to design and implement programs in a subset of Java, and the units cover classes, objects, arrays, ArrayList and 2D arrays.</p>\n<p>The first weeks are slower. A Java program needs a class and a method before it prints one line, and the compiler will complain about small mistakes. That strictness is useful, though. Students who get through it tend to find their second language easier.</p>"
+      "html": "<p>Start with Java when AP CSA is the target, when the school's course is taught in Java, or when the student is aiming at university computer science courses that begin with Java. The College Board's AP CSA page describes the course as teaching students to design and implement programs in a subset of Java, and the units cover classes, objects, arrays, ArrayList and 2D arrays.</p>\n<p>The first weeks are slower. A Java program needs a class and a method before it prints one line, and the compiler will complain about small mistakes. That strictness is useful, though. Students who get through it tend to find their second language easier.</p>\n<p>Once you start Java, classes and inheritance are the next hurdle, and I walk through them in <a href=\"blog-java-oop-classes-inheritance-polymorphism.html\">Java classes, inheritance and polymorphism with a worked example</a>.</p>"
     },
     {
       "id": "plan",
