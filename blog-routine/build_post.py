@@ -310,6 +310,20 @@ def update_sitemap(posts_meta, index_date):
     f.write_text(s, encoding="utf-8")
 
 
+def update_llms():
+    """Rebuild public/llms.txt: static intro plus a list of every blog post."""
+    static = (ROOT / "blog-routine" / "llms_static.md").read_text(encoding="utf-8").rstrip() + "\n"
+    rows = []
+    for slug in all_slugs():
+        p = load(slug)
+        rows.append((p.get("published", ""), slug, p["title"], p["description"]))
+    rows.sort(reverse=True)
+    lines = ["", "## Blog posts (exam guides and study advice)"]
+    for _, slug, title, desc in rows:
+        lines.append("- [%s](%s/blog-%s.html): %s" % (title, SITE, slug, desc))
+    (PUB / "llms.txt").write_text(static + "\n".join(lines) + "\n", encoding="utf-8")
+
+
 def main():
     args = sys.argv[1:]
     if not args:
@@ -335,7 +349,8 @@ def main():
         sys.exit(1)
     newest = update_index()
     update_sitemap(meta, newest)
-    print("[ok] blog.html cards and sitemap.xml updated")
+    update_llms()
+    print("[ok] blog.html cards, sitemap.xml and llms.txt updated")
 
 
 if __name__ == "__main__":

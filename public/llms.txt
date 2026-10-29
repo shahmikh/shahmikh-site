@@ -1,0 +1,40 @@
+# Syed Shahmikh Ali
+
+> Syed Shahmikh Ali is a computer science, AI and IT tutor and career mentor based in Pakistan. He teaches live one-to-one lessons online to students in the US, UK, Europe and the Gulf. He has taught 5,000+ hours since 2020, is a Preply Super Tutor, and is in the top 15% of computer science tutors on Preply. His background is Mechatronics Engineering (Air University) and cloud engineering.
+
+## What he teaches
+- AP Computer Science Principles and AP Computer Science A
+- IB Computer Science (HL and SL)
+- IGCSE and GCSE Computer Science
+- CompTIA Security+ (SY0-701) and Cisco CCNA (200-301)
+- Python, Java and object-oriented programming
+- Using AI tools to study effectively, plus study strategy and career guidance
+
+## How sessions work
+- Live, one-to-one, video-based, usually 60 or 90 minutes
+- Booking: [Book a free intro call](https://shahmikh.com/contact.html#booking)
+- Grades and job outcomes are not guaranteed
+
+## Key pages
+- [Home](https://shahmikh.com/): overview of tutoring and mentorship
+- [Courses and subjects](https://shahmikh.com/courses.html): what he teaches and how
+- [About](https://shahmikh.com/about.html): background and teaching approach
+- [FAQ](https://shahmikh.com/faq.html): sessions, timezones, booking, rescheduling
+- [Pricing](https://shahmikh.com/pricing.html)
+- [Career guidance](https://shahmikh.com/career-guidance.html)
+- [Free guide: Study Smarter with AI, 25 prompts](https://shahmikh.com/free-guide.html)
+- [Contact](https://shahmikh.com/contact.html)
+
+## Profiles
+- [LinkedIn](https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/)
+- [Instagram](https://www.instagram.com/shahmikh.ali)
+- [YouTube](https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA)
+
+## Blog posts (exam guides and study advice)
+- [Security+ SY0-701: What It Covers and an 8-Week Plan](https://shahmikh.com/blog-security-plus-sy0-701-study-plan.html): Security+ SY0-701 has 5 domains, up to 90 questions and a 750 pass mark. See what each domain weighs and an 8-week study plan that follows those weights.
+- [Python or Java as a First Language for a School Student](https://shahmikh.com/blog-python-or-java-first-language.html): Python or Java first? My answer depends on the exam: AP CSA needs Java, AP CSP and IGCSE do not. A clear recommendation by course, with the official rules.
+- [How to Use Past Papers for Computer Science Revision](https://shahmikh.com/blog-past-papers-method.html): Doing past papers is not the same as learning from them. A four-step method for computer science exams: attempt, mark with the mark scheme, log errors, redo.
+- [Java OOP: Classes, Inheritance and Polymorphism Explained](https://shahmikh.com/blog-java-oop-classes-inheritance-polymorphism.html): Learn Java classes, inheritance and polymorphism with one worked Shape example you can run, plus the three mistakes that trip up students most often.
+- [IGCSE Computer Science 0478 Paper 2: How to Revise It](https://shahmikh.com/blog-igcse-computer-science-paper-2.html): Paper 2 is half of your IGCSE Computer Science grade. What it covers, how pseudocode is marked, how to handle the 15-mark scenario, and a revision plan.
+- [CCNA 200-301: What Is on the Exam and How to Practise](https://shahmikh.com/blog-ccna-200-301-exam-guide.html): CCNA 200-301 v1.1 is a 120-minute exam with six domains, and Cisco says its last test day is 2 February 2027. See the topics, the weights and a lab routine.
+- [AP CSP Create Task: How the Written Responses Score](https://shahmikh.com/blog-ap-csp-create-task.html): The AP CSP Create task is 30% of your score. See how the four written prompts are scored, the mistakes graders report, and how to design your program for them.
