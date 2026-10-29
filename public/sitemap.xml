@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://shahmikh.com/about.html</loc></url>
-  <url><loc>https://shahmikh.com/blog.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/career-guidance.html</loc></url>
-  <url><loc>https://shahmikh.com/contact.html</loc></url>
-  <url><loc>https://shahmikh.com/courses.html</loc></url>
-  <url><loc>https://shahmikh.com/faq.html</loc></url>
+  <url><loc>https://shahmikh.com/about</loc></url>
+  <url><loc>https://shahmikh.com/blog</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/career-guidance</loc></url>
+  <url><loc>https://shahmikh.com/contact</loc></url>
+  <url><loc>https://shahmikh.com/courses</loc></url>
+  <url><loc>https://shahmikh.com/faq</loc></url>
   <url><loc>https://shahmikh.com/</loc></url>
-  <url><loc>https://shahmikh.com/pricing.html</loc></url>
-  <url><loc>https://shahmikh.com/resources.html</loc></url>
-  <url><loc>https://shahmikh.com/free-guide.html</loc></url>
-  <url><loc>https://shahmikh.com/testimonials.html</loc></url>
-  <url><loc>https://shahmikh.com/blog-ap-csp-create-task.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/blog-ccna-200-301-exam-guide.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/blog-igcse-computer-science-paper-2.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/blog-past-papers-method.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/blog-python-or-java-first-language.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/blog-security-plus-sy0-701-study-plan.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://shahmikh.com/blog-java-oop-classes-inheritance-polymorphism.html</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/pricing</loc></url>
+  <url><loc>https://shahmikh.com/resources</loc></url>
+  <url><loc>https://shahmikh.com/free-guide</loc></url>
+  <url><loc>https://shahmikh.com/testimonials</loc></url>
+  <url><loc>https://shahmikh.com/blog-ap-csp-create-task</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-ccna-200-301-exam-guide</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-igcse-computer-science-paper-2</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-past-papers-method</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-python-or-java-first-language</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-security-plus-sy0-701-study-plan</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-java-oop-classes-inheritance-polymorphism</loc><lastmod>2026-10-29</lastmod></url>
 </urlset>

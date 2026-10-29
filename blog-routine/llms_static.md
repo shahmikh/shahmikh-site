@@ -12,18 +12,18 @@
 
 ## How sessions work
 - Live, one-to-one, video-based, usually 60 or 90 minutes
-- Booking: [Book a free intro call](https://shahmikh.com/contact.html#booking)
+- Booking: [Book a free intro call](https://shahmikh.com/contact#booking)
 - Grades and job outcomes are not guaranteed
 
 ## Key pages
 - [Home](https://shahmikh.com/): overview of tutoring and mentorship
-- [Courses and subjects](https://shahmikh.com/courses.html): what he teaches and how
-- [About](https://shahmikh.com/about.html): background and teaching approach
-- [FAQ](https://shahmikh.com/faq.html): sessions, timezones, booking, rescheduling
-- [Pricing](https://shahmikh.com/pricing.html)
-- [Career guidance](https://shahmikh.com/career-guidance.html)
-- [Free guide: Study Smarter with AI, 25 prompts](https://shahmikh.com/free-guide.html)
-- [Contact](https://shahmikh.com/contact.html)
+- [Courses and subjects](https://shahmikh.com/courses): what he teaches and how
+- [About](https://shahmikh.com/about): background and teaching approach
+- [FAQ](https://shahmikh.com/faq): sessions, timezones, booking, rescheduling
+- [Pricing](https://shahmikh.com/pricing)
+- [Career guidance](https://shahmikh.com/career-guidance)
+- [Free guide: Study Smarter with AI, 25 prompts](https://shahmikh.com/free-guide)
+- [Contact](https://shahmikh.com/contact)
 
 ## Profiles
 - [LinkedIn](https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/)

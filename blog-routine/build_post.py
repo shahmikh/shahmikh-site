@@ -18,7 +18,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUB = ROOT / "public"
 POSTS = ROOT / "blog-routine" / "posts"
 SITE = "https://shahmikh.com"
-PERSON_ID = SITE + "/about.html#person"
+PERSON_ID = SITE + "/about#person"
 
 BANNED = [
     r"in today'?s fast[- ]paced", r"in the digital age", r"\bunlock", r"\bunleash", r"\belevate",
@@ -138,7 +138,7 @@ def validate(p):
 
 def render(p):
     slug = p["slug"]
-    url = "%s/blog-%s.html" % (SITE, slug)
+    url = "%s/blog-%s" % (SITE, slug)
     tocs = "".join('<li><a href="#%s">%s</a></li>' % (s["id"], esc(s["h2"])) for s in p["sections"])
     tocs += '<li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li>'
     sections = "".join('\n      <h2 id="%s">%s</h2>\n      %s\n' % (s["id"], esc(s["h2"]), s["html"]) for s in p["sections"])
@@ -151,7 +151,7 @@ def render(p):
 
     graph = [
         {
-            "@type": "Person", "@id": PERSON_ID, "name": "Syed Shahmikh Ali", "url": SITE + "/about.html",
+            "@type": "Person", "@id": PERSON_ID, "name": "Syed Shahmikh Ali", "url": SITE + "/about",
             "image": SITE + "/headshot.jpg", "jobTitle": "Tutor and career mentor",
             "knowsAbout": ["AP Computer Science A", "AP Computer Science Principles", "IB Computer Science",
                            "Java", "Python", "CompTIA Security+", "Cisco CCNA"],
@@ -167,7 +167,7 @@ def render(p):
             "@type": "BreadcrumbList",
             "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
-                {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog.html"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog"},
                 {"@type": "ListItem", "position": 3, "name": p["title"], "item": url},
             ],
         },
@@ -304,9 +304,9 @@ def update_sitemap(posts_meta, index_date):
             s = s.replace("</urlset>", entry + "\n</urlset>")
 
     for slug, date in posts_meta:
-        put("%s/blog-%s.html" % (SITE, slug), date)
+        put("%s/blog-%s" % (SITE, slug), date)
     if index_date:
-        put(SITE + "/blog.html", index_date)
+        put(SITE + "/blog", index_date)
     f.write_text(s, encoding="utf-8")
 
 
@@ -320,7 +320,7 @@ def update_llms():
     rows.sort(reverse=True)
     lines = ["", "## Blog posts (exam guides and study advice)"]
     for _, slug, title, desc in rows:
-        lines.append("- [%s](%s/blog-%s.html): %s" % (title, SITE, slug, desc))
+        lines.append("- [%s](%s/blog-%s): %s" % (title, SITE, slug, desc))
     (PUB / "llms.txt").write_text(static + "\n".join(lines) + "\n", encoding="utf-8")
 
 

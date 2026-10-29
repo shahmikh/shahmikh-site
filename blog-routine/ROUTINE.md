@@ -18,11 +18,11 @@ The owner asked for two posts a week, written with the SEO skill in `blog-routin
    - Do not repeat or strengthen these unverified site claims: "AWS Cloud Engineer", "97 reviews", "4,500+ hours", "9 tracks", or any prices. The Preply facts (Super Tutor, top 15% of computer science tutors) are confirmed.
    - Plain, casual, specific voice. No filler phrases from the playbook's banned list, no em dashes or en dashes, no triplets of adjectives.
    - Link to a relevant service page (`courses.html`, `career-guidance.html` or `contact.html#booking`) and 1 to 2 related posts. If an older relevant post exists, add one sentence with a link to the new post in it; if there are no older posts, skip this.
-7. **Build.** `python3 blog-routine/build_post.py <slug>`. Fix every `[ERROR]` and rerun until it passes. The script writes `public/blog-<slug>.html`, refreshes the cards on `public/blog.html` and updates `public/sitemap.xml`.
+7. **Build.** `python3 blog-routine/build_post.py <slug>`. Fix every `[ERROR]` and rerun until it passes. The script writes `public/blog-<slug>`, refreshes the cards on `public/blog.html` and updates `public/sitemap.xml`.
 8. **Check.** Run `NODE_PATH=$(npm root -g) node blog-routine/seo/scripts/site_check.js public https://shahmikh.com`. The new page must have no issues (older pages may still list meta length issues, ignore those). Also confirm no horizontal scroll at 390px.
 9. **Publish.** Update `blog-routine/topics.md` (move the topic to the published log with date and slug). Commit with a clear message, `git fetch origin main`, rebase if needed, push to `main`. Cloudflare redeploys in about a minute.
-10. **IndexNow (best effort).** `curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' -d '{"host":"shahmikh.com","key":"<contents of blog-routine/indexnow.key>","keyLocation":"https://shahmikh.com/<key>.txt","urlList":["https://shahmikh.com/blog-<slug>.html"]}'`. If the network blocks it, skip and carry on.
-11. **Report.** Send the owner a short message (SendUserMessage) with the post title, its URL (`https://shahmikh.com/blog-<slug>.html`) and anything that needs their attention.
+10. **IndexNow (best effort).** `curl -s -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' -d '{"host":"shahmikh.com","key":"<contents of blog-routine/indexnow.key>","keyLocation":"https://shahmikh.com/<key>.txt","urlList":["https://shahmikh.com/blog-<slug>"]}'`. If the network blocks it, skip and carry on.
+11. **Report.** Send the owner a short message (SendUserMessage) with the post title, its URL (`https://shahmikh.com/blog-<slug>`) and anything that needs their attention.
 
 ## Guardrails
 
