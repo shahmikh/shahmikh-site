@@ -20,6 +20,7 @@
 - [Courses and subjects](https://shahmikh.com/courses): what he teaches and how
 - [About](https://shahmikh.com/about): background and teaching approach
 - [FAQ](https://shahmikh.com/faq): sessions, timezones, booking, rescheduling
+- [Kids AI & Computer Science Program](https://shahmikh.com/kids): live small-group and 1:1 AI classes for ages 10 to 14, with a weekly project; waitlist open
 - [Pricing](https://shahmikh.com/pricing)
 - [Career guidance](https://shahmikh.com/career-guidance)
 - [Free guide: Study Smarter with AI, 25 prompts](https://shahmikh.com/free-guide)
