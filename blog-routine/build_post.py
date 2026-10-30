@@ -30,13 +30,13 @@ BANNED = [
 HEADER = """<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav-row">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
+    <a href="/" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="courses.html">Subjects</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="testimonials.html">Reviews</a><a href="blog.html" class="is-active">Blog</a><a href="about.html">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
+      <a href="courses">Subjects</a><a href="/#how">How it works</a><a href="pricing">Pricing</a><a href="resources">Resources</a><a href="testimonials">Reviews</a><a href="blog" class="is-active">Blog</a><a href="about">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
     </nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn--ghost">Contact</a>
-      <a href="contact.html#booking" class="btn btn--primary">Book a free call</a>
+      <a href="contact" class="btn btn--ghost">Contact</a>
+      <a href="contact#booking" class="btn btn--primary">Book a free call</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
     </div>
   </div>
@@ -47,11 +47,11 @@ FOOTER = """<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="resources.html">Resources</a></li><li><a href="blog.html">Blog</a></li></ul></div>
-      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids.html">Kids AI Program</a></li><li><a href="courses.html">Security+ &amp; CCNA</a></li><li><a href="courses.html">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance.html">Career Guidance</a></li></ul></div>
-      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about">About</a></li><li><a href="courses">Courses</a></li><li><a href="pricing">Pricing</a></li><li><a href="resources">Resources</a></li><li><a href="blog">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids">Kids AI Program</a></li><li><a href="courses">Security+ &amp; CCNA</a></li><li><a href="courses">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance">Career Guidance</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact">Contact</a></li><li><a href="faq">FAQ</a></li><li><a href="testimonials">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved.</span><span>Teaching students across the US, UK &amp; Europe.</span></div>
+    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved. · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></span><span>Teaching students across the US, UK &amp; Europe.</span></div>
   </div>
 </footer>
 <script src="main.js"></script>
@@ -61,8 +61,8 @@ AUTHOR_BOX = """<aside class="author-box">
   <img src="headshot.jpg" alt="Syed Shahmikh Ali" width="72" height="72" loading="lazy">
   <div>
     <p class="author-name">About the author</p>
-    <p><a href="about.html">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 15% of computer science tutors on Preply, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
-    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact.html">contact page</a> and I will correct it.</p>
+    <p><a href="about">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 15% of computer science tutors on Preply, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
+    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact">contact page</a> and I will correct it.</p>
   </div>
 </aside>"""
 
@@ -124,11 +124,11 @@ def validate(p):
         if h.startswith("http") or h.startswith("#") or h.startswith("mailto:"):
             continue
         f = h.split("#")[0]
-        if not (PUB / f).exists() and not (POSTS / (f.replace("blog-", "").replace(".html", "") + ".json")).exists():
+        if not (PUB / f).exists() and not (PUB / (f + ".html")).exists() and not (POSTS / (f.replace("blog-", "").replace(".html", "") + ".json")).exists():
             errs.append("internal link target missing: " + h)
     for r in p["related"]:
         f = r["href"].split("#")[0]
-        if not (PUB / f).exists() and not (POSTS / (f.replace("blog-", "").replace(".html", "") + ".json")).exists():
+        if not (PUB / f).exists() and not (PUB / (f + ".html")).exists() and not (POSTS / (f.replace("blog-", "").replace(".html", "") + ".json")).exists():
             errs.append("related link target missing: " + r["href"])
     ids = [s["id"] for s in p["sections"]]
     if len(ids) != len(set(ids)):
@@ -219,7 +219,7 @@ def render(p):
     <div class="container">
       <p class="eyebrow">{eyebrow} · {mins} min read</p>
       <h1 style="max-width: 24ch;">{h1}</h1>
-      <p class="post-byline">By <a href="about.html">Syed Shahmikh Ali</a> · Published {pub} · Updated {mod}</p>
+      <p class="post-byline">By <a href="about">Syed Shahmikh Ali</a> · Published {pub} · Updated {mod}</p>
     </div>
   </section>
 
@@ -252,7 +252,7 @@ def render(p):
     <div class="container">
       <p class="eyebrow">{cta_eyebrow}</p>
       <h2>{cta_heading}</h2>
-      <a href="contact.html#booking" class="btn btn--gold">Book a Call</a>
+      <a href="contact#booking" class="btn btn--gold">Book a Call</a>
     </div>
   </section>
 </main>
@@ -266,12 +266,18 @@ def render(p):
            cta_heading=esc(cta_heading), footer=FOOTER)
 
 
+def clean_links(html):
+    """Internal links use extensionless URLs (Cloudflare redirects .html to them)."""
+    html = re.sub(r'href="index\.html((?:#[^"]*)?)"', lambda m: 'href="/%s"' % m.group(1), html)
+    return re.sub(r'href="(?!https?:|mailto:|#)([^"#?]+)\.html((?:[#?][^"]*)?)"', r'href="\1\2"', html)
+
+
 def update_index():
     slugs = all_slugs()
     posts = sorted((load(s) for s in slugs), key=lambda x: (x["published"], x["slug"]), reverse=True)
     cards = "".join(
         """
-        <a href="blog-{slug}.html" class="card blog-card reveal">
+        <a href="blog-{slug}" class="card blog-card reveal">
           <span class="eyebrow">{eyebrow}</span>
           <h3>{title}</h3>
           <p>{summary}</p>
@@ -342,7 +348,7 @@ def main():
             for e in errs:
                 print("[ERROR] %s: %s" % (slug, e))
             continue
-        (PUB / ("blog-%s.html" % slug)).write_text(render(p), encoding="utf-8")
+        (PUB / ("blog-%s.html" % slug)).write_text(clean_links(render(p)), encoding="utf-8")
         meta.append((slug, p["modified"]))
         print("[ok] %s: %d words, public/blog-%s.html written" % (slug, words, slug))
     if failed:

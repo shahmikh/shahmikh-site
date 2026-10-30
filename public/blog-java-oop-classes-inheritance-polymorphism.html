@@ -132,13 +132,13 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="container nav-row">
-    <a href="index.html" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
+    <a href="/" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
     <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="courses.html">Subjects</a><a href="index.html#how">How it works</a><a href="pricing.html">Pricing</a><a href="resources.html">Resources</a><a href="testimonials.html">Reviews</a><a href="blog.html" class="is-active">Blog</a><a href="about.html">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
+      <a href="courses">Subjects</a><a href="/#how">How it works</a><a href="pricing">Pricing</a><a href="resources">Resources</a><a href="testimonials">Reviews</a><a href="blog" class="is-active">Blog</a><a href="about">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
     </nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn--ghost">Contact</a>
-      <a href="contact.html#booking" class="btn btn--primary">Book a free call</a>
+      <a href="contact" class="btn btn--ghost">Contact</a>
+      <a href="contact#booking" class="btn btn--primary">Book a free call</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
     </div>
   </div>
@@ -149,7 +149,7 @@
     <div class="container">
       <p class="eyebrow">Java · 8 min read</p>
       <h1 style="max-width: 24ch;">Java Object-Oriented Programming: Classes, Inheritance and Polymorphism</h1>
-      <p class="post-byline">By <a href="about.html">Syed Shahmikh Ali</a> · Published 2026-10-29 · Updated 2026-10-29</p>
+      <p class="post-byline">By <a href="about">Syed Shahmikh Ali</a> · Published 2026-10-29 · Updated 2026-10-29</p>
     </div>
   </section>
 
@@ -166,7 +166,7 @@
 
       <h2 id="class">What is a class in Java?</h2>
       <p>A class is a blueprint that defines the data and the actions that its objects will have. Each object made from it, using <code>new</code>, gets its own copy of the fields and can call the methods. A good first habit is to make fields <code>private</code> and expose only the methods other code needs, which is called encapsulation.</p>
-<p>In the AP Computer Science A course, this material sits in Unit 3, <a href="https://Apcentral.Collegeboard.org/courses/ap-computer-science-a" rel="noopener">Class Creation</a>, which College Board lists at 10% to 18% of the exam. If you are choosing between AP courses, my post on <a href="blog-python-or-java-first-language.html">Python or Java as a first language</a> covers where Java fits. Check your current course and exam description for exactly which object-oriented topics your year is tested on, since I have not confirmed that detail here.</p>
+<p>In the AP Computer Science A course, this material sits in Unit 3, <a href="https://Apcentral.Collegeboard.org/courses/ap-computer-science-a" rel="noopener">Class Creation</a>, which College Board lists at 10% to 18% of the exam. If you are choosing between AP courses, my post on <a href="blog-python-or-java-first-language">Python or Java as a first language</a> covers where Java fits. Check your current course and exam description for exactly which object-oriented topics your year is tested on, since I have not confirmed that detail here.</p>
 
       <h2 id="inheritance">How does inheritance work in Java?</h2>
       <p>A subclass is declared with <code>extends</code> and gets the members of its parent class. The Oracle Java tutorial puts it this way: a subclass inherits the public and protected members of its parent, and it does not inherit the private members. It also notes that <a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html" rel="noopener">constructors are not members, so they are not inherited</a>, although a subclass constructor can call the parent's with <code>super</code>.</p>
@@ -225,8 +225,8 @@ for (Shape s : shapes) System.out.println(s.describe());</code></pre>
 </ul>
 
       <h2 id="practice">How should you practise this?</h2>
-      <p>Type the Shape program from memory, then change it. Add a <code>Triangle</code>, add a <code>perimeter()</code> method, and make <code>Shape</code> abstract so it cannot be created directly. After each change, predict the output before you run it, and write down any prediction you got wrong. That is the same loop I describe in <a href="blog-past-papers-method.html">how to use past papers for computer science revision</a>.</p>
-<p>If you would like someone to check your classes with you, my <a href="courses.html">computer science lessons</a> cover AP CSA and other Java courses, and you can <a href="contact.html#booking">book a free call</a> to try one.</p>
+      <p>Type the Shape program from memory, then change it. Add a <code>Triangle</code>, add a <code>perimeter()</code> method, and make <code>Shape</code> abstract so it cannot be created directly. After each change, predict the output before you run it, and write down any prediction you got wrong. That is the same loop I describe in <a href="blog-past-papers-method">how to use past papers for computer science revision</a>.</p>
+<p>If you would like someone to check your classes with you, my <a href="courses">computer science lessons</a> cover AP CSA and other Java courses, and you can <a href="contact#booking">book a free call</a> to try one.</p>
 
       <h2 id="faq">Frequently asked questions</h2>
       <div class="faq-list">
@@ -239,14 +239,14 @@ for (Shape s : shapes) System.out.println(s.describe());</code></pre>
       <ul class="post-sources"><li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html" rel="noopener">Oracle Java Tutorials: Inheritance (subclasses and members)</a></li><li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html" rel="noopener">Oracle Java Tutorials: Polymorphism</a></li><li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/summaryinherit.html" rel="noopener">Oracle Java Tutorials: Summary of Inheritance</a></li><li><a href="https://Apcentral.Collegeboard.org/courses/ap-computer-science-a" rel="noopener">College Board: AP Computer Science A course overview</a></li></ul>
 
       <h2>Related reading</h2>
-      <ul class="post-sources"><li><a href="blog-python-or-java-first-language.html">Python or Java as a first language</a></li><li><a href="blog-past-papers-method.html">How to use past papers for computer science revision</a></li><li><a href="courses.html">AP CSP, AP CSA and IB CS tutoring</a></li></ul>
+      <ul class="post-sources"><li><a href="blog-python-or-java-first-language">Python or Java as a first language</a></li><li><a href="blog-past-papers-method">How to use past papers for computer science revision</a></li><li><a href="courses">AP CSP, AP CSA and IB CS tutoring</a></li></ul>
 
       <aside class="author-box">
   <img src="headshot.jpg" alt="Syed Shahmikh Ali" width="72" height="72" loading="lazy">
   <div>
     <p class="author-name">About the author</p>
-    <p><a href="about.html">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 15% of computer science tutors on Preply, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
-    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact.html">contact page</a> and I will correct it.</p>
+    <p><a href="about">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 15% of computer science tutors on Preply, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
+    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact">contact page</a> and I will correct it.</p>
   </div>
 </aside>
     </div>
@@ -256,7 +256,7 @@ for (Shape s : shapes) System.out.println(s.describe());</code></pre>
     <div class="container">
       <p class="eyebrow">Stuck on classes or inheritance?</p>
       <h2>Book a short call and we will trace your code together</h2>
-      <a href="contact.html#booking" class="btn btn--gold">Book a Call</a>
+      <a href="contact#booking" class="btn btn--gold">Book a Call</a>
     </div>
   </section>
 </main>
@@ -265,11 +265,11 @@ for (Shape s : shapes) System.out.println(s.describe());</code></pre>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
-      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="courses.html">Courses</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="resources.html">Resources</a></li><li><a href="blog.html">Blog</a></li></ul></div>
-      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids.html">Kids AI Program</a></li><li><a href="courses.html">Security+ &amp; CCNA</a></li><li><a href="courses.html">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance.html">Career Guidance</a></li></ul></div>
-      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about">About</a></li><li><a href="courses">Courses</a></li><li><a href="pricing">Pricing</a></li><li><a href="resources">Resources</a></li><li><a href="blog">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids">Kids AI Program</a></li><li><a href="courses">Security+ &amp; CCNA</a></li><li><a href="courses">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance">Career Guidance</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact">Contact</a></li><li><a href="faq">FAQ</a></li><li><a href="testimonials">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved.</span><span>Teaching students across the US, UK &amp; Europe.</span></div>
+    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved. · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></span><span>Teaching students across the US, UK &amp; Europe.</span></div>
   </div>
 </footer>
 <script src="main.js"></script>
