@@ -1,6 +1,6 @@
 # Syed Shahmikh Ali
 
-> Syed Shahmikh Ali is a computer science, AI and IT tutor and career mentor based in Pakistan. He teaches live one-to-one lessons online to students in the US, UK, Europe and the Gulf. He has taught 5,000+ hours since 2020, is a Preply Super Tutor, and is in the top 15% of computer science tutors on Preply. His background is Mechatronics Engineering (Air University) and cloud engineering.
+> Syed Shahmikh Ali is a computer science, AI and IT tutor and career mentor based in Pakistan. He teaches live one-to-one lessons online to students in the US, UK, Europe and the Gulf. He has taught 5,000+ hours since 2020, is a Preply Super Tutor, and is in the top 10% of computer science tutors on Preply. His background is Mechatronics Engineering (Air University) and cloud engineering.
 
 ## What he teaches
 - AP Computer Science Principles and AP Computer Science A

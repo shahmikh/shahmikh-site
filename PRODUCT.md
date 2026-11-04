@@ -29,7 +29,7 @@ Sessions are live 1:1 video lessons for students in the US, UK and Europe. The o
 
 ## Brand Commitments
 - Name and mark: SHAHMIKH wordmark with the "S" mark; existing brand line "Study smarter. Choose wisely. Build what's next."
-- Confirmed credentials: Preply Super Tutor; in the top 15% of computer science tutors on Preply. Mention in plain text only. Do not use Preply's logo, badge artwork, colours, fonts or layout, and do not look like Preply.
+- Confirmed credentials: Preply Super Tutor; in the top 10% of computer science tutors on Preply. Mention in plain text only. Do not use Preply's logo, badge artwork, colours, fonts or layout, and do not look like Preply.
 - Owner direction (volunteered): the site should feel warm and personal, with his face and voice leading.
 - The owner dislikes the site looking "made by Claude" (generic AI look).
 

@@ -15,7 +15,7 @@ The owner asked for two posts a week, written with the SEO skill in `blog-routin
    - Lead answers the question in the first 2 sentences. 3 to 5 key takeaways. Question-style H2s that open with a direct answer. Exactly 3 FAQ items. 2 to 6 sources, each also linked inline in the body.
    - Aim for 900 to 1,800 words. Never pad.
    - No invented statistics, studies, clients, quotes, student stories or results. First person only for things that are plainly true of teaching (for example "I teach both courses"), never for made-up anecdotes.
-   - Do not repeat or strengthen these unverified site claims: "AWS Cloud Engineer", "97 reviews", "4,500+ hours", "9 tracks", or any prices. The Preply facts (Super Tutor, top 15% of computer science tutors) are confirmed.
+   - Do not repeat or strengthen these unverified site claims: "AWS Cloud Engineer", "97 reviews", "4,500+ hours", "9 tracks", or any prices. The Preply facts (Super Tutor, top 10% of computer science tutors, updated from top 15% on 2026-11-04) and "Oxford University Press trained" are confirmed.
    - Plain, casual, specific voice. No filler phrases from the playbook's banned list, no em dashes or en dashes, no triplets of adjectives.
    - Link to a relevant service page (`courses`, `career-guidance` or `contact#booking` (no .html)) and 1 to 2 related posts. If an older relevant post exists, add one sentence with a link to the new post in it; if there are no older posts, skip this.
 7. **Build.** `python3 blog-routine/build_post.py <slug>`. Fix every `[ERROR]` and rerun until it passes. The script writes `public/blog-<slug>`, refreshes the cards on `public/blog.html` and updates `public/sitemap.xml`.
