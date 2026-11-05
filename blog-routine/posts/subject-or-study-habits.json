@@ -1,0 +1,95 @@
+{
+  "slug": "subject-or-study-habits",
+  "title": "Is Your Teen Struggling With the Subject or Study Habits?",
+  "h1": "Is Your Teen Struggling With the Subject or With Study Habits? How Parents Can Tell",
+  "description": "A parent's guide to telling a content gap from a study-habits problem in computer science, with a simple two-week check and what to do about each.",
+  "eyebrow": "For parents",
+  "read_min": 6,
+  "card_summary": "A simple two-week check to tell whether a teen has a content gap or a study-habits problem, and what to change in each case.",
+  "lead": "The quickest way to tell is to ask your teen to explain a topic out loud, then give them a few unseen questions on it with the notes closed. If they cannot explain it, the subject is the problem. If they can explain it but lose marks on the questions, or say they studied for hours and nothing stuck, the habits are the problem. Most students have a bit of both, so the goal is to find the bigger one first.",
+  "takeaways": [
+    "A content gap shows up as not being able to explain an idea. A habit problem shows up as knowing it on the page but not under test conditions.",
+    "Hours spent are a poor signal. What the hours were spent doing matters more.",
+    "Research reviews rate rereading and highlighting as low value, and practice testing and spreading study over time as high value.",
+    "Study skills work best when taught on the actual subject, not as a separate lesson.",
+    "A two-week check with one topic and a few closed-notes questions will usually show which problem you have."
+  ],
+  "sections": [
+    {
+      "id": "signs",
+      "h2": "What are the signs of a content gap?",
+      "html": "<p>A content gap means the student does not yet understand an idea, so no amount of extra effort on the same page will fix it. Typical signs in computer science: they cannot say what a loop or a class is for in their own words, they get stuck at the same point in a program every time, or they can copy a worked example but cannot change it slightly.</p>\n<p>Another sign is a pattern across tasks. If every question that involves, say, arrays or recursion goes wrong, while the rest are fine, the topic is the issue and not the student's attitude.</p>"
+    },
+    {
+      "id": "habits",
+      "h2": "What are the signs of a study-habits problem?",
+      "html": "<p>A habit problem means the student may understand the material when looking at it but is not practising the thing the exam asks for. Common signs: long study sessions with little to show, notes that are neat but never tested, cramming the night before, and a gap between how confident they feel and what the marks say.</p>\n<p>The research backs this up. A well known 2013 review in <em>Psychological Science in the Public Interest</em> looked at ten study techniques. According to <a href=\"https://www.sciencedaily.com/releases/2013/01/130110111734.htm\" rel=\"noopener\">a summary of the review</a>, practice testing got the highest overall utility rating and spreading study sessions over time was also rated highly. Rereading and highlighting were among the techniques rated low. The <a href=\"https://stafforini.com/works/dunlosky-2013-improving-students-learning/\" rel=\"noopener\">full paper</a> is by John Dunlosky and colleagues. In plain terms: a student who rereads notes for two hours is usually doing less useful work than one who spends half an hour answering questions from memory.</p>"
+    },
+    {
+      "id": "check",
+      "h2": "How can you test which problem it is at home?",
+      "html": "<p>Run this two-week check on one topic. It needs no computer science knowledge from you.</p>\n<ol>\n<li><strong>Ask for an explanation.</strong> Ask your teen to teach you one topic from the last few weeks, with the notes closed. Note where they get stuck or fall back on vague words.</li>\n<li><strong>Set three unseen questions.</strong> Use questions from the textbook, the teacher, or an official past paper. They answer on paper with no notes and a time limit.</li>\n<li><strong>Compare the two results.</strong> Failed the explanation: content gap. Passed the explanation but dropped marks on the questions: habits, or exam technique.</li>\n<li><strong>Repeat after a few days.</strong> Ask the same three questions again. If the answers fade quickly, the issue is how the material is being revised, not how clever the student is.</li>\n</ol>\n<p>This is an informal check I use as a teacher, not a diagnostic test. It shows you where to look, nothing more.</p>"
+    },
+    {
+      "id": "fix-content",
+      "h2": "What should you do if it is a content gap?",
+      "html": "<p>Go back to the earlier idea the topic depends on and rebuild from there. A student stuck on inheritance in Java usually has a shaky grip on classes and objects, so extra inheritance practice will not help yet. Short, targeted explanation plus a few small examples works better than a long re-read of the chapter. A tutor or teacher can find the exact missing step quickly, which saves weeks of guessing.</p>\n<p>If the course is one of the AP, IB or IGCSE computer science courses, my <a href=\"courses\">school computer science lessons</a> start with this kind of gap-finding.</p>"
+    },
+    {
+      "id": "fix-habits",
+      "h2": "What should you do if it is a habits problem?",
+      "html": "<p>Change what the study time is spent on, before adding more time. Swap rereading for closed-notes questions, and split one long session into shorter ones across the week. The Education Endowment Foundation reports that <a href=\"https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition\" rel=\"noopener\">metacognitive strategies</a>, meaning planning, monitoring and checking your own learning, are worth the equivalent of an additional +7 months' progress when used well. It also says these strategies should be taught alongside specific subject content, because pupils find generic tips hard to apply to a particular task.</p>\n<p>That last point matters for choosing help. A general study-skills workshop is less likely to stick than someone showing your teen how to revise computer science itself. One concrete way is the marking loop in my guide to <a href=\"blog-past-papers-method\">using past papers for computer science revision</a>.</p>"
+    },
+    {
+      "id": "support",
+      "h2": "How can parents help without hovering?",
+      "html": "<p>Ask about process, not outcomes. &quot;What did you test yourself on today?&quot; gives you more than &quot;how many hours did you do?&quot; Keep the home routine simple: a fixed time, a phone out of reach, and a short plan for each session written before it starts.</p>\n<p>If you are still not sure after the check, a short conversation with the teacher or a tutor can settle it. You can <a href=\"contact#booking\">book a free call</a> and bring the results of the two-week check along.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do I know if my teen is just not trying?",
+      "a": "Effort and effective effort are different. Check what the study time is spent on first. A student who rereads for hours may be trying hard with a method that gives little back."
+    },
+    {
+      "q": "Does my teen need a tutor or a study-skills course?",
+      "a": "If the two-week check shows a content gap, subject help is the better fit. If it shows a habits problem, the research suggests teaching those habits on the real subject, not in a separate lesson."
+    },
+    {
+      "q": "How long before changed habits show up in marks?",
+      "a": "There is no reliable figure. Run the same three-question check every week or two, and look for the answers staying correct after a few days, which is an earlier sign than a grade."
+    }
+  ],
+  "sources": [
+    {
+      "title": "ScienceDaily: summary of the Dunlosky et al. 2013 review of study techniques",
+      "url": "https://www.sciencedaily.com/releases/2013/01/130110111734.htm"
+    },
+    {
+      "title": "Dunlosky et al. (2013), Improving Students' Learning With Effective Learning Techniques",
+      "url": "https://stafforini.com/works/dunlosky-2013-improving-students-learning/"
+    },
+    {
+      "title": "Education Endowment Foundation: Metacognition and Self-regulated Learning",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition"
+    }
+  ],
+  "related": [
+    {
+      "title": "How to use past papers for computer science revision",
+      "href": "blog-past-papers-method.html"
+    },
+    {
+      "title": "Python or Java as a first language",
+      "href": "blog-python-or-java-first-language.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Not sure where the problem is?",
+  "cta_heading": "Book a free call and we will work out what is holding your teen back",
+  "published": "2026-11-05",
+  "modified": "2026-11-05"
+}
