@@ -16,6 +16,8 @@
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
 
+- 2026-11-05: manual run for the missed Thursday slot. Topic 11 (Network+ vs Security+ vs CCNA) not published: comptia.org and cisco.com pages were not on this session's fetch allowlist, so exam facts could not be verified. Retry from the scheduled task (Mon 9 Nov).
+
 ## Backlog (use in order, verify every fact before writing)
 9. Is your teen struggling with the subject or with study habits? How parents can tell
 10. SOC analyst or cloud security engineer: two entry paths compared honestly
