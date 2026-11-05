@@ -18,3 +18,6 @@ Goal: each week create 3 new pins from the newest blog posts / free guide and SC
 6. Scroll down, choose "Publish at a later date", open calendar icon, pick the date, keep 12:00. Space pins 2 days apart starting the day after the last scheduled pin (check pinterest.com/shahmikhali/_created/ "Scheduled Pins"). Click Publish (top, after scrolling up); confirm "Pin Scheduled".
 7. Append the slugs and dates to `pinterest-routine/pinned.md`, commit and push.
 8. Report: what was scheduled, dates, and any Pinterest analytics visible (impressions/clicks) plus Pinterest visits from Cloudflare Web Analytics referrers if reachable.
+
+## Pin design (from 5 Nov 2026)
+Use the t2 design: 1000x1500, big headline with one accent word, 3 to 4 icon rows, audience subtitle, footer "Syed Shahmikh Ali | shahmikh.com". Themes: warm (parents), dark (Security+/CCNA), mint (study tips). Source files were built in /home/claude/pins3 (t2.html, mk.py); recreate from this description if missing.
