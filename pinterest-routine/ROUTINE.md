@@ -21,3 +21,5 @@ Goal: each week create 3 new pins from the newest blog posts / free guide and SC
 
 ## Pin design (from 7 Nov 2026): vary the style every pin
 Owner decision: never reuse the same layout on consecutive pins. Keep only the brand basics constant (Plus Jakarta Sans, the palette family, footer "Syed Shahmikh Ali | shahmikh.com", 1000x1500). Rotate these styles: big-number cover, bar chart, versus split, speech-bubble question card, step/roadmap path, checklist on a paper background, cheat-sheet table, screen/code mockup. Also vary background (flat, split, gradient) and headline position. Source for five styles is in `pinterest-routine/pin-styles/mk.py` (renders HTML, then screenshot with Playwright at 1000x1500). Use only verified facts from published pages, and track which style gets the most saves/clicks after 3 to 4 weeks.
+
+Cadence (owner decision 2026-11-07): one pin per day, 7 per weekly run, each in a different style. Styles are in pin-styles/mk.py and mk2.py. Never type an at-sign in a description (opens a mention popup).
