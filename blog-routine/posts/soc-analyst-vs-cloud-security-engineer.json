@@ -1,0 +1,90 @@
+{
+  "slug": "soc-analyst-vs-cloud-security-engineer",
+  "title": "SOC Analyst or Cloud Security Engineer: Which First?",
+  "h1": "SOC Analyst or Cloud Security Engineer: Which Entry Path Should You Start With?",
+  "description": "Most people should start as a SOC analyst, then move to cloud security. See what each job does, what the certs expect and a 3-question way to choose.",
+  "eyebrow": "Cybersecurity careers",
+  "read_min": 8,
+  "card_summary": "Two entry paths into cybersecurity compared on daily work, certifications and experience expected, with a three-question way to pick yours.",
+  "lead": "If you are starting from scratch, a SOC analyst role is usually the more reachable first step, and cloud security engineer is a common second step once you have some systems or cloud experience behind you. That is a judgement, not a rule: the certifications for each path both assume years of hands-on work, so the real question is which kind of work you want to practise first, investigating alerts or building guardrails.",
+  "takeaways": [
+    "A SOC analyst spends the day watching for threats and investigating alerts. A cloud security engineer spends it designing and fixing how cloud accounts are configured and who can reach what.",
+    "The US Bureau of Labor Statistics tracks information security analysts, not cloud security engineers, so its pay and growth figures cover the broader analyst job only.",
+    "CompTIA CySA+ recommends about four years in a SOC or incident response role, and the AWS Security Specialty targets 3 to 5 years of securing cloud solutions. Neither is a beginner exam.",
+    "Choose by the work you enjoy: reacting to evidence points to the SOC, and building systems so problems never happen points to cloud security.",
+    "You do not have to choose forever. SOC experience gives you the detection and incident response knowledge that cloud security teams also test."
+  ],
+  "sections": [
+    {
+      "id": "difference",
+      "h2": "What is the difference between a SOC analyst and a cloud security engineer?",
+      "html": "<p>A SOC (security operations centre) analyst monitors and responds. A cloud security engineer builds and hardens. They overlap, but the daily rhythm is different.</p>\n<p>The US Bureau of Labor Statistics describes <a href=\"https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm\" rel=\"noopener\">information security analysts</a> as people who monitor networks for breaches and investigate when they happen, maintain tools such as firewalls and encryption software, check systems for vulnerabilities, and prepare reports on attempted attacks. That description fits a SOC analyst well.</p>\n<p>The AWS exam guide for the <a href=\"https://docs.aws.amazon.com/aws-certification/latest/security-specialty-03/security-specialty-03.md\" rel=\"noopener\">Security Specialty</a> shows what cloud security work looks like instead. It lists multi-account governance, managing identity at scale, writing firewall rules at scale, logging and monitoring strategy, data encryption at rest and in transit, and responding to an audit. Detection and incident response are in there too, but they sit beside a lot of design and configuration work.</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th></th><th>SOC analyst</th><th>Cloud security engineer</th></tr></thead><tbody>\n<tr><th>Main mode</th><td>React: triage alerts, investigate, escalate</td><td>Build: set policy, fix misconfigurations, automate checks</td></tr>\n<tr><th>Typical question</th><td>&quot;Is this login a real attacker?&quot;</td><td>&quot;Why can this role reach that storage bucket?&quot;</td></tr>\n<tr><th>Needs to know well</th><td>Networking, logs, malware basics, incident response steps</td><td>Identity and access management, one cloud platform, infrastructure as code</td></tr>\n<tr><th>Pace</th><td>Alert-driven, often shift-based</td><td>Project-driven, closer to engineering</td></tr>\n</tbody></table></div>\n<p>The table is my summary of how the two jobs usually differ. Individual employers split the work differently, so read the job description, not just the title.</p>"
+    },
+    {
+      "id": "entry",
+      "h2": "Which path is easier to enter with no experience?",
+      "html": "<p>The SOC route is usually the easier door, mainly because the cloud route expects you to already understand systems and cloud platforms. This is an inference from the certification requirements and from how BLS describes the field, not a hiring statistic.</p>\n<p>BLS says the typical entry-level education for information security analysts is a bachelor's degree, usually in computer science or a related field, and that some workers enter with a high school diploma plus relevant training and certifications. It lists work experience of less than 5 years in a related occupation, and notes that many analysts previously worked in IT departments, often as network and computer systems administrators. Security is often a second step after IT, not a first job.</p>\n<p>On the cloud side, the AWS exam guide says the target candidate should have the equivalent of 3 to 5 years of experience securing cloud solutions. CompTIA's page for the <a href=\"https://www.comptia.org/en-us/certifications/cybersecurity-analyst/v3/\" rel=\"noopener\">CySA+ (CS0-003)</a> recommends Network+, Security+ or equivalent knowledge plus at least four years of hands-on work as an incident response analyst, SOC analyst or similar. Both are above the entry level, which is why a first certification is better chosen from the foundation tier. My <a href=\"blog-security-plus-sy0-701-study-plan.html\">Security+ study plan</a> and <a href=\"blog-ccna-200-301-exam-guide.html\">CCNA guide</a> cover the two common starting points.</p>"
+    },
+    {
+      "id": "pay",
+      "h2": "What do the numbers say about pay and demand?",
+      "html": "<p>For the broader information security analyst job, BLS reports a median pay of $129,180 per year in May 2025 and projects 21% growth from 2025 to 2035, which it calls much faster than average for all occupations. The page was last modified on 27 August 2026.</p>\n<p>Two cautions. First, those figures are for the whole analyst occupation, not entry-level SOC roles, so a first job will usually pay less than the median. Second, BLS does not publish a separate figure for cloud security engineers, so I will not quote one. If you want a salary number for either role, check current job listings in your own country and city before you plan around it.</p>"
+    },
+    {
+      "id": "choose",
+      "h2": "How do you choose between them? Three questions",
+      "html": "<p>Answer these three questions before you pick a certification or apply for jobs. They are my own decision framework, built from the differences above.</p>\n<ol>\n<li><strong>Do you prefer solving a puzzle someone hands you, or designing so the puzzle never appears?</strong> Investigation and triage fit the SOC. Prevention and design fit cloud security.</li>\n<li><strong>How much IT or cloud background do you already have?</strong> If you have never configured a network, a server or a cloud account, the SOC path lets you learn those basics from the outside, through logs. If you already work with a cloud platform as a developer or sysadmin, you may be closer to cloud security than you think.</li>\n<li><strong>Can you work shifts?</strong> Many SOCs run around the clock. Cloud security teams more often work standard hours, though on-call duty exists in both. Ask about this in interviews.</li>\n</ol>\n<p>Here is a hypothetical example, not a real student. Someone finishing a networking course who likes reading packet captures and has no cloud exposure would be a natural SOC candidate. Someone who has built small apps on a cloud platform and enjoys permissions and automation might skip straight to junior cloud or DevSecOps roles. Both can end up in the same place later.</p>"
+    },
+    {
+      "id": "plan",
+      "h2": "What should you practise in the first three months?",
+      "html": "<p>Whichever path you pick, start with the same base, then split. A sensible first three months looks like this.</p>\n<ol>\n<li><strong>Weeks 1 to 4:</strong> networking basics (IP addressing, DNS, ports) and Linux command line. Everything in security sits on top of these.</li>\n<li><strong>Weeks 5 to 8, SOC route:</strong> learn to read logs, understand common attack stages, and write a short incident summary from a sample log you collect yourself in a home lab.</li>\n<li><strong>Weeks 5 to 8, cloud route:</strong> create a free-tier cloud account, learn how users, roles and policies work, then deliberately break one permission and fix it.</li>\n<li><strong>Weeks 9 to 12:</strong> sit a foundation certification such as Security+ if you have not, and write up what you built as a small portfolio you can show.</li>\n</ol>\n<p>If you want someone to check your plan against your background, my <a href=\"career-guidance.html\">career guidance sessions</a> are built for this, and you can <a href=\"contact.html#booking\">book a free call</a> to talk it through.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is a SOC analyst job a good first job in cybersecurity?",
+      "a": "For many people it is a practical first step, because it teaches networking, logs and incident response on the job. BLS notes that many information security analysts previously worked in IT, so some start in help desk or systems roles first."
+    },
+    {
+      "q": "Can I become a cloud security engineer without SOC experience?",
+      "a": "Yes, if you have systems, development or cloud administration experience. The AWS Security Specialty targets 3 to 5 years of experience securing cloud solutions, but that experience can come from cloud or DevOps work instead of a SOC."
+    },
+    {
+      "q": "Which certification should I take first?",
+      "a": "A foundation exam such as Security+ fits both paths. CySA+ and the AWS Security Specialty both assume years of hands-on experience, so they make more sense after your first role."
+    }
+  ],
+  "sources": [
+    {
+      "title": "US Bureau of Labor Statistics: Information Security Analysts",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"
+    },
+    {
+      "title": "CompTIA: CySA+ (CS0-003) certification",
+      "url": "https://www.comptia.org/en-us/certifications/cybersecurity-analyst/v3/"
+    },
+    {
+      "title": "AWS: Certified Security - Specialty (SCS-C03) exam guide",
+      "url": "https://docs.aws.amazon.com/aws-certification/latest/security-specialty-03/security-specialty-03.md"
+    }
+  ],
+  "related": [
+    {
+      "title": "Security+ SY0-701: what it covers and an 8-week plan",
+      "href": "blog-security-plus-sy0-701-study-plan.html"
+    },
+    {
+      "title": "CCNA 200-301: what is on the exam and how to practise labs",
+      "href": "blog-ccna-200-301-exam-guide.html"
+    },
+    {
+      "title": "Career guidance for students and career changers",
+      "href": "career-guidance.html"
+    }
+  ],
+  "cta_eyebrow": "Not sure which path fits you?",
+  "cta_heading": "Book a short call and we will map your first 90 days",
+  "published": "2026-11-08",
+  "modified": "2026-11-08"
+}

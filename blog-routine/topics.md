@@ -13,6 +13,7 @@
 - 2026-10-29: `past-papers-method` (How to use past papers for computer science revision)
 - 2026-10-29: `java-oop-classes-inheritance-polymorphism` (Java OOP: classes, inheritance and polymorphism)
 - 2026-11-05: `subject-or-study-habits` (Is your teen struggling with the subject or study habits?)
+- 2026-11-08: `soc-analyst-vs-cloud-security-engineer` (SOC analyst or cloud security engineer: which first?)
 
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
@@ -20,7 +21,6 @@
 - 2026-11-05: manual run for the missed Thursday slot. Topic 11 (Network+ vs Security+ vs CCNA) not published: comptia.org and cisco.com pages were not on this session's fetch allowlist, so exam facts could not be verified. Retry from the scheduled task (Mon 9 Nov).
 
 ## Backlog (use in order, verify every fact before writing)
-10. SOC analyst or cloud security engineer: two entry paths compared honestly
 11. Network+ vs Security+ vs CCNA: which to choose with no experience
 12. AP CSA recursion and 2D arrays: the mistakes that cost marks
 2. IB Computer Science internal assessment: how to choose a topic and what the criteria reward

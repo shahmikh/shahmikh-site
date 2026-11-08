@@ -32,6 +32,7 @@
 - [YouTube](https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA)
 
 ## Blog posts (exam guides and study advice)
+- [SOC Analyst or Cloud Security Engineer: Which First?](https://shahmikh.com/blog-soc-analyst-vs-cloud-security-engineer): Most people should start as a SOC analyst, then move to cloud security. See what each job does, what the certs expect and a 3-question way to choose.
 - [Is Your Teen Struggling With the Subject or Study Habits?](https://shahmikh.com/blog-subject-or-study-habits): A parent's guide to telling a content gap from a study-habits problem in computer science, with a simple two-week check and what to do about each.
 - [Security+ SY0-701: What It Covers and an 8-Week Plan](https://shahmikh.com/blog-security-plus-sy0-701-study-plan): Security+ SY0-701 has 5 domains, up to 90 questions and a 750 pass mark. See what each domain weighs and an 8-week study plan that follows those weights.
 - [Python or Java as a First Language for a School Student](https://shahmikh.com/blog-python-or-java-first-language): Python or Java first? My answer depends on the exam: AP CSA needs Java, AP CSP and IGCSE do not. A clear recommendation by course, with the official rules.
