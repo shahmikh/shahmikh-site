@@ -1,0 +1,94 @@
+{
+  "slug": "network-plus-vs-security-plus-vs-ccna",
+  "title": "Network+ vs Security+ vs CCNA: Which to Take First?",
+  "h1": "Network+ vs Security+ vs CCNA: Which Certification Should You Take First With No Experience?",
+  "description": "Network+ first if you are new to IT, then Security+ or CCNA depending on the job you want. See the exam facts side by side and a four-question way to pick.",
+  "eyebrow": "IT certifications",
+  "read_min": 8,
+  "card_summary": "Exam length, pass marks and recommended experience for Network+, Security+ and CCNA side by side, plus a simple rule for picking your first one.",
+  "lead": "If you are new to IT, start with CompTIA Network+, then choose Security+ if you are heading toward security or CCNA if you want to work hands-on with routers and switches. That is my recommendation, not an official one, and it rests on a simple idea: networking knowledge sits underneath both of the other exams, so it is the cheapest foundation to build first.",
+  "takeaways": [
+    "Network+ (N10-009) is 90 minutes with up to 90 questions and a 720 pass mark. Security+ (SY0-701) is the same length with a 750 pass mark. CCNA is a single 120-minute exam.",
+    "CompTIA recommends A+ and 9 to 12 months of hands-on experience for Network+, and Network+ plus two years of security or systems administrator experience for Security+. These are recommendations, not requirements.",
+    "Cisco's pages do not state prerequisites for CCNA, so you can sit it without Network+, but it goes deeper on Cisco-style configuration.",
+    "Check version dates before you pay: CompTIA lists Security+ SY0-701 as retiring in June 2027 with a V8 coming, and CCNA v1.1 has a last test day of 2 February 2027.",
+    "Pick by target job: security analyst work leans to Security+, network engineering leans to CCNA, and general IT support leans to Network+."
+  ],
+  "sections": [
+    {
+      "id": "facts",
+      "h2": "How do Network+, Security+ and CCNA compare on the facts?",
+      "html": "<p>All three are about networking or security, but they differ in length, depth and how much experience the provider expects. These figures come from <a href=\"https://www.comptia.org/en-us/certifications/network/\" rel=\"noopener\">CompTIA's Network+ page</a>, <a href=\"https://www.comptia.org/en/certifications/security/v7/\" rel=\"noopener\">CompTIA's Security+ page</a> and <a href=\"https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301_CCNA_v2.0_Exam_Topics_PDF.pdf\" rel=\"noopener\">Cisco's CCNA v2.0 exam topics</a>.</p>\n<div class=\"table-wrap\"><table class=\"post-table\"><thead><tr><th></th><th>Network+ (N10-009)</th><th>Security+ (SY0-701)</th><th>CCNA (200-301)</th></tr></thead><tbody>\n<tr><th>Questions</th><td>Up to 90</td><td>Up to 90</td><td>Not stated in the topics document I read</td></tr>\n<tr><th>Time</th><td>90 minutes</td><td>90 minutes</td><td>120 minutes</td></tr>\n<tr><th>Pass mark</th><td>720 of 900</td><td>750 of 900</td><td>Not stated in the document I read</td></tr>\n<tr><th>Recommended experience</th><td>A+ and 9 to 12 months of hands-on experience in a junior network administrator or network support role</td><td>Network+ and two years in a security or systems administrator job</td><td>None stated by Cisco in the pages I read</td></tr>\n<tr><th>Focus</th><td>How networks work and are supported</td><td>Security concepts, operations, risk</td><td>Configuring and troubleshooting Cisco-style networks</td></tr>\n</tbody></table></div>\n<p>Both CompTIA exams mix multiple-choice and performance-based questions. I left out CCNA question counts and pass marks because the Cisco documents I read do not state them, and I will not guess.</p>"
+    },
+    {
+      "id": "first",
+      "h2": "Which one should you take first if you have no experience?",
+      "html": "<p>Network+ is the safest first step for most beginners. The CompTIA recommendation for Security+ is Network+ plus two years of security or systems administrator experience, so Network+ is the stepping stone CompTIA itself points to.</p>\n<p>That does not mean Network+ is mandatory. CompTIA says the Network+ recommendation is A+ plus 9 to 12 months of hands-on experience, and that is a recommendation. If you already understand IP addressing, DNS, DHCP, switching and routing, you may be able to skip straight to Security+ or CCNA. A quick test: can you explain what happens when your laptop loads a web page, from DHCP through to the TCP connection? If that sounds like a blur, start with Network+.</p>\n<p>The experience figures matter for a second reason. They tell you the exams assume practical familiarity. If you have none, plan extra time for labs, not just reading.</p>"
+    },
+    {
+      "id": "choose",
+      "h2": "How do you choose with four questions?",
+      "html": "<p>These questions are my own decision framework, not a provider guideline.</p>\n<ol>\n<li><strong>What job title are you aiming for?</strong> Technical support specialist or network operations work fits Network+, since CompTIA lists those among the roles it maps to. Security analyst roles fit Security+. Network engineer roles fit CCNA.</li>\n<li><strong>Do you like building and configuring, or understanding and defending?</strong> CCNA rewards typing commands into devices. Security+ rewards knowing why a control exists and when to use it.</li>\n<li><strong>Which employers are you targeting?</strong> Look at ten job listings you would apply for and count which certification they name. That count beats any article, including this one.</li>\n<li><strong>How much time do you have before the exam changes?</strong> See the next section.</li>\n</ol>\n<p>An example, not a real student: someone aiming for a helpdesk job at a mid-sized company would likely take Network+ first. Someone who already runs a home lab with VLANs and wants to become a network engineer might go straight to CCNA. Someone who wants a security analyst role would still be wise to cover networking first, which is why my <a href=\"blog-soc-analyst-vs-cloud-security-engineer.html\">SOC analyst versus cloud security engineer</a> post suggests building networking basics before specialising.</p>"
+    },
+    {
+      "id": "dates",
+      "h2": "Which exam versions are changing soon?",
+      "html": "<p>Two of the three have dates you should know before you buy a voucher.</p>\n<p>CompTIA's Security+ page lists SY0-701 as retiring in June 2027 for English, and says Security+ V8 is coming in November. Its Network+ page notes the exam usually runs about three years after launch, with an estimated retirement in 2027 for N10-009, which launched on 20 June 2024, and no successor is listed there. Cisco's blog <a href=\"https://blogs.cisco.com/learning/stay-on-track-get-certified-before-the-ccna-refresh\" rel=\"noopener\">Stay on track, get certified before the CCNA refresh</a> gives 2 February 2027 as the last day to test CCNA v1.1 and 3 February 2027 as the day v2.0 goes live for testing. Cisco's advice is to keep studying and take v1.1 if you can certify by then, because the skills carry into v2.0.</p>\n<p>The v2.0 topics document I read lists five domains: Network Infrastructure and Connectivity (25%), Switching and Network Access (25%), IP Routing (20%), Network Services and Security (20%), and AI, and Network Operations and Management (10%). It also says the topics may change without notice.</p>\n<p>My practical advice: check the provider page the day you book, and favour materials made for the version you will actually sit. For deeper detail on each exam, see my <a href=\"blog-security-plus-sy0-701-study-plan.html\">Security+ SY0-701 study plan</a> and <a href=\"blog-ccna-200-301-exam-guide.html\">CCNA 200-301 guide</a>.</p>"
+    },
+    {
+      "id": "plan",
+      "h2": "What does a sensible sequence look like?",
+      "html": "<p>Here is a sequence I would suggest to a beginner, with rough timings that depend on your hours per week. It is my teaching judgement, not a provider plan.</p>\n<ol>\n<li><strong>Months 1 to 3:</strong> Network+ material, with a home lab or simulator. Aim to explain each concept aloud without notes.</li>\n<li><strong>Month 3 or 4:</strong> sit Network+ if your job target needs it, or move on if listings favour another certification.</li>\n<li><strong>Next 2 to 3 months:</strong> Security+ for security targets, or CCNA for network engineering targets. Do not study both at once.</li>\n<li><strong>After that:</strong> let your first role or a target employer tell you what to add.</li>\n</ol>\n<p>If you would like this sequence fitted to your own background and deadline, my <a href=\"courses.html\">Security+ and CCNA lessons</a> start with a short diagnostic, and you can <a href=\"contact.html#booking\">book a free call</a> to talk it through.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do I need Network+ before Security+ or CCNA?",
+      "a": "No. CompTIA recommends Network+ before Security+, and Cisco's pages I read state no prerequisites for CCNA. In practice, the networking knowledge helps a lot with both."
+    },
+    {
+      "q": "Is Security+ or Network+ harder?",
+      "a": "They are different in kind. Security+ needs 750 of 900 to pass and Network+ needs 720, both over 90 minutes. Difficulty depends on your background more than the numbers."
+    },
+    {
+      "q": "Should I wait for the new versions before studying?",
+      "a": "Do not pause studying. Cisco says the skills you build for CCNA v1.1 carry into v2.0, and the same logic applies to the CompTIA exams, whose core topics change slowly. Check each provider's page for current dates before booking."
+    }
+  ],
+  "sources": [
+    {
+      "title": "CompTIA: Network+ (N10-009) certification",
+      "url": "https://www.comptia.org/en-us/certifications/network/"
+    },
+    {
+      "title": "CompTIA: Security+ (SY0-701) certification",
+      "url": "https://www.comptia.org/en/certifications/security/v7/"
+    },
+    {
+      "title": "Cisco: CCNA 200-301 v2.0 exam topics",
+      "url": "https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301_CCNA_v2.0_Exam_Topics_PDF.pdf"
+    },
+    {
+      "title": "Cisco blog: Stay on track, get certified before the CCNA refresh",
+      "url": "https://blogs.cisco.com/learning/stay-on-track-get-certified-before-the-ccna-refresh"
+    }
+  ],
+  "related": [
+    {
+      "title": "Security+ SY0-701: what it covers and an 8-week plan",
+      "href": "blog-security-plus-sy0-701-study-plan.html"
+    },
+    {
+      "title": "CCNA 200-301: what is on the exam and how to practise labs",
+      "href": "blog-ccna-200-301-exam-guide.html"
+    },
+    {
+      "title": "SOC analyst or cloud security engineer: which first?",
+      "href": "blog-soc-analyst-vs-cloud-security-engineer.html"
+    }
+  ],
+  "cta_eyebrow": "Not sure which exam fits you?",
+  "cta_heading": "Book a short call and we will pick your first certification",
+  "published": "2026-11-08",
+  "modified": "2026-11-08"
+}
