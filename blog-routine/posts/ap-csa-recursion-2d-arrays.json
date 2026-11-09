@@ -1,0 +1,101 @@
+{
+  "slug": "ap-csa-recursion-2d-arrays",
+  "title": "AP CSA Recursion and 2D Arrays: Where the Marks Go",
+  "h1": "AP CSA Recursion and 2D Arrays: Where Students Lose Marks and How to Fix It",
+  "description": "Recursion is tested only in AP CSA multiple choice, while 2D arrays have their own free-response question. Here is how to trace one and write the other.",
+  "eyebrow": "AP Computer Science A",
+  "read_min": 8,
+  "card_summary": "Recursion is only in the multiple-choice section and 2D arrays are Question 4 of the free response. How to trace the first and write the second.",
+  "lead": "On the AP Computer Science A exam, recursion is assessed only in the multiple-choice section, so you need to trace recursive code, not write it. 2D arrays are the opposite: they are the subject of free-response Question 4, where you have to write a method from scratch. Prepare for each in the way it is actually tested and you will stop spending time on the wrong skill.",
+  "takeaways": [
+    "College Board's course description says recursion is assessed only through multiple-choice questions, which usually ask for the result or behavior of a recursive call.",
+    "Free-response Question 4 is a 2D array question: write one method that uses, analyzes and manipulates data in a 2D array.",
+    "For recursion, practice writing out the calls on paper until you can trace them without guessing.",
+    "For 2D arrays, the two most common slips are mixing up rows and columns and using the wrong length in the inner loop.",
+    "Unit 4, Data Collections, is listed at 30% to 40% of the multiple-choice section, so this material is worth the time."
+  ],
+  "sections": [
+    {
+      "id": "format",
+      "h2": "Where do recursion and 2D arrays appear on the exam?",
+      "html": "<p>Recursion appears only in the multiple-choice section, and 2D arrays appear in both sections. The exam is digital and has two parts, according to the <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam\" rel=\"noopener\">AP Computer Science A exam page</a>: Section I is 42 multiple-choice questions in 1 hour 30 minutes, worth 55% of the score, and Section II is 4 free-response questions in 1 hour 30 minutes, worth 45%.</p>\n<p>The four free-response questions are Methods and Control Structures, Class Design, Data Analysis with ArrayList, and 2D Array. Both topics here belong to Unit 4, Data Collections, which the <a href=\"https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf\" rel=\"noopener\">course and exam description</a> lists at 30% to 40% of the multiple-choice section. In that document, 2D arrays are topics 4.11 to 4.13 and recursion is topics 4.16 and 4.17. Check the current version of the document for your exam year, since I only read the version available this week.</p>"
+    },
+    {
+      "id": "recursion-tested",
+      "h2": "How is recursion tested?",
+      "html": "<p>It is tested by asking what a recursive method does. The course description states that \"Recursion is assessed only through the multiple-choice section of the exam\" and adds that students are often asked to determine the result of a specific recursive call or to describe what a recursive method does.</p>\n<p>That changes how you should study it. You will not lose free-response marks because you could not write a recursive method, but you can lose several multiple-choice marks if you guess at traces. It also means that slow, careful tracing on paper is worth more than memorising famous recursive examples. The same document suggests drawing a call tree or a stack trace to count how many times a recursive method runs, which is a good habit to copy.</p>"
+    },
+    {
+      "id": "trace",
+      "h2": "How do you trace a recursive method without guessing?",
+      "html": "<p>Write every call on its own line, wait to fill in the return values, and work back up once you hit the base case. Here is a small example I wrote and ran to check the answers:</p>\n<pre><code>public static int mystery(int n)\n{\n    if (n &lt;= 1)\n        return 1;\n    return n + mystery(n - 2);\n}</code></pre>\n<p>What does <code>mystery(5)</code> return? Go down first, then come back up:</p>\n<ol>\n<li><code>mystery(5)</code> needs <code>5 + mystery(3)</code>.</li>\n<li><code>mystery(3)</code> needs <code>3 + mystery(1)</code>.</li>\n<li><code>mystery(1)</code> hits the base case and returns 1.</li>\n<li>Back up: <code>mystery(3)</code> is 3 + 1 = 4, then <code>mystery(5)</code> is 5 + 4 = 9.</li>\n</ol>\n<p>Now try <code>mystery(4)</code>. The chain is 4, 2, 0, and 0 is below 2, so the base case returns 1 and the answer is 4 + 2 + 1 = 7. Many students assume the chain always ends at exactly 1, so this one is a useful trap to practise. Check what the base case actually allows before you start.</p>\n<p>The checklist I teach is short. Find the base case first. Check that each call moves toward it. Then write the calls down, not in your head. If a method makes two recursive calls, draw it as a tree, since the count of calls grows quickly.</p>"
+    },
+    {
+      "id": "recursion-mistakes",
+      "h2": "What are the usual recursion mistakes?",
+      "html": "<p>The usual mistakes are trying to hold the whole chain in your head, ignoring the order of the work, and misreading the base case. A few specifics:</p>\n<ul>\n<li><strong>Printing before or after the call.</strong> If a method prints, then calls itself, the output order is different from calling itself first and then printing. Mark which line comes before the recursive call and which after.</li>\n<li><strong>Dropping the work done on the way back.</strong> In <code>n + mystery(n - 2)</code>, the <code>n +</code> is still waiting after each call returns. Students often stop once they reach the base case and forget the additions.</li>\n<li><strong>Forgetting integer division.</strong> A method that uses <code>n / 10</code> or <code>n % 10</code> to peel digits off a number depends on integer division. For example, a digit-sum method on 472 gives 2 + 7 + 4 = 13.</li>\n</ol>\n<p>Practise with a mix of questions, then repeat them a few days later with the notes closed. My post on <a href=\"blog-past-papers-method.html\">using past papers for computer science revision</a> has a method that fits well here.</p>"
+    },
+    {
+      "id": "q4",
+      "h2": "What does the 2D array free-response question ask for?",
+      "html": "<p>It asks you to write one method that uses, analyzes and manipulates data in a 2D array. That wording comes from <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam\" rel=\"noopener\">College Board's description</a> of Question 4, and it shows what the question is about: loops over rows and columns, plus the logic that decides what to do with each value.</p>\n<p>The course description lists the skills behind it. Topic 4.11 states that the first index is for rows and the second is for columns. Topic 4.12 defines row-major order as traversal across each row, and notes that the outer loop of a nested enhanced for loop traverses the rows. Topic 4.13 is about writing standard and original algorithms for a context or specification that involves 2D arrays. All of that is in the <a href=\"https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf\" rel=\"noopener\">course and exam description</a>.</p>"
+    },
+    {
+      "id": "write",
+      "h2": "How do you write a 2D array method that works first time?",
+      "html": "<p>Write the loop skeleton first, with the row count and the column count correct, then add the logic inside it. Here is a method I wrote and tested that returns the sum of each column:</p>\n<pre><code>public static int[] columnSums(int[][] grid)\n{\n    int[] sums = new int[grid[0].length];\n    for (int r = 0; r &lt; grid.length; r++)\n    {\n        for (int c = 0; c &lt; grid[r].length; c++)\n        {\n            sums[c] += grid[r][c];\n        }\n    }\n    return sums;\n}</code></pre>\n<p>Called on <code>{{1, 2, 3}, {4, 5, 6}}</code>, it returns <code>[5, 7, 9]</code>. Notice three things. <code>grid.length</code> is the number of rows. <code>grid[r].length</code> is the number of columns in row <code>r</code>. And the result array is sized by the number of columns, because there is one sum per column.</p>\n<p>When you practise, say the dimensions out loud before writing a loop: \"rows go down, columns go across, the first index is the row.\" It sounds silly, but it prevents the most common slip.</p>"
+    },
+    {
+      "id": "2d-mistakes",
+      "h2": "What are the usual 2D array mistakes?",
+      "html": "<p>Most lost marks come from swapped indexes, wrong bounds and sloppy handling of the result. Look for these on every practice answer:</p>\n<ul>\n<li><strong>Swapped indexes.</strong> Writing <code>grid[c][r]</code> when you meant <code>grid[r][c]</code>. On a square grid it may even seem to work, which hides the bug.</li>\n<li><strong>Wrong inner bound.</strong> Using <code>grid.length</code> where you need <code>grid[r].length</code>, so a rectangular array throws an <code>ArrayIndexOutOfBoundsException</code>.</li>\n<li><strong>Changing a value while reading it.</strong> If a method must compare neighbors, decide whether you are reading the old values or the new ones.</li>\n<li><strong>Going out of bounds on neighbors.</strong> Checking <code>grid[r - 1][c]</code> on row 0 will fail unless you test the edge first.</li>\n<li><strong>Not returning or updating what the question asks for.</strong> Reread the method header and the sentence that says what it must return.</li>\n</ul>\n<p>Check your answer against the official scoring guidelines for past questions, and write a loop that visits every row and column even when you cannot finish the logic inside it.</p>"
+    },
+    {
+      "id": "plan",
+      "h2": "What is a good two-week plan for these topics?",
+      "html": "<p>Split the time by how each topic is tested: tracing practice for recursion, writing practice for 2D arrays. This is the plan I would give a student who has met both topics but feels shaky. It is a suggestion from my teaching, not an official schedule.</p>\n<ol>\n<li><strong>Days 1 to 3.</strong> Trace five recursive methods on paper, including one with a base case that is not 1 and one that prints.</li>\n<li><strong>Days 4 to 5.</strong> Write the recursive version of a loop you already know, such as a sum of digits, then compare with the loop. This builds understanding even though writing recursion is not tested.</li>\n<li><strong>Days 6 to 9.</strong> Write four 2D array methods by hand with no IDE: a row sum, a column sum, a count of values that meet a condition, and a method that finds the largest value.</li>\n<li><strong>Days 10 to 12.</strong> Do a past 2D array free-response question under a time limit, then mark it against the official scoring guidelines.</li>\n<li><strong>Days 13 to 14.</strong> Redo the traces and one array method with the notes closed.</li>\n</ol>\n<p>If you want someone to mark your handwritten answers and find the pattern in your mistakes, my <a href=\"courses\">AP Computer Science A lessons</a> are built around exactly that. For the object-oriented side of the course, see my post on <a href=\"blog-java-oop-classes-inheritance-polymorphism.html\">Java classes, inheritance and polymorphism</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do I need to write recursive methods on the AP CSA free response?",
+      "a": "According to the course description, recursion is assessed only through the multiple-choice section. You still need to read and trace recursive code, and writing a few recursive methods in practice helps you do that."
+    },
+    {
+      "q": "Should I use enhanced for loops or standard for loops for 2D arrays?",
+      "a": "Either works for reading values. Use a standard nested for loop when you need the row and column indexes or when you must change elements, and an enhanced loop when you only need the values."
+    },
+    {
+      "q": "How many 2D array questions are on the exam?",
+      "a": "There is one 2D array free-response question, Question 4. 2D arrays can also appear in the multiple-choice section as part of Unit 4, so practise both formats."
+    }
+  ],
+  "sources": [
+    {
+      "title": "College Board: AP Computer Science A exam page",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam"
+    },
+    {
+      "title": "College Board: AP Computer Science A course and exam description (PDF)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf"
+    }
+  ],
+  "related": [
+    {
+      "title": "How to use past papers for computer science revision",
+      "href": "blog-past-papers-method.html"
+    },
+    {
+      "title": "Java OOP: classes, inheritance and polymorphism",
+      "href": "blog-java-oop-classes-inheritance-polymorphism.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Want your answers marked?",
+  "cta_heading": "Book a free call and we will trace your recursion and 2D array answers together",
+  "published": "2026-11-09",
+  "modified": "2026-11-09"
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP CSA Recursion and 2D Arrays: Where the Marks Go</title>
+<meta name="description" content="Recursion is tested only in AP CSA multiple choice, while 2D arrays have their own free-response question. Here is how to trace one and write the other.">
+<meta name="theme-color" content="#0B1B33">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://shahmikh.com/blog-ap-csa-recursion-2d-arrays">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AP CSA Recursion and 2D Arrays: Where the Marks Go">
+<meta property="og:description" content="Recursion is tested only in AP CSA multiple choice, while 2D arrays have their own free-response question. Here is how to trace one and write the other.">
+<meta property="og:url" content="https://shahmikh.com/blog-ap-csa-recursion-2d-arrays">
+<meta property="og:image" content="https://shahmikh.com/headshot.jpg">
+<meta property="article:published_time" content="2026-11-09">
+<meta property="article:modified_time" content="2026-11-09">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AP CSA Recursion and 2D Arrays: Where the Marks Go">
+<meta name="twitter:description" content="Recursion is tested only in AP CSA multiple choice, while 2D arrays have their own free-response question. Here is how to trace one and write the other.">
+<meta name="twitter:image" content="https://shahmikh.com/headshot.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="theme.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://shahmikh.com/about#person",
+      "name": "Syed Shahmikh Ali",
+      "url": "https://shahmikh.com/about",
+      "image": "https://shahmikh.com/headshot.jpg",
+      "jobTitle": "Tutor and career mentor",
+      "knowsAbout": [
+        "AP Computer Science A",
+        "AP Computer Science Principles",
+        "IB Computer Science",
+        "Java",
+        "Python",
+        "CompTIA Security+",
+        "Cisco CCNA"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "AP CSA Recursion and 2D Arrays: Where the Marks Go",
+      "description": "Recursion is tested only in AP CSA multiple choice, while 2D arrays have their own free-response question. Here is how to trace one and write the other.",
+      "image": [
+        "https://shahmikh.com/headshot.jpg"
+      ],
+      "datePublished": "2026-11-09",
+      "dateModified": "2026-11-09",
+      "author": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "publisher": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "inLanguage": "en",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shahmikh.com/blog-ap-csa-recursion-2d-arrays"
+      },
+      "citation": [
+        "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam",
+        "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shahmikh.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://shahmikh.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AP CSA Recursion and 2D Arrays: Where the Marks Go",
+          "item": "https://shahmikh.com/blog-ap-csa-recursion-2d-arrays"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to write recursive methods on the AP CSA free response?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to the course description, recursion is assessed only through the multiple-choice section. You still need to read and trace recursive code, and writing a few recursive methods in practice helps you do that."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use enhanced for loops or standard for loops for 2D arrays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Either works for reading values. Use a standard nested for loop when you need the row and column indexes or when you must change elements, and an enhanced loop when you only need the values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many 2D array questions are on the exam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is one 2D array free-response question, Question 4. 2D arrays can also appear in the multiple-choice section as part of Unit 4, so practise both formats."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="courses">Subjects</a><a href="/#how">How it works</a><a href="pricing">Pricing</a><a href="resources">Resources</a><a href="testimonials">Reviews</a><a href="blog" class="is-active">Blog</a><a href="about">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact" class="btn btn--ghost">Contact</a>
+      <a href="contact#booking" class="btn btn--primary">Book a free call</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">AP Computer Science A · 8 min read</p>
+      <h1 style="max-width: 24ch;">AP CSA Recursion and 2D Arrays: Where Students Lose Marks and How to Fix It</h1>
+      <p class="post-byline">By <a href="about">Syed Shahmikh Ali</a> · Published 2026-11-09 · Updated 2026-11-09</p>
+    </div>
+  </section>
+
+  <article class="section-tight">
+    <div class="container blog-post-body">
+      <p class="post-lead">On the AP Computer Science A exam, recursion is assessed only in the multiple-choice section, so you need to trace recursive code, not write it. 2D arrays are the opposite: they are the subject of free-response Question 4, where you have to write a method from scratch. Prepare for each in the way it is actually tested and you will stop spending time on the wrong skill.</p>
+
+      <div class="takeaways">
+        <h2>Key takeaways</h2>
+        <ul><li>College Board's course description says recursion is assessed only through multiple-choice questions, which usually ask for the result or behavior of a recursive call.</li><li>Free-response Question 4 is a 2D array question: write one method that uses, analyzes and manipulates data in a 2D array.</li><li>For recursion, practice writing out the calls on paper until you can trace them without guessing.</li><li>For 2D arrays, the two most common slips are mixing up rows and columns and using the wrong length in the inner loop.</li><li>Unit 4, Data Collections, is listed at 30% to 40% of the multiple-choice section, so this material is worth the time.</li></ul>
+      </div>
+
+      <nav class="toc" aria-label="Contents"><p class="toc-title">In this article</p><ol><li><a href="#format">Where do recursion and 2D arrays appear on the exam?</a></li><li><a href="#recursion-tested">How is recursion tested?</a></li><li><a href="#trace">How do you trace a recursive method without guessing?</a></li><li><a href="#recursion-mistakes">What are the usual recursion mistakes?</a></li><li><a href="#q4">What does the 2D array free-response question ask for?</a></li><li><a href="#write">How do you write a 2D array method that works first time?</a></li><li><a href="#2d-mistakes">What are the usual 2D array mistakes?</a></li><li><a href="#plan">What is a good two-week plan for these topics?</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+
+      <h2 id="format">Where do recursion and 2D arrays appear on the exam?</h2>
+      <p>Recursion appears only in the multiple-choice section, and 2D arrays appear in both sections. The exam is digital and has two parts, according to the <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam" rel="noopener">AP Computer Science A exam page</a>: Section I is 42 multiple-choice questions in 1 hour 30 minutes, worth 55% of the score, and Section II is 4 free-response questions in 1 hour 30 minutes, worth 45%.</p>
+<p>The four free-response questions are Methods and Control Structures, Class Design, Data Analysis with ArrayList, and 2D Array. Both topics here belong to Unit 4, Data Collections, which the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf" rel="noopener">course and exam description</a> lists at 30% to 40% of the multiple-choice section. In that document, 2D arrays are topics 4.11 to 4.13 and recursion is topics 4.16 and 4.17. Check the current version of the document for your exam year, since I only read the version available this week.</p>
+
+      <h2 id="recursion-tested">How is recursion tested?</h2>
+      <p>It is tested by asking what a recursive method does. The course description states that "Recursion is assessed only through the multiple-choice section of the exam" and adds that students are often asked to determine the result of a specific recursive call or to describe what a recursive method does.</p>
+<p>That changes how you should study it. You will not lose free-response marks because you could not write a recursive method, but you can lose several multiple-choice marks if you guess at traces. It also means that slow, careful tracing on paper is worth more than memorising famous recursive examples. The same document suggests drawing a call tree or a stack trace to count how many times a recursive method runs, which is a good habit to copy.</p>
+
+      <h2 id="trace">How do you trace a recursive method without guessing?</h2>
+      <p>Write every call on its own line, wait to fill in the return values, and work back up once you hit the base case. Here is a small example I wrote and ran to check the answers:</p>
+<pre><code>public static int mystery(int n)
+{
+    if (n &lt;= 1)
+        return 1;
+    return n + mystery(n - 2);
+}</code></pre>
+<p>What does <code>mystery(5)</code> return? Go down first, then come back up:</p>
+<ol>
+<li><code>mystery(5)</code> needs <code>5 + mystery(3)</code>.</li>
+<li><code>mystery(3)</code> needs <code>3 + mystery(1)</code>.</li>
+<li><code>mystery(1)</code> hits the base case and returns 1.</li>
+<li>Back up: <code>mystery(3)</code> is 3 + 1 = 4, then <code>mystery(5)</code> is 5 + 4 = 9.</li>
+</ol>
+<p>Now try <code>mystery(4)</code>. The chain is 4, 2, 0, and 0 is below 2, so the base case returns 1 and the answer is 4 + 2 + 1 = 7. Many students assume the chain always ends at exactly 1, so this one is a useful trap to practise. Check what the base case actually allows before you start.</p>
+<p>The checklist I teach is short. Find the base case first. Check that each call moves toward it. Then write the calls down, not in your head. If a method makes two recursive calls, draw it as a tree, since the count of calls grows quickly.</p>
+
+      <h2 id="recursion-mistakes">What are the usual recursion mistakes?</h2>
+      <p>The usual mistakes are trying to hold the whole chain in your head, ignoring the order of the work, and misreading the base case. A few specifics:</p>
+<ul>
+<li><strong>Printing before or after the call.</strong> If a method prints, then calls itself, the output order is different from calling itself first and then printing. Mark which line comes before the recursive call and which after.</li>
+<li><strong>Dropping the work done on the way back.</strong> In <code>n + mystery(n - 2)</code>, the <code>n +</code> is still waiting after each call returns. Students often stop once they reach the base case and forget the additions.</li>
+<li><strong>Forgetting integer division.</strong> A method that uses <code>n / 10</code> or <code>n % 10</code> to peel digits off a number depends on integer division. For example, a digit-sum method on 472 gives 2 + 7 + 4 = 13.</li>
+</ol>
+<p>Practise with a mix of questions, then repeat them a few days later with the notes closed. My post on <a href="blog-past-papers-method">using past papers for computer science revision</a> has a method that fits well here.</p>
+
+      <h2 id="q4">What does the 2D array free-response question ask for?</h2>
+      <p>It asks you to write one method that uses, analyzes and manipulates data in a 2D array. That wording comes from <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam" rel="noopener">College Board's description</a> of Question 4, and it shows what the question is about: loops over rows and columns, plus the logic that decides what to do with each value.</p>
+<p>The course description lists the skills behind it. Topic 4.11 states that the first index is for rows and the second is for columns. Topic 4.12 defines row-major order as traversal across each row, and notes that the outer loop of a nested enhanced for loop traverses the rows. Topic 4.13 is about writing standard and original algorithms for a context or specification that involves 2D arrays. All of that is in the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf" rel="noopener">course and exam description</a>.</p>
+
+      <h2 id="write">How do you write a 2D array method that works first time?</h2>
+      <p>Write the loop skeleton first, with the row count and the column count correct, then add the logic inside it. Here is a method I wrote and tested that returns the sum of each column:</p>
+<pre><code>public static int[] columnSums(int[][] grid)
+{
+    int[] sums = new int[grid[0].length];
+    for (int r = 0; r &lt; grid.length; r++)
+    {
+        for (int c = 0; c &lt; grid[r].length; c++)
+        {
+            sums[c] += grid[r][c];
+        }
+    }
+    return sums;
+}</code></pre>
+<p>Called on <code>{{1, 2, 3}, {4, 5, 6}}</code>, it returns <code>[5, 7, 9]</code>. Notice three things. <code>grid.length</code> is the number of rows. <code>grid[r].length</code> is the number of columns in row <code>r</code>. And the result array is sized by the number of columns, because there is one sum per column.</p>
+<p>When you practise, say the dimensions out loud before writing a loop: "rows go down, columns go across, the first index is the row." It sounds silly, but it prevents the most common slip.</p>
+
+      <h2 id="2d-mistakes">What are the usual 2D array mistakes?</h2>
+      <p>Most lost marks come from swapped indexes, wrong bounds and sloppy handling of the result. Look for these on every practice answer:</p>
+<ul>
+<li><strong>Swapped indexes.</strong> Writing <code>grid[c][r]</code> when you meant <code>grid[r][c]</code>. On a square grid it may even seem to work, which hides the bug.</li>
+<li><strong>Wrong inner bound.</strong> Using <code>grid.length</code> where you need <code>grid[r].length</code>, so a rectangular array throws an <code>ArrayIndexOutOfBoundsException</code>.</li>
+<li><strong>Changing a value while reading it.</strong> If a method must compare neighbors, decide whether you are reading the old values or the new ones.</li>
+<li><strong>Going out of bounds on neighbors.</strong> Checking <code>grid[r - 1][c]</code> on row 0 will fail unless you test the edge first.</li>
+<li><strong>Not returning or updating what the question asks for.</strong> Reread the method header and the sentence that says what it must return.</li>
+</ul>
+<p>Check your answer against the official scoring guidelines for past questions, and write a loop that visits every row and column even when you cannot finish the logic inside it.</p>
+
+      <h2 id="plan">What is a good two-week plan for these topics?</h2>
+      <p>Split the time by how each topic is tested: tracing practice for recursion, writing practice for 2D arrays. This is the plan I would give a student who has met both topics but feels shaky. It is a suggestion from my teaching, not an official schedule.</p>
+<ol>
+<li><strong>Days 1 to 3.</strong> Trace five recursive methods on paper, including one with a base case that is not 1 and one that prints.</li>
+<li><strong>Days 4 to 5.</strong> Write the recursive version of a loop you already know, such as a sum of digits, then compare with the loop. This builds understanding even though writing recursion is not tested.</li>
+<li><strong>Days 6 to 9.</strong> Write four 2D array methods by hand with no IDE: a row sum, a column sum, a count of values that meet a condition, and a method that finds the largest value.</li>
+<li><strong>Days 10 to 12.</strong> Do a past 2D array free-response question under a time limit, then mark it against the official scoring guidelines.</li>
+<li><strong>Days 13 to 14.</strong> Redo the traces and one array method with the notes closed.</li>
+</ol>
+<p>If you want someone to mark your handwritten answers and find the pattern in your mistakes, my <a href="courses">AP Computer Science A lessons</a> are built around exactly that. For the object-oriented side of the course, see my post on <a href="blog-java-oop-classes-inheritance-polymorphism">Java classes, inheritance and polymorphism</a>.</p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Do I need to write recursive methods on the AP CSA free response? <span class="icon" aria-hidden="true"></span></summary><p>According to the course description, recursion is assessed only through the multiple-choice section. You still need to read and trace recursive code, and writing a few recursive methods in practice helps you do that.</p></details>
+        <details class="faq-item"><summary>Should I use enhanced for loops or standard for loops for 2D arrays? <span class="icon" aria-hidden="true"></span></summary><p>Either works for reading values. Use a standard nested for loop when you need the row and column indexes or when you must change elements, and an enhanced loop when you only need the values.</p></details>
+        <details class="faq-item"><summary>How many 2D array questions are on the exam? <span class="icon" aria-hidden="true"></span></summary><p>There is one 2D array free-response question, Question 4. 2D arrays can also appear in the multiple-choice section as part of Unit 4, so practise both formats.</p></details>
+      </div>
+
+      <h2 id="sources">Sources</h2>
+      <ul class="post-sources"><li><a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam" rel="noopener">College Board: AP Computer Science A exam page</a></li><li><a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf" rel="noopener">College Board: AP Computer Science A course and exam description (PDF)</a></li></ul>
+
+      <h2>Related reading</h2>
+      <ul class="post-sources"><li><a href="blog-past-papers-method">How to use past papers for computer science revision</a></li><li><a href="blog-java-oop-classes-inheritance-polymorphism">Java OOP: classes, inheritance and polymorphism</a></li><li><a href="courses">AP CSP, AP CSA and IB CS tutoring</a></li></ul>
+
+      <aside class="author-box">
+  <img src="headshot.jpg" alt="Syed Shahmikh Ali" width="72" height="72" loading="lazy">
+  <div>
+    <p class="author-name">About the author</p>
+    <p><a href="about">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 10% of computer science tutors on Preply, Oxford University Press trained, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
+    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact">contact page</a> and I will correct it.</p>
+  </div>
+</aside>
+    </div>
+  </article>
+
+  <section class="on-ink cta-band">
+    <div class="container">
+      <p class="eyebrow">Want your answers marked?</p>
+      <h2>Book a free call and we will trace your recursion and 2D array answers together</h2>
+      <a href="contact#booking" class="btn btn--gold">Book a Call</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about">About</a></li><li><a href="courses">Courses</a></li><li><a href="pricing">Pricing</a></li><li><a href="resources">Resources</a></li><li><a href="blog">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids">Kids AI Program</a></li><li><a href="courses">Security+ &amp; CCNA</a></li><li><a href="courses">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance">Career Guidance</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact">Contact</a></li><li><a href="faq">FAQ</a></li><li><a href="testimonials">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved. · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></span><span>Teaching students across the US, UK &amp; Europe.</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

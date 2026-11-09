@@ -43,7 +43,7 @@
     {
       "id": "practice",
       "h2": "How should you practise this?",
-      "html": "<p>Type the Shape program from memory, then change it. Add a <code>Triangle</code>, add a <code>perimeter()</code> method, and make <code>Shape</code> abstract so it cannot be created directly. After each change, predict the output before you run it, and write down any prediction you got wrong. That is the same loop I describe in <a href=\"blog-past-papers-method.html\">how to use past papers for computer science revision</a>.</p>\n<p>If you would like someone to check your classes with you, my <a href=\"courses.html\">computer science lessons</a> cover AP CSA and other Java courses, and you can <a href=\"contact.html#booking\">book a free call</a> to try one.</p>"
+      "html": "<p>Type the Shape program from memory, then change it. Add a <code>Triangle</code>, add a <code>perimeter()</code> method, and make <code>Shape</code> abstract so it cannot be created directly. After each change, predict the output before you run it, and write down any prediction you got wrong. That is the same loop I describe in <a href=\"blog-past-papers-method.html\">how to use past papers for computer science revision</a>.</p>\n<p>Once classes feel solid, the next Unit 4 topics to tackle are covered in <a href=\"blog-ap-csa-recursion-2d-arrays.html\">AP CSA recursion and 2D arrays</a>.</p>\n<p>If you would like someone to check your classes with you, my <a href=\"courses.html\">computer science lessons</a> cover AP CSA and other Java courses, and you can <a href=\"contact.html#booking\">book a free call</a> to try one.</p>"
     }
   ],
   "faq": [
