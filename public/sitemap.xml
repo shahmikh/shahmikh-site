@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shahmikh.com/about</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://shahmikh.com/blog</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://shahmikh.com/blog</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://shahmikh.com/career-guidance</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://shahmikh.com/contact</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://shahmikh.com/courses</loc><lastmod>2026-10-30</lastmod></url>
@@ -25,4 +25,5 @@
   <url><loc>https://shahmikh.com/blog-soc-analyst-vs-cloud-security-engineer</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://shahmikh.com/blog-network-plus-vs-security-plus-vs-ccna</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://shahmikh.com/blog-ap-csa-recursion-2d-arrays</loc><lastmod>2026-11-09</lastmod></url>
+  <url><loc>https://shahmikh.com/blog-ap-csp-multiple-choice</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>
