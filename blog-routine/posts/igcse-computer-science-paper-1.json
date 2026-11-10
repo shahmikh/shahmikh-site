@@ -1,0 +1,96 @@
+{
+  "slug": "igcse-computer-science-paper-1",
+  "title": "IGCSE Computer Science Paper 1: How to Revise It",
+  "h1": "IGCSE Computer Science 0478 Paper 1: How to Revise Computer Systems",
+  "description": "Cambridge IGCSE Computer Science Paper 1 is 75 marks in 1 hour 45 minutes across six topics. Here is how to sort them and revise each type of question.",
+  "eyebrow": "Cambridge IGCSE Computer Science",
+  "read_min": 8,
+  "card_summary": "Paper 1 is 75 marks, no calculator, six topics. Which parts you calculate by hand, which you explain, and a revision routine for each.",
+  "lead": "Paper 1 of Cambridge IGCSE Computer Science (0478) is called Computer Systems. It is 75 marks in 1 hour 45 minutes, worth 50% of the qualification, with short-answer and structured questions on six topics and no calculator. The topics split into things you work out by hand and things you must explain in the right words, and each needs a different kind of revision.",
+  "takeaways": [
+    "Paper 1 is 1 hour 45 minutes, 75 marks and 50% of the qualification. All questions are compulsory and you answer on the question paper.",
+    "The questions are based on Topics 1 to 6: data representation, data transmission, hardware, software, the internet and its uses, and automated and emerging technologies.",
+    "Calculators are not allowed, so binary, hexadecimal and two's complement have to be done by hand.",
+    "Logic gates are not in Paper 1. They sit in Boolean logic, which is assessed on Paper 2.",
+    "Sort every sub-topic into calculate, explain or compare, and revise each kind with a different method."
+  ],
+  "sections": [
+    {
+      "id": "format",
+      "h2": "What is IGCSE Computer Science Paper 1?",
+      "html": "<p>It is the theory paper. According to the <a href=\"https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf\" rel=\"noopener\">Cambridge IGCSE Computer Science 0478 syllabus for 2026 to 2028</a>, Paper 1 lasts 1 hour 45 minutes, is worth 75 marks and counts for 50% of the qualification. The syllabus describes the questions as short-answer and structured, and it says all of them are compulsory.</p>\n<p>The other half of the qualification is Paper 2, which is about algorithms, programming and logic. I cover that paper in <a href=\"blog-igcse-computer-science-paper-2.html\">how to revise IGCSE Computer Science Paper 2</a>. The two papers reward different habits, so it is worth revising them separately.</p>"
+    },
+    {
+      "id": "topics",
+      "h2": "Which topics are on Paper 1?",
+      "html": "<p>There are six, and the syllabus lists their sub-topics. Questions on Paper 1 are based on Topics 1 to 6:</p>\n<table>\n<thead><tr><th>Topic</th><th>Sub-topics</th></tr></thead>\n<tbody>\n<tr><td>1. Data representation</td><td>Number systems; text, sound and images; data storage and compression</td></tr>\n<tr><td>2. Data transmission</td><td>Types and methods of transmission; error detection; encryption</td></tr>\n<tr><td>3. Hardware</td><td>Computer architecture; input and output devices; data storage; network hardware</td></tr>\n<tr><td>4. Software</td><td>Types of software and interrupts; programming languages, translators and IDEs</td></tr>\n<tr><td>5. The internet and its uses</td><td>The internet and the world wide web; digital currency; cyber security</td></tr>\n<tr><td>6. Automated and emerging technologies</td><td>Automated systems; robotics; artificial intelligence</td></tr>\n</tbody>\n</table>\n<p>Logic gates catch some students out. The syllabus assesses them under Boolean logic, which is a Paper 2 topic, so they are not part of this paper's content list.</p>"
+    },
+    {
+      "id": "sort",
+      "h2": "How should you sort the content before revising?",
+      "html": "<p>Sort it by what the question asks you to do, not by chapter. This is my own method from teaching the course, not an official one, and it works because a skill you do by hand needs practice, while a skill you do in words needs precise wording.</p>\n<ul>\n<li><strong>Calculate.</strong> Number systems and two's complement from Topic 1, and the error detection methods from Topic 2. You can only get these right by doing them.</li>\n<li><strong>Explain a process.</strong> How a web page is located after a URL is entered, how an ARQ confirms data arrived, how a cyber security threat works and what stops it. You need the steps in order.</li>\n<li><strong>Compare or choose.</strong> Types of storage, programming language translators, symmetric against asymmetric encryption. You need the difference stated in one clear sentence.</li>\n</ul>\n<p>Make a three-column list of every sub-topic in the table above, put it under one of those headings, and mark the ones you cannot yet do from a blank page.</p>"
+    },
+    {
+      "id": "calculate",
+      "h2": "How do you revise the topics you calculate by hand?",
+      "html": "<p>You practise them with no calculator, because the syllabus states that calculators are not allowed on this paper. The number systems content asks you to convert between positive denary, hexadecimal and binary, to understand overflow, and to use the two's complement number system for positive and negative 8-bit binary integers. The syllabus also notes that an overflow error will occur if the value is greater than 255 in an 8-bit register.</p>\n<p>Here are three examples I worked out myself and checked with a short program. They are practice examples, not Cambridge questions.</p>\n<p><strong>Overflow.</strong> Add 200 and 100 in 8 bits. 200 is 11001000 and 100 is 01100100. The true answer, 300, needs 9 bits (100101100), so it does not fit in an 8-bit register. Only the last eight bits, 00101100, would be kept, which is 44. That is overflow, and a good answer says both that the result is wrong and why.</p>\n<p><strong>Two's complement.</strong> Write -45 in 8 bits. Start with 45, which is 00101101. Invert every bit to get 11010010, then add 1 to get 11010011. To check, the leftmost bit is 1, so the number is negative, and inverting and adding 1 again returns you to 00101101.</p>\n<p><strong>Hexadecimal.</strong> Convert B7 to binary by splitting it into two nibbles. B is 1011 and 7 is 0111, so B7 is 10110111, which is 183 in denary. This is also a good example of why hexadecimal is used: eight binary digits become two characters that are easy to read and copy.</p>\n<p>For error detection, take a 7-bit value such as 1011001. It has four 1s, which is an even number. With even parity the parity bit would be 0, and with odd parity it would be 1. The syllabus asks you to describe parity checks (odd and even), checksums and echo checks, so practise explaining what each one can and cannot detect.</p>\n<p>The routine I suggest: ten conversions every other day for two weeks, written on paper and checked afterwards. Short and frequent beats one long session.</p>"
+    },
+    {
+      "id": "explain",
+      "h2": "How do you revise the topics you have to explain?",
+      "html": "<p>Write each process as a short numbered sequence from memory, then compare it with your notes. The syllabus asks you to describe how web pages are located and displayed after a URL is entered, and it names the domain name server (DNS) as one of the components involved. It also asks you to describe the processes involved in, and the aim of, a range of cyber security threats, including brute-force attacks, data interception, DDoS attacks, hacking, malware, pharming, phishing and social engineering, and to explain how solutions help keep data safe.</p>\n<p>For each threat I suggest a three-line card: what the attacker is trying to get, how the attack works, and one measure that reduces it. If you cannot fill all three lines, you know what to revise. A card that says only \"phishing is a scam email\" would leave marks on the table, because the syllabus asks about the process and the aim, not just the name.</p>\n<p>Short-answer papers reward the exact term. If a question about encryption is looking for \"public key\" and \"private key\", an answer about \"a special code\" is too vague. When you revise, underline the precise term in each answer you write.</p>"
+    },
+    {
+      "id": "compare",
+      "h2": "How do you revise the compare-and-choose topics?",
+      "html": "<p>Use a two-column table for each pair and finish it with a single deciding difference. The syllabus asks you to understand symmetric and asymmetric encryption, where asymmetric encryption uses public and private keys, and it also covers types of programming language and translators. For each pair, write one sentence that starts \"The main difference is\", and make sure that sentence would still make sense if someone read it with no notes beside them.</p>\n<p>Another good test is to cover one column and rebuild it from the other. If you can state what a compiler does and then say what an interpreter does differently without peeking, you have the comparison. If you can recite a definition but stumble on the difference, you do not yet have it.</p>"
+    },
+    {
+      "id": "plan",
+      "h2": "What does a four-week Paper 1 plan look like?",
+      "html": "<p>Cover two topics a week, keep the calculation drills running throughout, and finish with timed practice. This is a suggested plan, so move the weeks around to match your gaps.</p>\n<ol>\n<li><strong>Week 1:</strong> Topic 1 and Topic 2. Daily conversion drills, plus the error detection and encryption cards.</li>\n<li><strong>Week 2:</strong> Topic 3 and Topic 4. Build the compare tables for storage, translators and interrupts.</li>\n<li><strong>Week 3:</strong> Topic 5 and Topic 6. Write the URL-to-page process and the threat cards.</li>\n<li><strong>Week 4:</strong> Timed past paper questions. Use the 75 marks in 105 minutes to set your pace: it works out at 1.4 minutes a mark, so a 4-mark question deserves around 5 to 6 minutes at most.</li>\n</ol>\n<p>Cambridge lists the qualification's materials on its <a href=\"https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/\" rel=\"noopener\">0478 past papers page</a>. For how to mark and learn from a past paper afterwards, see <a href=\"blog-past-papers-method.html\">how to use past papers for computer science revision</a>. If you want someone to check your explanations against what an examiner looks for, you can look at my <a href=\"courses\">IGCSE and IB computer science courses</a>.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Are logic gates on IGCSE Computer Science Paper 1?",
+      "a": "No. The syllabus assesses logic gates under Topic 10, Boolean logic, which belongs to Paper 2. Paper 1 is based on Topics 1 to 6, so spend your Paper 1 revision time on those."
+    },
+    {
+      "q": "Can I use a calculator on IGCSE Computer Science Paper 1?",
+      "a": "No. The syllabus states that calculators are not allowed in this examination. That is why you should practise binary, hexadecimal and two's complement conversions by hand until they are quick."
+    },
+    {
+      "q": "How long is IGCSE Computer Science Paper 1 and how many marks is it?",
+      "a": "Paper 1 is 1 hour 45 minutes long and is worth 75 marks, which is 50% of the qualification. The questions are short-answer and structured, they are all compulsory, and you write your answers on the question paper."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cambridge International: IGCSE Computer Science 0478 syllabus 2026 to 2028",
+      "url": "https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf"
+    },
+    {
+      "title": "Cambridge International: IGCSE Computer Science 0478 past papers",
+      "url": "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    },
+    {
+      "title": "IGCSE Computer Science 0478 Paper 2: how to revise it",
+      "href": "blog-igcse-computer-science-paper-2.html"
+    },
+    {
+      "title": "How to use past papers properly for computer science exams",
+      "href": "blog-past-papers-method.html"
+    }
+  ],
+  "cta_eyebrow": "Want help with IGCSE Computer Science?",
+  "cta_heading": "Book a short call and we will plan your Paper 1 revision",
+  "published": "2026-11-10",
+  "modified": "2026-11-10"
+}

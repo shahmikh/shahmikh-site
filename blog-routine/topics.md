@@ -17,6 +17,7 @@
 - 2026-11-08: `network-plus-vs-security-plus-vs-ccna` (Network+ vs Security+ vs CCNA: which to take first?) - extra owner-requested run; CompTIA and Cisco pages were fetchable this time
 - 2026-11-09: `ap-csa-recursion-2d-arrays` (AP CSA recursion and 2D arrays: where the marks go)
 - 2026-11-10: `ap-csp-multiple-choice` (AP CSP multiple choice: question types and how to practise) - topic 3; topic 2 skipped, see below
+- 2026-11-10: `igcse-computer-science-paper-1` (IGCSE Computer Science Paper 1: how to revise it) - topic 4; extra run, Cambridge syllabus fetched OK
 
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
@@ -26,7 +27,6 @@
 
 ## Backlog (use in order, verify every fact before writing)
 2. IB Computer Science internal assessment: how to choose a topic and what the criteria reward
-4. IGCSE Computer Science 0478 Paper 1: how to revise computing theory (verify on Cambridge)
 5. How many hours a week should a student spend on AP computer science? (parent guide; only sourced claims)
 6. Is Security+ or a degree better for a first cybersecurity job? (verify on CompTIA and a labour-statistics source)
 7. AP CSA ArrayList vs array: when to use which and the free-response Question 3 pattern
