@@ -32,6 +32,7 @@
 - [YouTube](https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA)
 
 ## Blog posts (exam guides and study advice)
+- [AP CSA ArrayList vs Array: Which to Use and FRQ 3](https://shahmikh.com/blog-ap-csa-arraylist-vs-array): Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.
 - [IGCSE Computer Science Paper 1: How to Revise It](https://shahmikh.com/blog-igcse-computer-science-paper-1): Cambridge IGCSE Computer Science Paper 1 is 75 marks in 1 hour 45 minutes across six topics. Here is how to sort them and revise each type of question.
 - [AP CSP Multiple Choice: Question Types and How to Practise](https://shahmikh.com/blog-ap-csp-multiple-choice): The AP CSP multiple-choice section is 70% of your score: 70 questions in 2 hours. Here are the question types, the topic weights and a practice routine.
 - [AP CSA Recursion and 2D Arrays: Where the Marks Go](https://shahmikh.com/blog-ap-csa-recursion-2d-arrays): Recursion is tested only in AP CSA multiple choice, while 2D arrays have their own free-response question. Here is how to trace one and write the other.

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP CSA ArrayList vs Array: Which to Use and FRQ 3</title>
+<meta name="description" content="Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.">
+<meta name="theme-color" content="#0B1B33">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://shahmikh.com/blog-ap-csa-arraylist-vs-array">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AP CSA ArrayList vs Array: Which to Use and FRQ 3">
+<meta property="og:description" content="Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.">
+<meta property="og:url" content="https://shahmikh.com/blog-ap-csa-arraylist-vs-array">
+<meta property="og:image" content="https://shahmikh.com/headshot.jpg">
+<meta property="article:published_time" content="2026-11-12">
+<meta property="article:modified_time" content="2026-11-12">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AP CSA ArrayList vs Array: Which to Use and FRQ 3">
+<meta name="twitter:description" content="Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.">
+<meta name="twitter:image" content="https://shahmikh.com/headshot.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="theme.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://shahmikh.com/about#person",
+      "name": "Syed Shahmikh Ali",
+      "url": "https://shahmikh.com/about",
+      "image": "https://shahmikh.com/headshot.jpg",
+      "jobTitle": "Tutor and career mentor",
+      "knowsAbout": [
+        "AP Computer Science A",
+        "AP Computer Science Principles",
+        "IB Computer Science",
+        "Java",
+        "Python",
+        "CompTIA Security+",
+        "Cisco CCNA"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "AP CSA ArrayList vs Array: Which to Use and FRQ 3",
+      "description": "Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.",
+      "image": [
+        "https://shahmikh.com/headshot.jpg"
+      ],
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "publisher": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "inLanguage": "en",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shahmikh.com/blog-ap-csa-arraylist-vs-array"
+      },
+      "citation": [
+        "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam",
+        "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shahmikh.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://shahmikh.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AP CSA ArrayList vs Array: Which to Use and FRQ 3",
+          "item": "https://shahmikh.com/blog-ap-csa-arraylist-vs-array"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I use an array instead of an ArrayList in Question 3?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The question gives you an ArrayList and asks you to write a method using the data in it. Work with the type you are given. Converting to an array adds extra code and extra chances to make a mistake."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between size() and length?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An ArrayList uses the method size(), with brackets. An array uses length with no brackets. Writing the wrong one will not compile, so check which type you are holding before you write the loop condition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a backwards loop always better when removing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For removing, it is the simplest safe choice because removal only shifts elements you have already processed. If the order of results matters, such as building a new list in the original order, a forward loop with careful counter handling may be clearer."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="courses">Subjects</a><a href="/#how">How it works</a><a href="pricing">Pricing</a><a href="resources">Resources</a><a href="testimonials">Reviews</a><a href="blog" class="is-active">Blog</a><a href="about">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact" class="btn btn--ghost">Contact</a>
+      <a href="contact#booking" class="btn btn--primary">Book a free call</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">AP Computer Science A · 8 min read</p>
+      <h1 style="max-width: 24ch;">AP CSA ArrayList vs Array: When to Use Each and How to Write Free-Response Question 3</h1>
+      <p class="post-byline">By <a href="about">Syed Shahmikh Ali</a> · Published 2026-11-12 · Updated 2026-11-12</p>
+    </div>
+  </section>
+
+  <article class="section-tight">
+    <div class="container blog-post-body">
+      <p class="post-lead">Use an array when the number of elements is fixed, and an ArrayList when you need to add or remove elements. On the AP Computer Science A exam this matters most in free-response Question 3, where you write one method that analyses and often changes an ArrayList, and where the classic mistake is skipping an element after a removal.</p>
+
+      <div class="takeaways">
+        <h2>Key takeaways</h2>
+        <ul><li>An array has a fixed length that cannot be changed. An ArrayList is mutable in size, so it is the right choice whenever elements are added or removed.</li><li>The Java Quick Reference gives you six ArrayList methods: size, two versions of add, get, set and remove. Learn exactly what each one returns.</li><li>Free-response Question 3 is Data Analysis with ArrayList: you write one method that uses, analyses and changes the data in an ArrayList of objects.</li><li>Removing while moving forward through a list shifts later elements left, so a plain for loop skips the element after each removal. Loop backwards, or only move on when nothing was removed.</li><li>Never add or remove inside an enhanced for loop, because it can cause a ConcurrentModificationException.</li></ul>
+      </div>
+
+      <nav class="toc" aria-label="Contents"><p class="toc-title">In this article</p><ol><li><a href="#choose">When should you use an array and when an ArrayList?</a></li><li><a href="#methods">Which ArrayList methods do you need to know?</a></li><li><a href="#question-3">What does free-response Question 3 ask for?</a></li><li><a href="#skip-bug">Why does removing elements in a loop skip items?</a></li><li><a href="#fixes">What are the two safe ways to remove while looping?</a></li><li><a href="#enhanced">Can you remove inside an enhanced for loop?</a></li><li><a href="#routine">How should you practise Question 3?</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+
+      <h2 id="choose">When should you use an array and when an ArrayList?</h2>
+      <p>Use an array when you know the size up front and it will not change, and an ArrayList when the collection grows or shrinks. The course and exam description says an ArrayList is "mutable in size" and holds object references, while an array's length cannot be changed once it is created.</p>
+<p>Here is the decision I give students, in the order I ask the questions:</p>
+<table>
+<thead><tr><th>Question</th><th>If yes</th></tr></thead>
+<tbody>
+<tr><td>Will elements be added or removed?</td><td>ArrayList</td></tr>
+<tr><td>Do you need to store plain <code>int</code> or <code>double</code> values with no extra work?</td><td>Array (an ArrayList stores wrapper objects such as <code>Integer</code>, with autoboxing doing the conversion)</td></tr>
+<tr><td>Is the data a grid of rows and columns?</td><td>2D array</td></tr>
+<tr><td>Does the question hand you one of them?</td><td>Use the type you are given, and do not convert it</td></tr>
+</tbody>
+</table>
+<p>On the exam the choice is usually made for you, because the question states the type. The skill being tested is using that type correctly, so the decision table matters most when you write your own practice programs.
+
+      <h2 id="methods">Which ArrayList methods do you need to know?</h2>
+      <p>Six, and they are all in the Java Quick Reference, which the <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam" rel="noopener">exam page</a> says is built into the Bluebook app. The <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf" rel="noopener">course and exam description</a> lists them under Topic 4.8:</p>
+<table>
+<thead><tr><th>Method</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><code>int size()</code></td><td>Returns the number of elements</td></tr>
+<tr><td><code>boolean add(E obj)</code></td><td>Appends to the end and returns true</td></tr>
+<tr><td><code>void add(int index, E obj)</code></td><td>Inserts at the index, shifting later elements right</td></tr>
+<tr><td><code>E get(int index)</code></td><td>Returns the element at the index</td></tr>
+<tr><td><code>E set(int index, E obj)</code></td><td>Replaces the element and returns the old one</td></tr>
+<tr><td><code>E remove(int index)</code></td><td>Removes the element, shifting later elements left, and returns it</td></tr>
+</tbody>
+</table>
+<p>Valid indexes run from 0 to <code>size() - 1</code>, and an index outside that range throws an <code>IndexOutOfBoundsException</code>. Two details cost marks. First, an array uses <code>length</code> with no brackets and an ArrayList uses <code>size()</code> with brackets, so mixing them up fails to compile. Second, the "shifting" in <code>add</code> and <code>remove</code> is the reason loops go wrong, which is the next section.</p>
+
+      <h2 id="question-3">What does free-response Question 3 ask for?</h2>
+      <p>You write one method that uses, analyses and changes data stored in an ArrayList. The exam page lists Question 3 as "Data Analysis with ArrayList", and the course description says you get an outline of a data set represented by a class and write one method from given specifications and examples.</p>
+<p>The same description notes that solutions often insert or remove elements, so you have to adjust loop counters to avoid skipping an element or accessing one that no longer exists. That one sentence is the whole difficulty of the question. The method itself is usually short. Whether it works depends on how you handle the indexes after a removal.</p>
+
+      <h2 id="skip-bug">Why does removing elements in a loop skip items?</h2>
+      <p>Because <code>remove</code> shifts every later element one place left, so the element that was next is now at the index you just looked at, and your loop counter moves past it. Here is a method I wrote and ran to show it. It should remove every word shorter than <code>minLength</code> and return how many it removed:</p>
+<pre><code>public static int removeShort(ArrayList&lt;String&gt; words, int minLength)
+{
+    int removed = 0;
+    for (int i = 0; i &lt; words.size(); i++)
+    {
+        if (words.get(i).length() &lt; minLength)
+        {
+            words.remove(i);
+            removed++;
+        }
+    }
+    return removed;
+}</code></pre>
+<p>I called it with the list <code>[hi, to, tree, a, cat]</code> and <code>minLength</code> 3. It returned 2 and left <code>[to, tree, cat]</code>. The word "hi" was removed, "to" slid into index 0, and the loop moved on to index 1 without ever checking it. The word "a" was removed correctly because it did not follow another removal. The correct result is <code>[tree, cat]</code> and a return value of 3.</p>
+<p>This is an example I created, not a College Board question. The pattern is the point: any time a loop removes and a neighbour might also need removing, a forward for loop is a bug.</p>
+
+      <h2 id="fixes">What are the two safe ways to remove while looping?</h2>
+      <p>Loop backwards, or only move forward when you did not remove anything. Both give the correct answer on the same test list. I ran each and got a return value of 3 and the list <code>[tree, cat]</code>.</p>
+<p>The backwards loop is the one I recommend under exam pressure, because it has no extra logic to get wrong:</p>
+<pre><code>for (int i = words.size() - 1; i &gt;= 0; i--)
+{
+    if (words.get(i).length() &lt; minLength)
+    {
+        words.remove(i);
+        removed++;
+    }
+}</code></pre>
+<p>Removing at index <code>i</code> only shifts elements after <code>i</code>, and a backwards loop has already dealt with those. The second option is a <code>while</code> loop where the counter only increases in the else branch:</p>
+<pre><code>int i = 0;
+while (i &lt; words.size())
+{
+    if (words.get(i).length() &lt; minLength)
+    {
+        words.remove(i);
+        removed++;
+    }
+    else
+    {
+        i++;
+    }
+}</code></pre>
+<p>You can also write <code>i--</code> after a removal inside a for loop, which does the same job but is easier to forget. Pick one pattern and use it every time, so you do not have to think about it on exam day.</p>
+
+      <h2 id="enhanced">Can you remove inside an enhanced for loop?</h2>
+      <p>No. The course description says that changing the size of the list during an enhanced for traversal can cause a <code>ConcurrentModificationException</code>, so elements should not be added or removed in that loop. Use an enhanced for loop when you only read values, and a standard for loop with an index when you add, remove or set elements.</p>
+<p>If you are also revising the other array-based question, my post on <a href="blog-ap-csa-recursion-2d-arrays">AP CSA recursion and 2D arrays</a> covers Question 4 and tracing recursive code.</p>
+
+      <h2 id="routine">How should you practise Question 3?</h2>
+      <p>Write each method on paper, then type it into an IDE and test it on a list where two neighbours both need removing. Paper first, because the exam is a written method, and the test case second, because that is the case that exposes the skipping bug.</p>
+<ol>
+<li>Write the method on paper in about 15 minutes, with the loop skeleton first.</li>
+<li>Before you type it, predict the output for a list with two adjacent elements that both match.</li>
+<li>Run it and compare. If it differs, find the exact index where the loop went wrong.</li>
+<li>Rewrite it using the backwards loop and confirm the output.</li>
+<li>Change the task: count instead of remove, then replace with <code>set</code>, then insert with <code>add(index, obj)</code>.</li>
+</ol>
+<p>Do this with a different task each time for two weeks and the pattern becomes automatic. If you want someone to read your handwritten answers and point at the line that breaks, that is what I do in <a href="courses">AP CSA tutoring</a>, and you can <a href="contact#booking">book a free call</a> to talk through a plan.</p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Can I use an array instead of an ArrayList in Question 3? <span class="icon" aria-hidden="true"></span></summary><p>The question gives you an ArrayList and asks you to write a method using the data in it. Work with the type you are given. Converting to an array adds extra code and extra chances to make a mistake.</p></details>
+        <details class="faq-item"><summary>What is the difference between size() and length? <span class="icon" aria-hidden="true"></span></summary><p>An ArrayList uses the method size(), with brackets. An array uses length with no brackets. Writing the wrong one will not compile, so check which type you are holding before you write the loop condition.</p></details>
+        <details class="faq-item"><summary>Is a backwards loop always better when removing? <span class="icon" aria-hidden="true"></span></summary><p>For removing, it is the simplest safe choice because removal only shifts elements you have already processed. If the order of results matters, such as building a new list in the original order, a forward loop with careful counter handling may be clearer.</p></details>
+      </div>
+
+      <h2 id="sources">Sources</h2>
+      <ul class="post-sources"><li><a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam" rel="noopener">College Board: AP Computer Science A exam page</a></li><li><a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf" rel="noopener">College Board: AP Computer Science A course and exam description (PDF)</a></li></ul>
+
+      <h2>Related reading</h2>
+      <ul class="post-sources"><li><a href="blog-ap-csa-recursion-2d-arrays">AP CSA recursion and 2D arrays: where the marks go</a></li><li><a href="blog-past-papers-method">How to use past papers for computer science revision</a></li><li><a href="courses">AP CSP, AP CSA and IB CS tutoring</a></li></ul>
+
+      <aside class="author-box">
+  <img src="headshot.jpg" alt="Syed Shahmikh Ali" width="72" height="72" loading="lazy">
+  <div>
+    <p class="author-name">About the author</p>
+    <p><a href="about">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 10% of computer science tutors on Preply, Oxford University Press trained, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
+    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact">contact page</a> and I will correct it.</p>
+  </div>
+</aside>
+    </div>
+  </article>
+
+  <section class="on-ink cta-band">
+    <div class="container">
+      <p class="eyebrow">Want your Question 3 answers marked?</p>
+      <h2>Book a free call and we will trace your ArrayList loops together</h2>
+      <a href="contact#booking" class="btn btn--gold">Book a Call</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about">About</a></li><li><a href="courses">Courses</a></li><li><a href="pricing">Pricing</a></li><li><a href="resources">Resources</a></li><li><a href="blog">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids">Kids AI Program</a></li><li><a href="courses">Security+ &amp; CCNA</a></li><li><a href="courses">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance">Career Guidance</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact">Contact</a></li><li><a href="faq">FAQ</a></li><li><a href="testimonials">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved. · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></span><span>Teaching students across the US, UK &amp; Europe.</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

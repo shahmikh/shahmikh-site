@@ -1,0 +1,96 @@
+{
+  "slug": "ap-csa-arraylist-vs-array",
+  "title": "AP CSA ArrayList vs Array: Which to Use and FRQ 3",
+  "h1": "AP CSA ArrayList vs Array: When to Use Each and How to Write Free-Response Question 3",
+  "description": "Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.",
+  "eyebrow": "AP Computer Science A",
+  "read_min": 8,
+  "card_summary": "Arrays are fixed length, ArrayLists change size. How to pick the right one, and a removal loop that does not skip elements in free-response Question 3.",
+  "lead": "Use an array when the number of elements is fixed, and an ArrayList when you need to add or remove elements. On the AP Computer Science A exam this matters most in free-response Question 3, where you write one method that analyses and often changes an ArrayList, and where the classic mistake is skipping an element after a removal.",
+  "takeaways": [
+    "An array has a fixed length that cannot be changed. An ArrayList is mutable in size, so it is the right choice whenever elements are added or removed.",
+    "The Java Quick Reference gives you six ArrayList methods: size, two versions of add, get, set and remove. Learn exactly what each one returns.",
+    "Free-response Question 3 is Data Analysis with ArrayList: you write one method that uses, analyses and changes the data in an ArrayList of objects.",
+    "Removing while moving forward through a list shifts later elements left, so a plain for loop skips the element after each removal. Loop backwards, or only move on when nothing was removed.",
+    "Never add or remove inside an enhanced for loop, because it can cause a ConcurrentModificationException."
+  ],
+  "sections": [
+    {
+      "id": "choose",
+      "h2": "When should you use an array and when an ArrayList?",
+      "html": "<p>Use an array when you know the size up front and it will not change, and an ArrayList when the collection grows or shrinks. The course and exam description says an ArrayList is \"mutable in size\" and holds object references, while an array's length cannot be changed once it is created.</p>\n<p>Here is the decision I give students, in the order I ask the questions:</p>\n<table>\n<thead><tr><th>Question</th><th>If yes</th></tr></thead>\n<tbody>\n<tr><td>Will elements be added or removed?</td><td>ArrayList</td></tr>\n<tr><td>Do you need to store plain <code>int</code> or <code>double</code> values with no extra work?</td><td>Array (an ArrayList stores wrapper objects such as <code>Integer</code>, with autoboxing doing the conversion)</td></tr>\n<tr><td>Is the data a grid of rows and columns?</td><td>2D array</td></tr>\n<tr><td>Does the question hand you one of them?</td><td>Use the type you are given, and do not convert it</td></tr>\n</tbody>\n</table>\n<p>On the exam the choice is usually made for you, because the question states the type. The skill being tested is using that type correctly, so the decision table matters most when you write your own practice programs."
+    },
+    {
+      "id": "methods",
+      "h2": "Which ArrayList methods do you need to know?",
+      "html": "<p>Six, and they are all in the Java Quick Reference, which the <a href=\"https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam\" rel=\"noopener\">exam page</a> says is built into the Bluebook app. The <a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf\" rel=\"noopener\">course and exam description</a> lists them under Topic 4.8:</p>\n<table>\n<thead><tr><th>Method</th><th>What it does</th></tr></thead>\n<tbody>\n<tr><td><code>int size()</code></td><td>Returns the number of elements</td></tr>\n<tr><td><code>boolean add(E obj)</code></td><td>Appends to the end and returns true</td></tr>\n<tr><td><code>void add(int index, E obj)</code></td><td>Inserts at the index, shifting later elements right</td></tr>\n<tr><td><code>E get(int index)</code></td><td>Returns the element at the index</td></tr>\n<tr><td><code>E set(int index, E obj)</code></td><td>Replaces the element and returns the old one</td></tr>\n<tr><td><code>E remove(int index)</code></td><td>Removes the element, shifting later elements left, and returns it</td></tr>\n</tbody>\n</table>\n<p>Valid indexes run from 0 to <code>size() - 1</code>, and an index outside that range throws an <code>IndexOutOfBoundsException</code>. Two details cost marks. First, an array uses <code>length</code> with no brackets and an ArrayList uses <code>size()</code> with brackets, so mixing them up fails to compile. Second, the \"shifting\" in <code>add</code> and <code>remove</code> is the reason loops go wrong, which is the next section.</p>"
+    },
+    {
+      "id": "question-3",
+      "h2": "What does free-response Question 3 ask for?",
+      "html": "<p>You write one method that uses, analyses and changes data stored in an ArrayList. The exam page lists Question 3 as \"Data Analysis with ArrayList\", and the course description says you get an outline of a data set represented by a class and write one method from given specifications and examples.</p>\n<p>The same description notes that solutions often insert or remove elements, so you have to adjust loop counters to avoid skipping an element or accessing one that no longer exists. That one sentence is the whole difficulty of the question. The method itself is usually short. Whether it works depends on how you handle the indexes after a removal.</p>"
+    },
+    {
+      "id": "skip-bug",
+      "h2": "Why does removing elements in a loop skip items?",
+      "html": "<p>Because <code>remove</code> shifts every later element one place left, so the element that was next is now at the index you just looked at, and your loop counter moves past it. Here is a method I wrote and ran to show it. It should remove every word shorter than <code>minLength</code> and return how many it removed:</p>\n<pre><code>public static int removeShort(ArrayList&lt;String&gt; words, int minLength)\n{\n    int removed = 0;\n    for (int i = 0; i &lt; words.size(); i++)\n    {\n        if (words.get(i).length() &lt; minLength)\n        {\n            words.remove(i);\n            removed++;\n        }\n    }\n    return removed;\n}</code></pre>\n<p>I called it with the list <code>[hi, to, tree, a, cat]</code> and <code>minLength</code> 3. It returned 2 and left <code>[to, tree, cat]</code>. The word \"hi\" was removed, \"to\" slid into index 0, and the loop moved on to index 1 without ever checking it. The word \"a\" was removed correctly because it did not follow another removal. The correct result is <code>[tree, cat]</code> and a return value of 3.</p>\n<p>This is an example I created, not a College Board question. The pattern is the point: any time a loop removes and a neighbour might also need removing, a forward for loop is a bug.</p>"
+    },
+    {
+      "id": "fixes",
+      "h2": "What are the two safe ways to remove while looping?",
+      "html": "<p>Loop backwards, or only move forward when you did not remove anything. Both give the correct answer on the same test list. I ran each and got a return value of 3 and the list <code>[tree, cat]</code>.</p>\n<p>The backwards loop is the one I recommend under exam pressure, because it has no extra logic to get wrong:</p>\n<pre><code>for (int i = words.size() - 1; i &gt;= 0; i--)\n{\n    if (words.get(i).length() &lt; minLength)\n    {\n        words.remove(i);\n        removed++;\n    }\n}</code></pre>\n<p>Removing at index <code>i</code> only shifts elements after <code>i</code>, and a backwards loop has already dealt with those. The second option is a <code>while</code> loop where the counter only increases in the else branch:</p>\n<pre><code>int i = 0;\nwhile (i &lt; words.size())\n{\n    if (words.get(i).length() &lt; minLength)\n    {\n        words.remove(i);\n        removed++;\n    }\n    else\n    {\n        i++;\n    }\n}</code></pre>\n<p>You can also write <code>i--</code> after a removal inside a for loop, which does the same job but is easier to forget. Pick one pattern and use it every time, so you do not have to think about it on exam day.</p>"
+    },
+    {
+      "id": "enhanced",
+      "h2": "Can you remove inside an enhanced for loop?",
+      "html": "<p>No. The course description says that changing the size of the list during an enhanced for traversal can cause a <code>ConcurrentModificationException</code>, so elements should not be added or removed in that loop. Use an enhanced for loop when you only read values, and a standard for loop with an index when you add, remove or set elements.</p>\n<p>If you are also revising the other array-based question, my post on <a href=\"blog-ap-csa-recursion-2d-arrays.html\">AP CSA recursion and 2D arrays</a> covers Question 4 and tracing recursive code.</p>"
+    },
+    {
+      "id": "routine",
+      "h2": "How should you practise Question 3?",
+      "html": "<p>Write each method on paper, then type it into an IDE and test it on a list where two neighbours both need removing. Paper first, because the exam is a written method, and the test case second, because that is the case that exposes the skipping bug.</p>\n<ol>\n<li>Write the method on paper in about 15 minutes, with the loop skeleton first.</li>\n<li>Before you type it, predict the output for a list with two adjacent elements that both match.</li>\n<li>Run it and compare. If it differs, find the exact index where the loop went wrong.</li>\n<li>Rewrite it using the backwards loop and confirm the output.</li>\n<li>Change the task: count instead of remove, then replace with <code>set</code>, then insert with <code>add(index, obj)</code>.</li>\n</ol>\n<p>Do this with a different task each time for two weeks and the pattern becomes automatic. If you want someone to read your handwritten answers and point at the line that breaks, that is what I do in <a href=\"courses.html\">AP CSA tutoring</a>, and you can <a href=\"contact.html#booking\">book a free call</a> to talk through a plan.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can I use an array instead of an ArrayList in Question 3?",
+      "a": "The question gives you an ArrayList and asks you to write a method using the data in it. Work with the type you are given. Converting to an array adds extra code and extra chances to make a mistake."
+    },
+    {
+      "q": "What is the difference between size() and length?",
+      "a": "An ArrayList uses the method size(), with brackets. An array uses length with no brackets. Writing the wrong one will not compile, so check which type you are holding before you write the loop condition."
+    },
+    {
+      "q": "Is a backwards loop always better when removing?",
+      "a": "For removing, it is the simplest safe choice because removal only shifts elements you have already processed. If the order of results matters, such as building a new list in the original order, a forward loop with careful counter handling may be clearer."
+    }
+  ],
+  "sources": [
+    {
+      "title": "College Board: AP Computer Science A exam page",
+      "url": "https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam"
+    },
+    {
+      "title": "College Board: AP Computer Science A course and exam description (PDF)",
+      "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"
+    }
+  ],
+  "related": [
+    {
+      "title": "AP CSA recursion and 2D arrays: where the marks go",
+      "href": "blog-ap-csa-recursion-2d-arrays.html"
+    },
+    {
+      "title": "How to use past papers for computer science revision",
+      "href": "blog-past-papers-method.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Want your Question 3 answers marked?",
+  "cta_heading": "Book a free call and we will trace your ArrayList loops together",
+  "published": "2026-11-12",
+  "modified": "2026-11-12"
+}

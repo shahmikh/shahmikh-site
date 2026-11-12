@@ -18,6 +18,7 @@
 - 2026-11-09: `ap-csa-recursion-2d-arrays` (AP CSA recursion and 2D arrays: where the marks go)
 - 2026-11-10: `ap-csp-multiple-choice` (AP CSP multiple choice: question types and how to practise) - topic 3; topic 2 skipped, see below
 - 2026-11-10: `igcse-computer-science-paper-1` (IGCSE Computer Science Paper 1: how to revise it) - topic 4; extra run, Cambridge syllabus fetched OK
+- 2026-11-12: `ap-csa-arraylist-vs-array` (AP CSA ArrayList vs array: which to use and FRQ 3) - topic 7; topic 5 (weekly hours) skipped, College Board gives no hours guidance to cite; topic 2 still blocked
 
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
@@ -29,5 +30,4 @@
 2. IB Computer Science internal assessment: how to choose a topic and what the criteria reward
 5. How many hours a week should a student spend on AP computer science? (parent guide; only sourced claims)
 6. Is Security+ or a degree better for a first cybersecurity job? (verify on CompTIA and a labour-statistics source)
-7. AP CSA ArrayList vs array: when to use which and the free-response Question 3 pattern
 8. Debugging Java for beginners: reading error messages and a repeatable process
