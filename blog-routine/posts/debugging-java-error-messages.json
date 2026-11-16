@@ -1,0 +1,95 @@
+{
+  "slug": "debugging-java-error-messages",
+  "title": "Debugging Java for Beginners: Read the Error First",
+  "h1": "Debugging Java for Beginners: How to Read Error Messages and Fix the Bug",
+  "description": "Java tells you what went wrong and on which line. Here is how to read stack traces and compile errors, and a repeatable process for logic bugs.",
+  "eyebrow": "Java",
+  "read_min": 7,
+  "card_summary": "How to read a Java stack trace, what the two most common exceptions mean, and a five-step process for bugs that give no error at all.",
+  "lead": "Start with the error message, because Java usually tells you the exception type and the exact line where it happened. Read the first line for what went wrong, then find the first line of the trace that points at your own code, and that is where to look.",
+  "takeaways": [
+    "A stack trace lists the methods that were running when the error happened. The first line names the exception, and the first line that mentions your own file is the place to start.",
+    "Compile errors come from javac before the program runs, and the caret marks where it got confused. Fix the first one and recompile.",
+    "ArrayIndexOutOfBoundsException means an index was negative or at least the array length. A loop condition with <= instead of < is a classic cause.",
+    "NullPointerException means you used a variable that holds null as if it were an object. Find where that variable should have been assigned.",
+    "If there is no error and the answer is wrong, you have a logic bug. Predict the output by hand first, then print the values and find the first line where reality and prediction differ."
+  ],
+  "sections": [
+    {
+      "id": "first-step",
+      "h2": "What should you do first when a Java program fails?",
+      "html": "<p>Read the message from the top, slowly, before you change any code. Most beginners skim it, panic and start editing, which is how one bug turns into three. The message is information, and Java is usually specific about it.</p>\n<p>There are three kinds of failure, and each needs a different response. A <strong>compile error</strong> means the code could not be built, so nothing ran. A <strong>runtime exception</strong> means it ran and then stopped with an error. A <strong>logic bug</strong> means it ran to the end and gave the wrong answer. The Oracle Java tutorial defines an <a href=\"https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html\" rel=\"noopener\">exception</a> as \"an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.\" That covers the second kind. The other two are a typo-level mistake caught before running, and a mistake in your thinking that nothing catches for you.</p>"
+    },
+    {
+      "id": "stack-trace",
+      "h2": "How do you read a Java stack trace?",
+      "html": "<p>Read the first line for the exception type and message, then go down until you reach a line that names your own class and file. That line number is where to start. The lines below it show who called that method.</p>\n<p>The Oracle tutorial describes the <em>call stack</em> as \"the ordered list of methods that had been called to get to the method where the error occurred.\" A stack trace is a printout of that list. Here is a real one. I wrote a small <code>Demo</code> class with an <code>average</code> method, ran it on Java 21, and got this:</p>\n<pre><code>Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3\n\tat Demo.average(Demo.java:10)\n\tat Demo.main(Demo.java:24)</code></pre>\n<p>Reading it line by line:</p>\n<ol>\n<li><code>ArrayIndexOutOfBoundsException</code> is the type of problem.</li>\n<li><code>Index 3 out of bounds for length 3</code> is the detail: the code asked for position 3 in an array that only has positions 0, 1 and 2.</li>\n<li><code>Demo.average(Demo.java:10)</code> is where it happened: line 10 of <code>Demo.java</code>, inside the <code>average</code> method.</li>\n<li><code>Demo.main(Demo.java:24)</code> is who called <code>average</code>. You only need this if line 10 looks correct and the real mistake is in what was passed in.</li>\n</ol>\n<p>Longer programs produce longer traces, with several lines from library code you did not write. Skip those and look for your own file name. The wording of the detail message can differ between Java versions, so do not expect your output to match this text exactly.</p>"
+    },
+    {
+      "id": "compile-errors",
+      "h2": "What do compile errors tell you?",
+      "html": "<p>They give the file, the line, a short description, and a caret under the spot where the compiler got stuck. I wrote a two-line file with two deliberate mistakes and this is what <code>javac</code> printed:</p>\n<pre><code>Bad.java:5: error: incompatible types: String cannot be converted to int\n        int x = \"hello\";\n                ^\nBad.java:6: error: cannot find symbol\n        System.out.println(y);\n                           ^\n  symbol:   variable y\n  location: class Bad\n2 errors</code></pre>\n<p>The first says you tried to put text in an <code>int</code> variable. The second says the name <code>y</code> was never declared. Two habits help. Fix the first error and recompile before touching the rest, because one mistake such as a missing brace can cause a long list of messages after it. And if the line the compiler points to looks fine, check the line just above it, since a missing semicolon or bracket is often reported on the line after the real mistake.</p>"
+    },
+    {
+      "id": "two-exceptions",
+      "h2": "What do the two most common exceptions mean?",
+      "html": "<p><code>ArrayIndexOutOfBoundsException</code> means you used a bad index, and <code>NullPointerException</code> means you used a variable that points at nothing. Between them they cover a large share of the crashes beginners hit.</p>\n<p><strong>ArrayIndexOutOfBoundsException.</strong> The Java documentation says it is thrown when an array is accessed with an illegal index, and that the index is either negative or greater than or equal to the size of the array (see the <a href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html\" rel=\"noopener\">Java SE 17 API page</a>). My crash above came from this loop:</p>\n<pre><code>for (int i = 0; i &lt;= scores.length; i++)\n{\n    total += scores[i];\n}</code></pre>\n<p>An array of length 3 has indexes 0 to 2, so <code>&lt;=</code> lets <code>i</code> reach 3. The fix is <code>i &lt; scores.length</code>. When you see this exception, check the loop condition and any <code>+ 1</code> or <code>- 1</code> near the index first.</p>\n<p><strong>NullPointerException.</strong> The <a href=\"https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html\" rel=\"noopener\">Java SE 21 API page</a> lists the cases, including calling an instance method of a <code>null</code> object and accessing a field of a <code>null</code> object. Here is a class where a <code>String</code> field is declared but never given a value, so it holds <code>null</code>:</p>\n<pre><code>private String nickname;\n\npublic int nicknameLength()\n{\n    return nickname.length();\n}</code></pre>\n<p>Running it on Java 21 printed <code>Cannot invoke \"String.length()\" because \"this.nickname\" is null</code>, followed by the line number. That message names the exact variable, which saves a lot of guessing. Your job is then to find out why <code>nickname</code> was never assigned: a constructor that forgot it, a method that was never called, or a value that came back empty from somewhere else.</p>"
+    },
+    {
+      "id": "logic-bugs",
+      "h2": "How do you debug a program that runs but gives the wrong answer?",
+      "html": "<p>Predict the correct output by hand, then print values until you find the first place where the program disagrees with you. With no error message there is nothing to read, so you have to create the evidence yourself.</p>\n<p>Here is an example I made up for this post. A method should count how many numbers are at least a limit:</p>\n<pre><code>public static int countBig(int[] nums, int limit)\n{\n    int count = 0;\n    for (int n : nums)\n    {\n        if (n &gt; limit)\n        {\n            count++;\n        }\n    }\n    return count;\n}</code></pre>\n<p>Called with <code>{5, 10, 12}</code> and a limit of 10, I expected 2 and the program printed 1. No exception, no warning. The prediction is what exposes it: 10 is at least 10, so it should count, and the condition uses <code>&gt;</code> instead of <code>&gt;=</code>. Adding <code>System.out.println(n + \" \" + (n &gt; limit));</code> inside the loop would have shown <code>10 false</code> and pointed at the same line. Boundary values like this one, where the input equals the limit, are where many logic bugs hide, so always include one in your test data.</p>\n<p>For longer methods, a trace table on paper does the same job: one column per variable, one row per loop pass. This is the same skill as tracing code in an exam, which I cover in my post on <a href=\"blog-past-papers-method.html\">how to use past papers for computer science revision</a>.</p>"
+    },
+    {
+      "id": "process",
+      "h2": "What is a repeatable process for fixing any bug?",
+      "html": "<p>Use the same five steps every time, so you are never guessing at random. The order matters more than the speed.</p>\n<ol>\n<li><strong>Read the message.</strong> Note the type, the detail and the first line number in your own code.</li>\n<li><strong>Look at that line and the one above it.</strong> Check the loop condition, the variable names and the brackets.</li>\n<li><strong>Predict, then check.</strong> Say what each variable should hold at that point, then print them and compare.</li>\n<li><strong>Change one thing.</strong> Make a single edit, rerun, and see whether the result changed in the way you expected. Several edits at once leave you not knowing which one worked.</li>\n<li><strong>Test the edges.</strong> Rerun with an empty array, a single element, and a value equal to the limit.</li>\n</ol>\n<p>If you are stuck for more than 15 minutes, write the problem down in one sentence: \"I expected X at line Y but got Z.\" Writing that sentence often shows you the answer, and if it does not, it is exactly what to bring to a teacher. Students working through this with me in <a href=\"courses.html\">computer science tutoring</a> practise the process on their own buggy code, and you can <a href=\"contact.html#booking\">book a free call</a> to see how that works.</p>\n<p>If you are still choosing a first language, my post on <a href=\"blog-python-or-java-first-language.html\">Python or Java as a first language</a> compares the two.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why does my Java error point to a line that looks correct?",
+      "a": "The line number is where Java noticed the problem, not always where you made it. Check the line above for a missing semicolon or bracket, and for runtime errors check what values were passed into that line."
+    },
+    {
+      "q": "Should I use print statements or a debugger?",
+      "a": "Start with print statements, because they work everywhere and make you think about what each value should be. A debugger that steps through code is worth learning once your programs have several methods, and it follows the same predict-then-check idea."
+    },
+    {
+      "q": "How do I stop making the same Java mistakes?",
+      "a": "Keep a short list of your own errors with the cause and the fix, for example loop condition used <= instead of <. After a few weeks you will see that the same three or four mistakes repeat, and you will start checking for them before you run the code."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oracle Java Tutorials: What Is an Exception?",
+      "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html"
+    },
+    {
+      "title": "Java SE 17 API: ArrayIndexOutOfBoundsException",
+      "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html"
+    },
+    {
+      "title": "Java SE 21 API: NullPointerException",
+      "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html"
+    }
+  ],
+  "related": [
+    {
+      "title": "Python or Java as a first language",
+      "href": "blog-python-or-java-first-language.html"
+    },
+    {
+      "title": "How to use past papers for computer science revision",
+      "href": "blog-past-papers-method.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Stuck on a Java bug?",
+  "cta_heading": "Book a free call and we will read your stack trace together",
+  "published": "2026-11-16",
+  "modified": "2026-11-16"
+}

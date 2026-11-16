@@ -19,6 +19,7 @@
 - 2026-11-10: `ap-csp-multiple-choice` (AP CSP multiple choice: question types and how to practise) - topic 3; topic 2 skipped, see below
 - 2026-11-10: `igcse-computer-science-paper-1` (IGCSE Computer Science Paper 1: how to revise it) - topic 4; extra run, Cambridge syllabus fetched OK
 - 2026-11-12: `ap-csa-arraylist-vs-array` (AP CSA ArrayList vs array: which to use and FRQ 3) - topic 7; topic 5 (weekly hours) skipped, College Board gives no hours guidance to cite; topic 2 still blocked
+- 2026-11-16: `debugging-java-error-messages` (Debugging Java for beginners: read the error first) - topic 8; sources: Oracle Java tutorial and Java SE 17/21 API pages; code examples were compiled and run on Java 21
 
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
@@ -30,4 +31,9 @@
 2. IB Computer Science internal assessment: how to choose a topic and what the criteria reward
 5. How many hours a week should a student spend on AP computer science? (parent guide; only sourced claims)
 6. Is Security+ or a degree better for a first cybersecurity job? (verify on CompTIA and a labour-statistics source)
-8. Debugging Java for beginners: reading error messages and a repeatable process
+9. AP CSP Explore performance task vs Create task: what each asks for (verify on College Board)
+10. How to learn Python loops and conditionals: a practice routine with runnable examples
+11. IGCSE Computer Science: how to write and trace pseudocode (verify on Cambridge syllabus)
+12. Cisco Packet Tracer for CCNA: what to practise first (verify on Cisco Networking Academy)
+13. Study schedule for a student balancing AP computer science with other subjects (sourced claims only)
+14. Java String methods every beginner should know, with run-and-check examples (verify on Oracle docs)

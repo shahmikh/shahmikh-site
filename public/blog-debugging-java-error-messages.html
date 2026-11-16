@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debugging Java for Beginners: Read the Error First</title>
+<meta name="description" content="Java tells you what went wrong and on which line. Here is how to read stack traces and compile errors, and a repeatable process for logic bugs.">
+<meta name="theme-color" content="#0B1B33">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://shahmikh.com/blog-debugging-java-error-messages">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Debugging Java for Beginners: Read the Error First">
+<meta property="og:description" content="Java tells you what went wrong and on which line. Here is how to read stack traces and compile errors, and a repeatable process for logic bugs.">
+<meta property="og:url" content="https://shahmikh.com/blog-debugging-java-error-messages">
+<meta property="og:image" content="https://shahmikh.com/headshot.jpg">
+<meta property="article:published_time" content="2026-11-16">
+<meta property="article:modified_time" content="2026-11-16">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Debugging Java for Beginners: Read the Error First">
+<meta name="twitter:description" content="Java tells you what went wrong and on which line. Here is how to read stack traces and compile errors, and a repeatable process for logic bugs.">
+<meta name="twitter:image" content="https://shahmikh.com/headshot.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="theme.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://shahmikh.com/about#person",
+      "name": "Syed Shahmikh Ali",
+      "url": "https://shahmikh.com/about",
+      "image": "https://shahmikh.com/headshot.jpg",
+      "jobTitle": "Tutor and career mentor",
+      "knowsAbout": [
+        "AP Computer Science A",
+        "AP Computer Science Principles",
+        "IB Computer Science",
+        "Java",
+        "Python",
+        "CompTIA Security+",
+        "Cisco CCNA"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Debugging Java for Beginners: Read the Error First",
+      "description": "Java tells you what went wrong and on which line. Here is how to read stack traces and compile errors, and a repeatable process for logic bugs.",
+      "image": [
+        "https://shahmikh.com/headshot.jpg"
+      ],
+      "datePublished": "2026-11-16",
+      "dateModified": "2026-11-16",
+      "author": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "publisher": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "inLanguage": "en",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shahmikh.com/blog-debugging-java-error-messages"
+      },
+      "citation": [
+        "https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html",
+        "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html",
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shahmikh.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://shahmikh.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Debugging Java for Beginners: Read the Error First",
+          "item": "https://shahmikh.com/blog-debugging-java-error-messages"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does my Java error point to a line that looks correct?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The line number is where Java noticed the problem, not always where you made it. Check the line above for a missing semicolon or bracket, and for runtime errors check what values were passed into that line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use print statements or a debugger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with print statements, because they work everywhere and make you think about what each value should be. A debugger that steps through code is worth learning once your programs have several methods, and it follows the same predict-then-check idea."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stop making the same Java mistakes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep a short list of your own errors with the cause and the fix, for example loop condition used <= instead of <. After a few weeks you will see that the same three or four mistakes repeat, and you will start checking for them before you run the code."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="courses">Subjects</a><a href="/#how">How it works</a><a href="pricing">Pricing</a><a href="resources">Resources</a><a href="testimonials">Reviews</a><a href="blog" class="is-active">Blog</a><a href="about">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact" class="btn btn--ghost">Contact</a>
+      <a href="contact#booking" class="btn btn--primary">Book a free call</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Java · 7 min read</p>
+      <h1 style="max-width: 24ch;">Debugging Java for Beginners: How to Read Error Messages and Fix the Bug</h1>
+      <p class="post-byline">By <a href="about">Syed Shahmikh Ali</a> · Published 2026-11-16 · Updated 2026-11-16</p>
+    </div>
+  </section>
+
+  <article class="section-tight">
+    <div class="container blog-post-body">
+      <p class="post-lead">Start with the error message, because Java usually tells you the exception type and the exact line where it happened. Read the first line for what went wrong, then find the first line of the trace that points at your own code, and that is where to look.</p>
+
+      <div class="takeaways">
+        <h2>Key takeaways</h2>
+        <ul><li>A stack trace lists the methods that were running when the error happened. The first line names the exception, and the first line that mentions your own file is the place to start.</li><li>Compile errors come from javac before the program runs, and the caret marks where it got confused. Fix the first one and recompile.</li><li>ArrayIndexOutOfBoundsException means an index was negative or at least the array length. A loop condition with <= instead of < is a classic cause.</li><li>NullPointerException means you used a variable that holds null as if it were an object. Find where that variable should have been assigned.</li><li>If there is no error and the answer is wrong, you have a logic bug. Predict the output by hand first, then print the values and find the first line where reality and prediction differ.</li></ul>
+      </div>
+
+      <nav class="toc" aria-label="Contents"><p class="toc-title">In this article</p><ol><li><a href="#first-step">What should you do first when a Java program fails?</a></li><li><a href="#stack-trace">How do you read a Java stack trace?</a></li><li><a href="#compile-errors">What do compile errors tell you?</a></li><li><a href="#two-exceptions">What do the two most common exceptions mean?</a></li><li><a href="#logic-bugs">How do you debug a program that runs but gives the wrong answer?</a></li><li><a href="#process">What is a repeatable process for fixing any bug?</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+
+      <h2 id="first-step">What should you do first when a Java program fails?</h2>
+      <p>Read the message from the top, slowly, before you change any code. Most beginners skim it, panic and start editing, which is how one bug turns into three. The message is information, and Java is usually specific about it.</p>
+<p>There are three kinds of failure, and each needs a different response. A <strong>compile error</strong> means the code could not be built, so nothing ran. A <strong>runtime exception</strong> means it ran and then stopped with an error. A <strong>logic bug</strong> means it ran to the end and gave the wrong answer. The Oracle Java tutorial defines an <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html" rel="noopener">exception</a> as "an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions." That covers the second kind. The other two are a typo-level mistake caught before running, and a mistake in your thinking that nothing catches for you.</p>
+
+      <h2 id="stack-trace">How do you read a Java stack trace?</h2>
+      <p>Read the first line for the exception type and message, then go down until you reach a line that names your own class and file. That line number is where to start. The lines below it show who called that method.</p>
+<p>The Oracle tutorial describes the <em>call stack</em> as "the ordered list of methods that had been called to get to the method where the error occurred." A stack trace is a printout of that list. Here is a real one. I wrote a small <code>Demo</code> class with an <code>average</code> method, ran it on Java 21, and got this:</p>
+<pre><code>Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at Demo.average(Demo.java:10)
+	at Demo.main(Demo.java:24)</code></pre>
+<p>Reading it line by line:</p>
+<ol>
+<li><code>ArrayIndexOutOfBoundsException</code> is the type of problem.</li>
+<li><code>Index 3 out of bounds for length 3</code> is the detail: the code asked for position 3 in an array that only has positions 0, 1 and 2.</li>
+<li><code>Demo.average(Demo.java:10)</code> is where it happened: line 10 of <code>Demo.java</code>, inside the <code>average</code> method.</li>
+<li><code>Demo.main(Demo.java:24)</code> is who called <code>average</code>. You only need this if line 10 looks correct and the real mistake is in what was passed in.</li>
+</ol>
+<p>Longer programs produce longer traces, with several lines from library code you did not write. Skip those and look for your own file name. The wording of the detail message can differ between Java versions, so do not expect your output to match this text exactly.</p>
+
+      <h2 id="compile-errors">What do compile errors tell you?</h2>
+      <p>They give the file, the line, a short description, and a caret under the spot where the compiler got stuck. I wrote a two-line file with two deliberate mistakes and this is what <code>javac</code> printed:</p>
+<pre><code>Bad.java:5: error: incompatible types: String cannot be converted to int
+        int x = "hello";
+                ^
+Bad.java:6: error: cannot find symbol
+        System.out.println(y);
+                           ^
+  symbol:   variable y
+  location: class Bad
+2 errors</code></pre>
+<p>The first says you tried to put text in an <code>int</code> variable. The second says the name <code>y</code> was never declared. Two habits help. Fix the first error and recompile before touching the rest, because one mistake such as a missing brace can cause a long list of messages after it. And if the line the compiler points to looks fine, check the line just above it, since a missing semicolon or bracket is often reported on the line after the real mistake.</p>
+
+      <h2 id="two-exceptions">What do the two most common exceptions mean?</h2>
+      <p><code>ArrayIndexOutOfBoundsException</code> means you used a bad index, and <code>NullPointerException</code> means you used a variable that points at nothing. Between them they cover a large share of the crashes beginners hit.</p>
+<p><strong>ArrayIndexOutOfBoundsException.</strong> The Java documentation says it is thrown when an array is accessed with an illegal index, and that the index is either negative or greater than or equal to the size of the array (see the <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html" rel="noopener">Java SE 17 API page</a>). My crash above came from this loop:</p>
+<pre><code>for (int i = 0; i &lt;= scores.length; i++)
+{
+    total += scores[i];
+}</code></pre>
+<p>An array of length 3 has indexes 0 to 2, so <code>&lt;=</code> lets <code>i</code> reach 3. The fix is <code>i &lt; scores.length</code>. When you see this exception, check the loop condition and any <code>+ 1</code> or <code>- 1</code> near the index first.</p>
+<p><strong>NullPointerException.</strong> The <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" rel="noopener">Java SE 21 API page</a> lists the cases, including calling an instance method of a <code>null</code> object and accessing a field of a <code>null</code> object. Here is a class where a <code>String</code> field is declared but never given a value, so it holds <code>null</code>:</p>
+<pre><code>private String nickname;
+
+public int nicknameLength()
+{
+    return nickname.length();
+}</code></pre>
+<p>Running it on Java 21 printed <code>Cannot invoke "String.length()" because "this.nickname" is null</code>, followed by the line number. That message names the exact variable, which saves a lot of guessing. Your job is then to find out why <code>nickname</code> was never assigned: a constructor that forgot it, a method that was never called, or a value that came back empty from somewhere else.</p>
+
+      <h2 id="logic-bugs">How do you debug a program that runs but gives the wrong answer?</h2>
+      <p>Predict the correct output by hand, then print values until you find the first place where the program disagrees with you. With no error message there is nothing to read, so you have to create the evidence yourself.</p>
+<p>Here is an example I made up for this post. A method should count how many numbers are at least a limit:</p>
+<pre><code>public static int countBig(int[] nums, int limit)
+{
+    int count = 0;
+    for (int n : nums)
+    {
+        if (n &gt; limit)
+        {
+            count++;
+        }
+    }
+    return count;
+}</code></pre>
+<p>Called with <code>{5, 10, 12}</code> and a limit of 10, I expected 2 and the program printed 1. No exception, no warning. The prediction is what exposes it: 10 is at least 10, so it should count, and the condition uses <code>&gt;</code> instead of <code>&gt;=</code>. Adding <code>System.out.println(n + " " + (n &gt; limit));</code> inside the loop would have shown <code>10 false</code> and pointed at the same line. Boundary values like this one, where the input equals the limit, are where many logic bugs hide, so always include one in your test data.</p>
+<p>For longer methods, a trace table on paper does the same job: one column per variable, one row per loop pass. This is the same skill as tracing code in an exam, which I cover in my post on <a href="blog-past-papers-method">how to use past papers for computer science revision</a>.</p>
+
+      <h2 id="process">What is a repeatable process for fixing any bug?</h2>
+      <p>Use the same five steps every time, so you are never guessing at random. The order matters more than the speed.</p>
+<ol>
+<li><strong>Read the message.</strong> Note the type, the detail and the first line number in your own code.</li>
+<li><strong>Look at that line and the one above it.</strong> Check the loop condition, the variable names and the brackets.</li>
+<li><strong>Predict, then check.</strong> Say what each variable should hold at that point, then print them and compare.</li>
+<li><strong>Change one thing.</strong> Make a single edit, rerun, and see whether the result changed in the way you expected. Several edits at once leave you not knowing which one worked.</li>
+<li><strong>Test the edges.</strong> Rerun with an empty array, a single element, and a value equal to the limit.</li>
+</ol>
+<p>If you are stuck for more than 15 minutes, write the problem down in one sentence: "I expected X at line Y but got Z." Writing that sentence often shows you the answer, and if it does not, it is exactly what to bring to a teacher. Students working through this with me in <a href="courses">computer science tutoring</a> practise the process on their own buggy code, and you can <a href="contact#booking">book a free call</a> to see how that works.</p>
+<p>If you are still choosing a first language, my post on <a href="blog-python-or-java-first-language">Python or Java as a first language</a> compares the two.</p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Why does my Java error point to a line that looks correct? <span class="icon" aria-hidden="true"></span></summary><p>The line number is where Java noticed the problem, not always where you made it. Check the line above for a missing semicolon or bracket, and for runtime errors check what values were passed into that line.</p></details>
+        <details class="faq-item"><summary>Should I use print statements or a debugger? <span class="icon" aria-hidden="true"></span></summary><p>Start with print statements, because they work everywhere and make you think about what each value should be. A debugger that steps through code is worth learning once your programs have several methods, and it follows the same predict-then-check idea.</p></details>
+        <details class="faq-item"><summary>How do I stop making the same Java mistakes? <span class="icon" aria-hidden="true"></span></summary><p>Keep a short list of your own errors with the cause and the fix, for example loop condition used <= instead of <. After a few weeks you will see that the same three or four mistakes repeat, and you will start checking for them before you run the code.</p></details>
+      </div>
+
+      <h2 id="sources">Sources</h2>
+      <ul class="post-sources"><li><a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html" rel="noopener">Oracle Java Tutorials: What Is an Exception?</a></li><li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html" rel="noopener">Java SE 17 API: ArrayIndexOutOfBoundsException</a></li><li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" rel="noopener">Java SE 21 API: NullPointerException</a></li></ul>
+
+      <h2>Related reading</h2>
+      <ul class="post-sources"><li><a href="blog-python-or-java-first-language">Python or Java as a first language</a></li><li><a href="blog-past-papers-method">How to use past papers for computer science revision</a></li><li><a href="courses">AP CSP, AP CSA and IB CS tutoring</a></li></ul>
+
+      <aside class="author-box">
+  <img src="headshot.jpg" alt="Syed Shahmikh Ali" width="72" height="72" loading="lazy">
+  <div>
+    <p class="author-name">About the author</p>
+    <p><a href="about">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 10% of computer science tutors on Preply, Oxford University Press trained, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
+    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact">contact page</a> and I will correct it.</p>
+  </div>
+</aside>
+    </div>
+  </article>
+
+  <section class="on-ink cta-band">
+    <div class="container">
+      <p class="eyebrow">Stuck on a Java bug?</p>
+      <h2>Book a free call and we will read your stack trace together</h2>
+      <a href="contact#booking" class="btn btn--gold">Book a Call</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about">About</a></li><li><a href="courses">Courses</a></li><li><a href="pricing">Pricing</a></li><li><a href="resources">Resources</a></li><li><a href="blog">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids">Kids AI Program</a></li><li><a href="courses">Security+ &amp; CCNA</a></li><li><a href="courses">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance">Career Guidance</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact">Contact</a></li><li><a href="faq">FAQ</a></li><li><a href="testimonials">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved. · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></span><span>Teaching students across the US, UK &amp; Europe.</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
