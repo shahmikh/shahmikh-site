@@ -32,6 +32,7 @@
 - [YouTube](https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA)
 
 ## Blog posts (exam guides and study advice)
+- [Java String Methods Every Beginner Should Know](https://shahmikh.com/blog-java-string-methods-for-beginners): Eight Java String methods to learn first, with code that was compiled and run, the index rules, and the equals and immutability bugs beginners hit.
 - [Debugging Java for Beginners: Read the Error First](https://shahmikh.com/blog-debugging-java-error-messages): Java tells you what went wrong and on which line. Here is how to read stack traces and compile errors, and a repeatable process for logic bugs.
 - [AP CSA ArrayList vs Array: Which to Use and FRQ 3](https://shahmikh.com/blog-ap-csa-arraylist-vs-array): Arrays have a fixed length and an ArrayList can grow and shrink. Here is how to choose, plus a safe pattern for AP CSA free-response Question 3.
 - [IGCSE Computer Science Paper 1: How to Revise It](https://shahmikh.com/blog-igcse-computer-science-paper-1): Cambridge IGCSE Computer Science Paper 1 is 75 marks in 1 hour 45 minutes across six topics. Here is how to sort them and revise each type of question.

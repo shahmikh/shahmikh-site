@@ -20,6 +20,7 @@
 - 2026-11-10: `igcse-computer-science-paper-1` (IGCSE Computer Science Paper 1: how to revise it) - topic 4; extra run, Cambridge syllabus fetched OK
 - 2026-11-12: `ap-csa-arraylist-vs-array` (AP CSA ArrayList vs array: which to use and FRQ 3) - topic 7; topic 5 (weekly hours) skipped, College Board gives no hours guidance to cite; topic 2 still blocked
 - 2026-11-16: `debugging-java-error-messages` (Debugging Java for beginners: read the error first) - topic 8; sources: Oracle Java tutorial and Java SE 17/21 API pages; code examples were compiled and run on Java 21
+- 2026-11-19: `java-string-methods-for-beginners` (Java String methods every beginner should know) - topic 14; topics 2, 5 still blocked, 6 and 9 not attempted (comptia.org/bls.gov fetch needed owner approval this run); sources: Java SE 17 String API, College Board AP CSA Java Quick Reference; code compiled and run on Java 21
 
 ## Skipped
 - IB CS internal assessment topic: ibo.org subject guide pages could not be fetched on 2026-10-29, so facts could not be verified. Keep in backlog; retry when the IB guide PDF loads.
@@ -36,4 +37,3 @@
 11. IGCSE Computer Science: how to write and trace pseudocode (verify on Cambridge syllabus)
 12. Cisco Packet Tracer for CCNA: what to practise first (verify on Cisco Networking Academy)
 13. Study schedule for a student balancing AP computer science with other subjects (sourced claims only)
-14. Java String methods every beginner should know, with run-and-check examples (verify on Oracle docs)

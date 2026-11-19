@@ -1,0 +1,96 @@
+{
+  "slug": "java-string-methods-for-beginners",
+  "title": "Java String Methods Every Beginner Should Know",
+  "h1": "Java String Methods Every Beginner Should Know, With Output You Can Check",
+  "description": "Eight Java String methods to learn first, with code that was compiled and run, the index rules, and the equals and immutability bugs beginners hit.",
+  "eyebrow": "Java",
+  "read_min": 6,
+  "card_summary": "The String methods on the AP CSA Java Quick Reference plus charAt, with run-and-check examples and the equals and immutability mistakes to avoid.",
+  "lead": "Learn length, substring, indexOf, equals, compareTo and split first, plus charAt for single characters. They cover most String tasks in beginner Java, and the first six are the ones on the College Board's AP CSA Java Quick Reference.",
+  "takeaways": [
+    "Indexes start at 0. The last valid index is length() - 1, but substring(from, to) allows to up to length() and excludes the character at to.",
+    "indexOf returns -1 when the text is not found, so a result of 0 or more means it was found.",
+    "Compare Strings with equals, not ==. The == operator checks whether two variables refer to the same object.",
+    "Strings cannot be changed. Methods such as toUpperCase and trim return a new String, so assign the result or it is lost.",
+    "Predict the output of each small program by hand before running it, and test an empty String and a one-character String."
+  ],
+  "sections": [
+    {
+      "id": "which-methods",
+      "h2": "Which Java String methods should a beginner learn first?",
+      "html": "<p>Learn eight: <code>length</code>, <code>substring</code> (both forms), <code>indexOf</code>, <code>equals</code>, <code>compareTo</code> and <code>split</code>, plus <code>charAt</code> for single characters. The first six are exactly the String methods on the <a href=\"https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf\" rel=\"noopener\">College Board AP Computer Science A Java Quick Reference</a>, the sheet students get during the exam, so they are worth knowing cold even if you never take AP.</p>\n<p>The quick reference I read lists the String constructor, <code>length()</code>, <code>substring(int from, int to)</code>, <code>substring(int from)</code>, <code>indexOf(String)</code>, <code>equals(Object)</code>, <code>compareTo(String)</code> and <code>split(String)</code>. It does not list <code>charAt</code>, which is why many AP courses use <code>substring(i, i + 1)</code> to pull out one character. Both work in real Java. Everything below follows the official <a href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" rel=\"noopener\">Java SE 17 String documentation</a>, and every output shown comes from a program I compiled and ran on Java 21.</p>"
+    },
+    {
+      "id": "indexes",
+      "h2": "How do indexes and substring work?",
+      "html": "<p>Positions start at 0, and <code>substring(from, to)</code> includes <code>from</code> but stops before <code>to</code>. The Oracle docs put it this way: the substring \"begins at the specified beginIndex and extends to the character at index endIndex - 1,\" so its length is <code>endIndex - beginIndex</code>.</p>\n<pre><code>String s = \"computer science\";\ns.length();         // 16\ns.substring(0, 8);  // \"computer\"\ns.substring(9);     // \"science\"\ns.charAt(0);        // 'c'</code></pre>\n<p>A quick habit that prevents most off-by-one mistakes: the last valid index is <code>length() - 1</code>, but the largest valid end for <code>substring</code> is <code>length()</code>. That asymmetry trips up almost everyone once. If you go past it, Java throws <code>IndexOutOfBoundsException</code>. Running <code>s.substring(5, 20)</code> printed <code>Range [5, 20) out of bounds for length 16</code>, and <code>s.charAt(16)</code> printed <code>Index 16 out of bounds for length 16</code>. Wording can differ between Java versions. If you want a deeper look at reading those messages, see <a href=\"blog-debugging-java-error-messages.html\" rel=\"noopener\">Debugging Java for beginners</a>.</p>"
+    },
+    {
+      "id": "indexof",
+      "h2": "What does indexOf return when it finds nothing?",
+      "html": "<p>It returns -1. Per the documentation, <code>indexOf(String)</code> returns \"the index of the first occurrence of the specified substring, or -1 if there is no such occurrence.\" That makes it both a search tool and a yes/no test.</p>\n<pre><code>s.indexOf(\"science\");  // 9\ns.indexOf(\"python\");   // -1</code></pre>\n<p>A useful trick is counting vowels by checking each letter against a vowel string. The call <code>\"aeiou\".indexOf(letter) &gt;= 0</code> asks whether the letter appears in the vowel list:</p>\n<pre><code>int count = 0;\nfor (int i = 0; i &lt; s.length(); i++) {\n    if (\"aeiou\".indexOf(s.substring(i, i + 1)) &gt;= 0) count++;\n}\n// count is 6 for \"computer science\"</code></pre>\n<p>Check the loop condition: <code>i &lt; s.length()</code>, not <code>&lt;=</code>. Using <code>&lt;=</code> would run one step too far and throw the exception above.</p>"
+    },
+    {
+      "id": "equals",
+      "h2": "Why does == fail for comparing Strings?",
+      "html": "<p>Because <code>==</code> asks whether two variables point to the same object, not whether the text matches. Use <code>equals</code>. The documentation says the result is true \"if and only if the argument is not null and is a String object that represents the same sequence of characters as this object.\"</p>\n<pre><code>String a = new String(\"java\");\nString b = new String(\"java\");\na == b;          // false\na.equals(b);     // true\n\"Java\".equals(\"java\");            // false\n\"Java\".equalsIgnoreCase(\"java\");  // true</code></pre>\n<p>For ordering, <code>compareTo</code> returns a negative number, zero or a positive number. In my test <code>\"apple\".compareTo(\"banana\") &lt; 0</code> was true. The docs say it returns 0 exactly when <code>equals</code> would return true, and the comparison is based on Unicode values, so an uppercase letter sorts before a lowercase one. Do not rely on the exact size of the number, only on its sign.</p>"
+    },
+    {
+      "id": "immutable",
+      "h2": "Why does toUpperCase seem to do nothing?",
+      "html": "<p>Strings cannot be changed after they are created, so methods return a new String instead of editing the old one. The class documentation states it plainly: \"Strings are constant; their values cannot be changed after they are created.\"</p>\n<pre><code>String t = \"hello\";\nt.toUpperCase();\nSystem.out.println(t);   // hello  (result thrown away)\nt = t.toUpperCase();\nSystem.out.println(t);   // HELLO</code></pre>\n<p>The first call produced \"HELLO\" and nothing kept it. This is one of the most common beginner bugs, and Java gives no error for it. The fix is to assign the result. The same rule applies to <code>trim</code> and <code>replace</code>. For example <code>\"a--b\".replace(\"-\", \"+\")</code> gives <code>a++b</code> and leaves the original untouched.</p>"
+    },
+    {
+      "id": "split",
+      "h2": "How do you split a String into pieces?",
+      "html": "<p>Use <code>split</code> with the separator and you get an array. The documentation describes it as splitting \"around matches of the given regular expression,\" and it says trailing empty strings are not included in the result.</p>\n<pre><code>String[] parts = \"3,5,8\".split(\",\");\nparts.length;   // 3\nparts[1];       // \"5\"</code></pre>\n<p>The text you pass is a regular expression, which matters for characters such as the dot or the pipe. A comma or a space is safe. For anything else, check the documentation before trusting it. If you pull numbers out this way, remember each piece is still text. Reading data into an array is a natural next step, and <a href=\"blog-ap-csa-arraylist-vs-array.html\" rel=\"noopener\">ArrayList versus array</a> covers how to store it.</p>"
+    },
+    {
+      "id": "practice",
+      "h2": "What is a good way to practise these methods?",
+      "html": "<p>Write small programs that predict the output first, then run them. Here are four that use only the methods above, and I would do them in this order:</p>\n<ol>\n<li>Print a String backwards. My version loops from <code>length() - 1</code> down to 0 and joins <code>substring(i, i + 1)</code>. It turned \"stressed\" into \"desserts\".</li>\n<li>Count how many times one letter appears.</li>\n<li>Check whether a word is a palindrome using <code>equals</code>, never <code>==</code>.</li>\n<li>Split a line like <code>\"3,5,8\"</code>, convert each piece and add them up.</li>\n</ol>\n<p>For each one, write down what you expect for an empty String and for a one-character String before you run it. Those two cases catch most index mistakes. If you want someone to check your reasoning as you go, my <a href=\"courses.html\" rel=\"noopener\">computer science courses</a> cover AP CSA and general Java, and you can <a href=\"contact.html#booking\" rel=\"noopener\">book a free call</a> to talk through where you are stuck.</p>"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is charAt on the AP CSA exam?",
+      "a": "The Java Quick Reference I read does not list charAt, and it does list substring, indexOf, length, equals, compareTo and split. Many courses teach substring(i, i + 1) for single characters for that reason. Check the current Course and Exam Description for your year, since the sheet is updated by College Board."
+    },
+    {
+      "q": "What is the difference between trim and strip?",
+      "a": "According to the Java SE 17 documentation, trim removes leading and trailing characters with a code point of U+0020 or below, while strip, added in Java 11, removes white space as Java defines it. For everyday text the results are usually the same."
+    },
+    {
+      "q": "Why does my split code give an extra empty String at the start?",
+      "a": "If the text begins with the separator, the first piece is an empty String. Only trailing empty strings are removed by default, as the documentation says. Trim or skip the leading separator before splitting."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Java SE 17 API: String",
+      "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html"
+    },
+    {
+      "title": "College Board: AP Computer Science A Java Quick Reference",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf"
+    }
+  ],
+  "related": [
+    {
+      "title": "Debugging Java for beginners: read the error first",
+      "href": "blog-debugging-java-error-messages.html"
+    },
+    {
+      "title": "AP CSA ArrayList vs array: which to use and FRQ 3",
+      "href": "blog-ap-csa-arraylist-vs-array.html"
+    },
+    {
+      "title": "AP CSP, AP CSA and IB CS tutoring",
+      "href": "courses.html"
+    }
+  ],
+  "cta_eyebrow": "Stuck on Java Strings?",
+  "cta_heading": "Book a free call and we will trace your code together",
+  "published": "2026-11-19",
+  "modified": "2026-11-19"
+}

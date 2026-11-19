@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java String Methods Every Beginner Should Know</title>
+<meta name="description" content="Eight Java String methods to learn first, with code that was compiled and run, the index rules, and the equals and immutability bugs beginners hit.">
+<meta name="theme-color" content="#0B1B33">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://shahmikh.com/blog-java-string-methods-for-beginners">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java String Methods Every Beginner Should Know">
+<meta property="og:description" content="Eight Java String methods to learn first, with code that was compiled and run, the index rules, and the equals and immutability bugs beginners hit.">
+<meta property="og:url" content="https://shahmikh.com/blog-java-string-methods-for-beginners">
+<meta property="og:image" content="https://shahmikh.com/headshot.jpg">
+<meta property="article:published_time" content="2026-11-19">
+<meta property="article:modified_time" content="2026-11-19">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Java String Methods Every Beginner Should Know">
+<meta name="twitter:description" content="Eight Java String methods to learn first, with code that was compiled and run, the index rules, and the equals and immutability bugs beginners hit.">
+<meta name="twitter:image" content="https://shahmikh.com/headshot.jpg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="stylesheet" href="theme.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://shahmikh.com/about#person",
+      "name": "Syed Shahmikh Ali",
+      "url": "https://shahmikh.com/about",
+      "image": "https://shahmikh.com/headshot.jpg",
+      "jobTitle": "Tutor and career mentor",
+      "knowsAbout": [
+        "AP Computer Science A",
+        "AP Computer Science Principles",
+        "IB Computer Science",
+        "Java",
+        "Python",
+        "CompTIA Security+",
+        "Cisco CCNA"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Java String Methods Every Beginner Should Know",
+      "description": "Eight Java String methods to learn first, with code that was compiled and run, the index rules, and the equals and immutability bugs beginners hit.",
+      "image": [
+        "https://shahmikh.com/headshot.jpg"
+      ],
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "author": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "publisher": {
+        "@id": "https://shahmikh.com/about#person"
+      },
+      "inLanguage": "en",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shahmikh.com/blog-java-string-methods-for-beginners"
+      },
+      "citation": [
+        "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html",
+        "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shahmikh.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://shahmikh.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Java String Methods Every Beginner Should Know",
+          "item": "https://shahmikh.com/blog-java-string-methods-for-beginners"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is charAt on the AP CSA exam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Java Quick Reference I read does not list charAt, and it does list substring, indexOf, length, equals, compareTo and split. Many courses teach substring(i, i + 1) for single characters for that reason. Check the current Course and Exam Description for your year, since the sheet is updated by College Board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between trim and strip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to the Java SE 17 documentation, trim removes leading and trailing characters with a code point of U+0020 or below, while strip, added in Java 11, removes white space as Java defines it. For everyday text the results are usually the same."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my split code give an extra empty String at the start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the text begins with the separator, the first piece is an empty String. Only trailing empty strings are removed by default, as the documentation says. Trim or skip the leading separator before splitting."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/" class="brand"><img class="brand-logo" src="logo.svg" width="38" height="38" alt="">Shahmikh</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="courses">Subjects</a><a href="/#how">How it works</a><a href="pricing">Pricing</a><a href="resources">Resources</a><a href="testimonials">Reviews</a><a href="blog" class="is-active">Blog</a><a href="about">About</a><a href="https://portal.shahmikh.com" class="nav-portal" rel="noopener">Portal</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact" class="btn btn--ghost">Contact</a>
+      <a href="contact#booking" class="btn btn--primary">Book a free call</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Java · 6 min read</p>
+      <h1 style="max-width: 24ch;">Java String Methods Every Beginner Should Know, With Output You Can Check</h1>
+      <p class="post-byline">By <a href="about">Syed Shahmikh Ali</a> · Published 2026-11-19 · Updated 2026-11-19</p>
+    </div>
+  </section>
+
+  <article class="section-tight">
+    <div class="container blog-post-body">
+      <p class="post-lead">Learn length, substring, indexOf, equals, compareTo and split first, plus charAt for single characters. They cover most String tasks in beginner Java, and the first six are the ones on the College Board's AP CSA Java Quick Reference.</p>
+
+      <div class="takeaways">
+        <h2>Key takeaways</h2>
+        <ul><li>Indexes start at 0. The last valid index is length() - 1, but substring(from, to) allows to up to length() and excludes the character at to.</li><li>indexOf returns -1 when the text is not found, so a result of 0 or more means it was found.</li><li>Compare Strings with equals, not ==. The == operator checks whether two variables refer to the same object.</li><li>Strings cannot be changed. Methods such as toUpperCase and trim return a new String, so assign the result or it is lost.</li><li>Predict the output of each small program by hand before running it, and test an empty String and a one-character String.</li></ul>
+      </div>
+
+      <nav class="toc" aria-label="Contents"><p class="toc-title">In this article</p><ol><li><a href="#which-methods">Which Java String methods should a beginner learn first?</a></li><li><a href="#indexes">How do indexes and substring work?</a></li><li><a href="#indexof">What does indexOf return when it finds nothing?</a></li><li><a href="#equals">Why does == fail for comparing Strings?</a></li><li><a href="#immutable">Why does toUpperCase seem to do nothing?</a></li><li><a href="#split">How do you split a String into pieces?</a></li><li><a href="#practice">What is a good way to practise these methods?</a></li><li><a href="#faq">Frequently asked questions</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+
+      <h2 id="which-methods">Which Java String methods should a beginner learn first?</h2>
+      <p>Learn eight: <code>length</code>, <code>substring</code> (both forms), <code>indexOf</code>, <code>equals</code>, <code>compareTo</code> and <code>split</code>, plus <code>charAt</code> for single characters. The first six are exactly the String methods on the <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf" rel="noopener">College Board AP Computer Science A Java Quick Reference</a>, the sheet students get during the exam, so they are worth knowing cold even if you never take AP.</p>
+<p>The quick reference I read lists the String constructor, <code>length()</code>, <code>substring(int from, int to)</code>, <code>substring(int from)</code>, <code>indexOf(String)</code>, <code>equals(Object)</code>, <code>compareTo(String)</code> and <code>split(String)</code>. It does not list <code>charAt</code>, which is why many AP courses use <code>substring(i, i + 1)</code> to pull out one character. Both work in real Java. Everything below follows the official <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" rel="noopener">Java SE 17 String documentation</a>, and every output shown comes from a program I compiled and ran on Java 21.</p>
+
+      <h2 id="indexes">How do indexes and substring work?</h2>
+      <p>Positions start at 0, and <code>substring(from, to)</code> includes <code>from</code> but stops before <code>to</code>. The Oracle docs put it this way: the substring "begins at the specified beginIndex and extends to the character at index endIndex - 1," so its length is <code>endIndex - beginIndex</code>.</p>
+<pre><code>String s = "computer science";
+s.length();         // 16
+s.substring(0, 8);  // "computer"
+s.substring(9);     // "science"
+s.charAt(0);        // 'c'</code></pre>
+<p>A quick habit that prevents most off-by-one mistakes: the last valid index is <code>length() - 1</code>, but the largest valid end for <code>substring</code> is <code>length()</code>. That asymmetry trips up almost everyone once. If you go past it, Java throws <code>IndexOutOfBoundsException</code>. Running <code>s.substring(5, 20)</code> printed <code>Range [5, 20) out of bounds for length 16</code>, and <code>s.charAt(16)</code> printed <code>Index 16 out of bounds for length 16</code>. Wording can differ between Java versions. If you want a deeper look at reading those messages, see <a href="blog-debugging-java-error-messages" rel="noopener">Debugging Java for beginners</a>.</p>
+
+      <h2 id="indexof">What does indexOf return when it finds nothing?</h2>
+      <p>It returns -1. Per the documentation, <code>indexOf(String)</code> returns "the index of the first occurrence of the specified substring, or -1 if there is no such occurrence." That makes it both a search tool and a yes/no test.</p>
+<pre><code>s.indexOf("science");  // 9
+s.indexOf("python");   // -1</code></pre>
+<p>A useful trick is counting vowels by checking each letter against a vowel string. The call <code>"aeiou".indexOf(letter) &gt;= 0</code> asks whether the letter appears in the vowel list:</p>
+<pre><code>int count = 0;
+for (int i = 0; i &lt; s.length(); i++) {
+    if ("aeiou".indexOf(s.substring(i, i + 1)) &gt;= 0) count++;
+}
+// count is 6 for "computer science"</code></pre>
+<p>Check the loop condition: <code>i &lt; s.length()</code>, not <code>&lt;=</code>. Using <code>&lt;=</code> would run one step too far and throw the exception above.</p>
+
+      <h2 id="equals">Why does == fail for comparing Strings?</h2>
+      <p>Because <code>==</code> asks whether two variables point to the same object, not whether the text matches. Use <code>equals</code>. The documentation says the result is true "if and only if the argument is not null and is a String object that represents the same sequence of characters as this object."</p>
+<pre><code>String a = new String("java");
+String b = new String("java");
+a == b;          // false
+a.equals(b);     // true
+"Java".equals("java");            // false
+"Java".equalsIgnoreCase("java");  // true</code></pre>
+<p>For ordering, <code>compareTo</code> returns a negative number, zero or a positive number. In my test <code>"apple".compareTo("banana") &lt; 0</code> was true. The docs say it returns 0 exactly when <code>equals</code> would return true, and the comparison is based on Unicode values, so an uppercase letter sorts before a lowercase one. Do not rely on the exact size of the number, only on its sign.</p>
+
+      <h2 id="immutable">Why does toUpperCase seem to do nothing?</h2>
+      <p>Strings cannot be changed after they are created, so methods return a new String instead of editing the old one. The class documentation states it plainly: "Strings are constant; their values cannot be changed after they are created."</p>
+<pre><code>String t = "hello";
+t.toUpperCase();
+System.out.println(t);   // hello  (result thrown away)
+t = t.toUpperCase();
+System.out.println(t);   // HELLO</code></pre>
+<p>The first call produced "HELLO" and nothing kept it. This is one of the most common beginner bugs, and Java gives no error for it. The fix is to assign the result. The same rule applies to <code>trim</code> and <code>replace</code>. For example <code>"a--b".replace("-", "+")</code> gives <code>a++b</code> and leaves the original untouched.</p>
+
+      <h2 id="split">How do you split a String into pieces?</h2>
+      <p>Use <code>split</code> with the separator and you get an array. The documentation describes it as splitting "around matches of the given regular expression," and it says trailing empty strings are not included in the result.</p>
+<pre><code>String[] parts = "3,5,8".split(",");
+parts.length;   // 3
+parts[1];       // "5"</code></pre>
+<p>The text you pass is a regular expression, which matters for characters such as the dot or the pipe. A comma or a space is safe. For anything else, check the documentation before trusting it. If you pull numbers out this way, remember each piece is still text. Reading data into an array is a natural next step, and <a href="blog-ap-csa-arraylist-vs-array" rel="noopener">ArrayList versus array</a> covers how to store it.</p>
+
+      <h2 id="practice">What is a good way to practise these methods?</h2>
+      <p>Write small programs that predict the output first, then run them. Here are four that use only the methods above, and I would do them in this order:</p>
+<ol>
+<li>Print a String backwards. My version loops from <code>length() - 1</code> down to 0 and joins <code>substring(i, i + 1)</code>. It turned "stressed" into "desserts".</li>
+<li>Count how many times one letter appears.</li>
+<li>Check whether a word is a palindrome using <code>equals</code>, never <code>==</code>.</li>
+<li>Split a line like <code>"3,5,8"</code>, convert each piece and add them up.</li>
+</ol>
+<p>For each one, write down what you expect for an empty String and for a one-character String before you run it. Those two cases catch most index mistakes. If you want someone to check your reasoning as you go, my <a href="courses" rel="noopener">computer science courses</a> cover AP CSA and general Java, and you can <a href="contact#booking" rel="noopener">book a free call</a> to talk through where you are stuck.</p>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is charAt on the AP CSA exam? <span class="icon" aria-hidden="true"></span></summary><p>The Java Quick Reference I read does not list charAt, and it does list substring, indexOf, length, equals, compareTo and split. Many courses teach substring(i, i + 1) for single characters for that reason. Check the current Course and Exam Description for your year, since the sheet is updated by College Board.</p></details>
+        <details class="faq-item"><summary>What is the difference between trim and strip? <span class="icon" aria-hidden="true"></span></summary><p>According to the Java SE 17 documentation, trim removes leading and trailing characters with a code point of U+0020 or below, while strip, added in Java 11, removes white space as Java defines it. For everyday text the results are usually the same.</p></details>
+        <details class="faq-item"><summary>Why does my split code give an extra empty String at the start? <span class="icon" aria-hidden="true"></span></summary><p>If the text begins with the separator, the first piece is an empty String. Only trailing empty strings are removed by default, as the documentation says. Trim or skip the leading separator before splitting.</p></details>
+      </div>
+
+      <h2 id="sources">Sources</h2>
+      <ul class="post-sources"><li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" rel="noopener">Java SE 17 API: String</a></li><li><a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf" rel="noopener">College Board: AP Computer Science A Java Quick Reference</a></li></ul>
+
+      <h2>Related reading</h2>
+      <ul class="post-sources"><li><a href="blog-debugging-java-error-messages">Debugging Java for beginners: read the error first</a></li><li><a href="blog-ap-csa-arraylist-vs-array">AP CSA ArrayList vs array: which to use and FRQ 3</a></li><li><a href="courses">AP CSP, AP CSA and IB CS tutoring</a></li></ul>
+
+      <aside class="author-box">
+  <img src="headshot.jpg" alt="Syed Shahmikh Ali" width="72" height="72" loading="lazy">
+  <div>
+    <p class="author-name">About the author</p>
+    <p><a href="about">Syed Shahmikh Ali</a> is a Preply Super Tutor, in the top 10% of computer science tutors on Preply, Oxford University Press trained, with a mechatronics engineering background. He teaches AP CSP, AP CSA, IB CS, IGCSE CS, Python, Java, Security+ and CCNA one to one.</p>
+    <p class="post-note">Editorial note: this article is checked against the sources listed above. If you spot a mistake, tell me through the <a href="contact">contact page</a> and I will correct it.</p>
+  </div>
+</aside>
+    </div>
+  </article>
+
+  <section class="on-ink cta-band">
+    <div class="container">
+      <p class="eyebrow">Stuck on Java Strings?</p>
+      <h2>Book a free call and we will trace your code together</h2>
+      <a href="contact#booking" class="btn btn--gold">Book a Call</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Syed Shahmikh Ali</h4><p>Engineer turned educator — helping students, parents and career-changers with exam strategy, degree and career decisions, and tech skills.</p></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about">About</a></li><li><a href="courses">Courses</a></li><li><a href="pricing">Pricing</a></li><li><a href="resources">Resources</a></li><li><a href="blog">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="kids">Kids AI Program</a></li><li><a href="courses">Security+ &amp; CCNA</a></li><li><a href="courses">AP CSP, CSA &amp; IB CS</a></li><li><a href="career-guidance">Career Guidance</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact">Contact</a></li><li><a href="faq">FAQ</a></li><li><a href="testimonials">Testimonials</a></li><li><a class="social-link" href="https://www.youtube.com/channel/UCB7mB0eotW74qMWaU1fnaSA" data-network="youtube" rel="noopener" target="_blank">YouTube</a></li><li><a class="social-link" href="https://www.instagram.com/shahmikh.ali" data-network="instagram" rel="noopener" target="_blank">Instagram</a></li><li><a class="social-link" href="https://www.linkedin.com/in/syed-shahmikh-ali-6b962b201/" data-network="linkedin" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Syed Shahmikh Ali. All rights reserved. · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></span><span>Teaching students across the US, UK &amp; Europe.</span></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
